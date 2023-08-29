@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/constants/app_fonts.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
 
 void main() {
@@ -15,7 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Grocery App',
-      theme: ThemeData(appBarTheme: AppBarTheme(color: AppColors.blue)),
+      theme: ThemeData(
+          fontFamily: 'Rubik Regular',
+          appBarTheme: AppBarTheme(color: AppColors.blue)),
       home: const GetStartedView(),
     );
   }
