@@ -78,12 +78,12 @@ class _GetStartedViewState extends State<GetStartedView> {
                     (index) => Padding(
                           padding: const EdgeInsets.all(3),
                           child: Container(
-                            height: activePage == index ? 7 : 10,
+                            height: activePage == index ? 5 : 7,
                             width: activePage == index ? 25 : 45,
                             decoration: BoxDecoration(
                                 color: activePage == index
-                                    ? AppDarkColors.black1
-                                    : AppDarkColors.black45,
+                                    ? AppDarkColors.black45
+                                    : AppDarkColors.black1,
                                 borderRadius: BorderRadius.circular(2)),
                           ),
                         )),
