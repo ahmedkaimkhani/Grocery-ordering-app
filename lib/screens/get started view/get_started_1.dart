@@ -17,7 +17,7 @@ class GetStartedView extends StatelessWidget {
             Container(
               color: Colors.red,
               child: SizedBox(
-                height: height * 0.40,
+                height: height * 0.50,
                 child: PageView(
                   children: [
                     Padding(
@@ -25,9 +25,17 @@ class GetStartedView extends StatelessWidget {
                           left: 30, right: 30, top: 40, bottom: 20),
                       child: Column(
                         children: [
-                          Text(
-                            'Your holiday shopping delivered to Screen one',
-                            style: CustomTextStyle30.h1Bold30,
+                          Wrap(
+                            children: [
+                              Text(
+                                'Your holiday shopping delivered to Screen one',
+                                style: CustomTextStyle30.h1Bold30,
+                              ),
+                              Container(
+                                child:
+                                    Image.asset('assets/images/png/tree.png'),
+                              )
+                            ],
                           ),
                           const SizedBox(
                             height: 30,
