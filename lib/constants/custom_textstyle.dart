@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 
-class CustomTextStyles {
+class CustomTextStyle30 {
   static TextStyle h1Bold30 = const TextStyle(
     // For 30 Size
     fontSize: 30,
     fontWeight: FontWeight.bold,
     color: Color(0xffFAFBFD),
-    fontFamily: 'Rubik Regular',
+    // fontFamily: 'Rubik Regular',
   );
 
   static TextStyle h1SemiBold30 = TextStyle(
@@ -27,38 +27,6 @@ class CustomTextStyles {
     fontWeight: FontWeight.normal,
     color: AppDarkColors.black100,
   );
-
-  // for 26 size
-  static TextStyle h1Bold26 = TextStyle(
-      fontSize: 26,
-      fontWeight: FontWeight.bold,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
-
-  static TextStyle h1SemiBold26 = TextStyle(
-      fontSize: 26,
-      fontWeight: FontWeight.w600,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
-
-  static TextStyle h1Medium26 = TextStyle(
-    fontSize: 26,
-    fontWeight: FontWeight.w500,
-    color: AppDarkColors.black100,
-  );
-
-  static TextStyle h1Regular26 = TextStyle(
-    fontSize: 26,
-    fontWeight: FontWeight.normal,
-    color: AppDarkColors.black100,
-  );
-
-  // for 22 size
-  static TextStyle h1SemiBold22 = const TextStyle(
-      fontSize: 26,
-      fontWeight: FontWeight.w600,
-      color: Color(0xffF8F9FB),
-      fontFamily: 'Rubik Medium');
 
   // for 20 size
   static TextStyle h1Bold20 = TextStyle(
@@ -163,4 +131,41 @@ class CustomTextStyles {
     fontWeight: FontWeight.normal,
     color: Color(0xff616A7D),
   );
+}
+
+// For 26 Size
+class CustomTextStyle26 {
+  // for 26 size
+  static TextStyle h1Bold26 = TextStyle(
+      fontSize: 26,
+      fontWeight: FontWeight.bold,
+      color: AppDarkColors.black100,
+      fontFamily: 'Rubik Medium');
+
+  static TextStyle h1SemiBold26 = TextStyle(
+      fontSize: 26,
+      fontWeight: FontWeight.w600,
+      color: AppDarkColors.black100,
+      fontFamily: 'Rubik Medium');
+
+  static TextStyle h1Medium26 = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w500,
+    color: AppDarkColors.black100,
+  );
+
+  static TextStyle h1Regular26 = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.normal,
+    color: AppDarkColors.black100,
+  );
+}
+
+class CustomTextStyle22 {
+  // for 22 size
+  static TextStyle h1SemiBold22 = const TextStyle(
+      fontSize: 22,
+      fontWeight: FontWeight.w600,
+      color: Color(0xffF8F9FB),
+      fontFamily: 'Rubik Medium');
 }

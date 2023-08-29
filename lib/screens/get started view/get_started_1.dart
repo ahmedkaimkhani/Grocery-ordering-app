@@ -20,7 +20,7 @@ class GetStartedView extends StatelessWidget {
                     color: Colors.red,
                     child: Text(
                       'Your holiday shopping delivered to Screen one',
-                      style: CustomTextStyles.h1Bold30,
+                      style: CustomTextStyle30.h1Bold30,
                     ),
                   )
                 ],
