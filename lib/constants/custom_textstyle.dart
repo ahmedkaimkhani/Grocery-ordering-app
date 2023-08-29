@@ -3,11 +3,12 @@ import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 
 class CustomTextStyles {
   static TextStyle h1Bold30 = const TextStyle(
-      // For 30 Size
-      fontSize: 30,
-      fontWeight: FontWeight.bold,
-      color: Color(0xffFAFBFD),
-      fontFamily: 'Rubik Medium');
+    // For 30 Size
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+    color: Color(0xffFAFBFD),
+    fontFamily: 'Rubik Regular',
+  );
 
   static TextStyle h1SemiBold30 = TextStyle(
       fontSize: 30,
