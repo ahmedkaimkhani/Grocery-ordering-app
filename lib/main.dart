@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           backgroundColor: AppDarkColors.black1,
           appBarTheme: AppBarTheme(color: AppColors.blue)),
-      home: const GetStartedView(),
+      home: GetStartedView(),
     );
   }
 }
