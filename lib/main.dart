@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Grocery App',
       theme: ThemeData(
-          fontFamily: 'Rubik Regular',
           backgroundColor: AppDarkColors.black1,
           appBarTheme: AppBarTheme(color: AppColors.blue)),
       home: const GetStartedView(),
