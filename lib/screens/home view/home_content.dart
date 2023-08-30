@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/screens/home%20view/widgets/custom_deal.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
@@ -79,6 +80,19 @@ class _MyWidgetState extends State<HomeContent> {
             ],
           ),
         ),
+        const SizedBox(
+          height: 20,
+        ),
+        Row(
+          children: const [
+            Expanded(
+                child: CustomDealDesign(
+                    text: '346', text2: 'USD', text3: 'Your total savings')),
+            Expanded(
+                child: CustomDealDesign(
+                    text: '346', text2: 'USD', text3: 'Your total savings')),
+          ],
+        )
       ],
     );
   }

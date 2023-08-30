@@ -32,10 +32,10 @@ class CustomTextStyle30 {
 class CustomTextStyle26 {
   // for 26 size
   static TextStyle h1Bold26 = TextStyle(
-    fontSize: 26,
-    fontWeight: FontWeight.bold,
-    color: AppDarkColors.black100,
-  );
+      fontSize: 26,
+      fontWeight: FontWeight.bold,
+      color: AppDarkColors.black100,
+      fontFamily: 'Rubik Regular');
 
   static TextStyle h1SemiBold26 = TextStyle(
     fontSize: 26,
