@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+
+import '../../constants/app_colors.dart';
+import '../../constants/custom_textstyle.dart';
+
+class HomeContent extends StatefulWidget {
+  const HomeContent({super.key});
+
+  @override
+  State<HomeContent> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<HomeContent> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 155,
+          width: double.infinity,
+          color: AppColors.blue,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 25),
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: AppColors.textFieldColor,
+                      borderRadius: BorderRadius.circular(50)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 25, right: 25, top: 7),
+                    child: customTextField(),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 4),
+                child: Row(
+                  children: [
+                    Text(
+                      'DELIVERY TO',
+                      style: CustomTextStyle11.fonts11w8,
+                    ),
+                    const Spacer(),
+                    Text('WITHIN', style: CustomTextStyle11.fonts11w8)
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 4),
+                child: Row(
+                  children: [
+                    Text(
+                      'Green Way 3000, Sylhet',
+                      style: CustomTextStyle14.h1Medium14,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(
+                        Icons.arrow_drop_down,
+                        color: AppDarkColors.black1,
+                      ),
+                    ),
+                    const Spacer(),
+                    Text('1 Hour', style: CustomTextStyle14.h1Medium14),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(
+                        Icons.arrow_drop_down,
+                        color: AppDarkColors.black1,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  // Serach bar
+  TextField customTextField() {
+    return TextField(
+        decoration: InputDecoration(
+          // contentPadding: EdgeInsets.all(0),
+          prefixIcon: Icon(
+            Icons.search,
+            size: 30,
+            color: AppDarkColors.black1,
+          ),
+          hintText: 'Search Products or store',
+          hintStyle: CustomTextFieldStyle.h1Medium14,
+          border: InputBorder.none,
+        ),
+        style: CustomTextFieldStyle.h2Medium14);
+  }
+}
