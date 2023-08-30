@@ -1,9 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
+import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -80,8 +82,22 @@ class _HomeViewState extends State<HomeView> {
                         'Green Way 3000, Sylhet',
                         style: CustomTextStyle14.h1Medium14,
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          color: AppDarkColors.black1,
+                        ),
+                      ),
                       const Spacer(),
-                      Text('1 Hour', style: CustomTextStyle14.h1Medium14)
+                      Text('1 Hour', style: CustomTextStyle14.h1Medium14),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          color: AppDarkColors.black1,
+                        ),
+                      ),
                     ],
                   ),
                 )
@@ -90,7 +106,7 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      bottomNavigationBar: curvedNavbar(),
+      bottomNavigationBar: const CustomNavigationBar(),
     );
   }
 
@@ -109,23 +125,5 @@ class _HomeViewState extends State<HomeView> {
           border: InputBorder.none,
         ),
         style: CustomTextFieldStyle.h2Medium14);
-  }
-
-  // Navigation Bar
-  CurvedNavigationBar curvedNavbar() {
-    return CurvedNavigationBar(
-      items: [
-        Icon(
-          FontAwesomeIcons.home,
-          color: AppDarkColors.black1,
-        ),
-        Icon(Icons.category_outlined, color: AppDarkColors.black1),
-        Icon(FontAwesomeIcons.heart, color: AppDarkColors.black1),
-        Icon(Icons.more_vert, color: AppDarkColors.black1),
-      ],
-      animationDuration: const Duration(milliseconds: 300),
-      color: AppColors.blue,
-      backgroundColor: AppDarkColors.black1,
-    );
   }
 }

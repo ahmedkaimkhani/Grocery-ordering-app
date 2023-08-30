@@ -10,10 +10,10 @@ class CustomTextStyle30 {
   );
 
   static TextStyle h1SemiBold30 = TextStyle(
-      fontSize: 30,
-      fontWeight: FontWeight.w600,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
+    fontSize: 30,
+    fontWeight: FontWeight.w600,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1Medium30 = TextStyle(
     fontSize: 30,
@@ -32,16 +32,16 @@ class CustomTextStyle30 {
 class CustomTextStyle26 {
   // for 26 size
   static TextStyle h1Bold26 = TextStyle(
-      fontSize: 26,
-      fontWeight: FontWeight.bold,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1SemiBold26 = TextStyle(
-      fontSize: 26,
-      fontWeight: FontWeight.w600,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
+    fontSize: 26,
+    fontWeight: FontWeight.w600,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1Medium26 = TextStyle(
     fontSize: 26,
@@ -59,25 +59,25 @@ class CustomTextStyle26 {
 class CustomTextStyle22 {
   // for 22 size
   static TextStyle h1SemiBold22 = const TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.w600,
-      color: Color(0xffF8F9FB),
-      fontFamily: 'Rubik Medium');
+    fontSize: 22,
+    fontWeight: FontWeight.w600,
+    color: Color(0xffF8F9FB),
+  );
 }
 
 class CustomTextStyle20 {
   // for 20 size
   static TextStyle h1Bold20 = TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1SemiBold20 = TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.w600,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1Medium20 = TextStyle(
     fontSize: 20,
@@ -95,16 +95,16 @@ class CustomTextStyle20 {
 class CustomTextStyle18 {
   // For 18 size
   static TextStyle h1Bold318 = const TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.bold,
-      color: Color(0xff1E222B),
-      fontFamily: 'Rubik Medium');
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: Color(0xff1E222B),
+  );
 
   static TextStyle h1SemiBold18 = TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Medium');
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1Medium18 = const TextStyle(
     fontSize: 18,
@@ -122,10 +122,10 @@ class CustomTextStyle18 {
 class CustomTextStyle16 {
   // For 16 size
   static TextStyle h1SemiBold16 = const TextStyle(
-      fontSize: 16,
-      fontWeight: FontWeight.w600,
-      color: Color(0xff1E222B),
-      fontFamily: 'Rubik Medium');
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    color: Color(0xff1E222B),
+  );
 
   static TextStyle h1Medium16 = TextStyle(
     fontSize: 16,
@@ -143,10 +143,10 @@ class CustomTextStyle16 {
 class CustomTextStyle14 {
   // For 14 size
   static TextStyle h1SemiBold14 = const TextStyle(
-      fontSize: 14,
-      fontWeight: FontWeight.w600,
-      color: Color(0xff1E222B),
-      fontFamily: 'Rubik Medium');
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    color: Color(0xff1E222B),
+  );
 
   static TextStyle h1Medium14 = TextStyle(
     fontSize: 14,
