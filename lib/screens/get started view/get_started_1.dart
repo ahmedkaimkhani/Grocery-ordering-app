@@ -14,7 +14,9 @@ class GetStartedView extends StatefulWidget {
 class _GetStartedViewState extends State<GetStartedView> {
   int activePage = 0;
 
-  final PageController pageController = PageController(initialPage: 0);
+  final PageController pageController = PageController(
+    initialPage: 0,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +94,11 @@ class _GetStartedViewState extends State<GetStartedView> {
                         )),
               ),
               Spacer(),
-              SizedBox(height: height * 0.08, child: Custom1stButton()),
+              SizedBox(
+                height: height * 0.08,
+                width: width * 0.65,
+                child: const Custom1stButton(),
+              ),
             ],
           ),
         ),

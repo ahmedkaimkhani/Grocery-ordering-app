@@ -25,18 +25,9 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             side: BorderSide(color: AppColors.blue)),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            buttonText,
-            style: buttonTextColor ?? CustomTextStyle14.h1SemiBold14,
-          ),
-          Icon(
-            buttonIcon,
-            color: const Color(0xff1E222B),
-          ),
-        ],
+      child: Text(
+        buttonText,
+        style: buttonTextColor ?? CustomTextStyle14.h1SemiBold14,
       ),
     );
   }

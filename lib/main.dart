@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/app_fonts.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
@@ -13,12 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Grocery App',
       theme: ThemeData(
           backgroundColor: AppDarkColors.black1,
-          appBarTheme: AppBarTheme(color: AppColors.blue)),
+          appBarTheme: AppBarTheme(
+            color: AppColors.blue,
+          )),
       home: GetStartedView(),
     );
   }
