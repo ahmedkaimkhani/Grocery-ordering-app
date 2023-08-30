@@ -133,10 +133,10 @@ class CustomTextStyle16 {
     color: AppDarkColors.black100,
   );
 
-  static TextStyle h1Regular16 = const TextStyle(
+  static TextStyle h1Regular16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
-    color: Color(0xff616A7D),
+    color: AppDarkColors.black1,
   );
 }
 
@@ -148,16 +148,16 @@ class CustomTextStyle14 {
       color: Color(0xff1E222B),
       fontFamily: 'Rubik Medium');
 
-  static TextStyle h1Medium14 = const TextStyle(
+  static TextStyle h1Medium14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: Color(0xff1E222B),
+    color: AppDarkColors.black1,
   );
 
   static TextStyle h1Regular14 = const TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: Color(0xff8891A5),
+    color: Color(0xff1E222B),
   );
 }
 
@@ -174,5 +174,24 @@ class CustomTextStyle12 {
     fontSize: 12,
     fontWeight: FontWeight.normal,
     color: Color(0xff616A7D),
+  );
+}
+
+// Font 11
+class CustomTextStyle11 {
+  static TextStyle fonts11w8 = TextStyle(
+      fontSize: 11, fontWeight: FontWeight.w800, color: AppDarkColors.black45);
+}
+
+class CustomTextFieldStyle {
+  static TextStyle h1Medium14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppDarkColors.grey,
+  );
+  static TextStyle h2Medium14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppDarkColors.black1,
   );
 }

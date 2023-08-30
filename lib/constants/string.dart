@@ -1,3 +1,3 @@
 class AppText {
-  static String appBarText = 'Hey, Halal';
+  static String appBarText = 'Hey, Ahmed';
 }

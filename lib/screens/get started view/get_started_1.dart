@@ -28,7 +28,7 @@ class _GetStartedViewState extends State<GetStartedView> {
       body: SafeArea(
         child: Padding(
           padding:
-              const EdgeInsets.only(left: 30, right: 30, top: 40, bottom: 30),
+              const EdgeInsets.only(left: 35, right: 35, top: 40, bottom: 30),
           child: Column(
             children: [
               Container(
