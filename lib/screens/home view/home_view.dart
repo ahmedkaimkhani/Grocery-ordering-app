@@ -5,6 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
+import 'package:grocery_order_app_flutter/screens/home%20view/widgets/appbar.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
 class HomeView extends StatefulWidget {
@@ -18,23 +19,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 8, top: 12),
-          child: Text(
-            AppText.appBarText,
-            style: CustomTextStyle22.h1SemiBold22,
-          ),
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 20, top: 12),
-            child: Icon(FontAwesomeIcons.cartShopping),
-          ),
-        ],
-      ),
+      appBar: customAppBar(),
       body: Column(
         children: [
           Container(
