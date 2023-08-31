@@ -32,10 +32,10 @@ class CustomTextStyle30 {
 class CustomTextStyle26 {
   // for 26 size
   static TextStyle h1Bold26 = TextStyle(
-      fontSize: 26,
-      fontWeight: FontWeight.bold,
-      color: AppDarkColors.black100,
-      fontFamily: 'Rubik Regular');
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: AppDarkColors.black100,
+  );
 
   static TextStyle h1SemiBold26 = TextStyle(
     fontSize: 26,
@@ -50,10 +50,10 @@ class CustomTextStyle26 {
   );
 
   static TextStyle h1Regular26 = TextStyle(
-    fontSize: 26,
-    fontWeight: FontWeight.normal,
-    color: AppDarkColors.black100,
-  );
+      fontSize: 26,
+      fontWeight: FontWeight.normal,
+      color: AppDarkColors.black100,
+      fontFamily: 'Rubik Regular');
 }
 
 class CustomTextStyle22 {
@@ -142,10 +142,10 @@ class CustomTextStyle16 {
 
 class CustomTextStyle14 {
   // For 14 size
-  static TextStyle h1SemiBold14 = const TextStyle(
+  static TextStyle h1SemiBold14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w600,
-    color: Color(0xff1E222B),
+    color: AppDarkColors.black100,
   );
 
   static TextStyle h1Medium14 = TextStyle(
@@ -154,10 +154,10 @@ class CustomTextStyle14 {
     color: AppDarkColors.black1,
   );
 
-  static TextStyle h1Regular14 = const TextStyle(
+  static TextStyle h1Regular14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
-    color: Color(0xff1E222B),
+    color: AppDarkColors.black100,
   );
 }
 

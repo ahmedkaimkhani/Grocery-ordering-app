@@ -83,15 +83,25 @@ class _MyWidgetState extends State<HomeContent> {
         const SizedBox(
           height: 20,
         ),
-        Row(
-          children: const [
-            Expanded(
-                child: CustomDealDesign(
-                    text: '346', text2: 'USD', text3: 'Your total savings')),
-            Expanded(
-                child: CustomDealDesign(
-                    text: '346', text2: 'USD', text3: 'Your total savings')),
-          ],
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            children: [
+              const Expanded(
+                  child: CustomDealDesign(
+                      text: '346', text2: 'USD', text3: 'Your total savings')),
+              const SizedBox(
+                width: 20,
+              ),
+              Expanded(
+                  child: CustomDealDesign(
+                text: '215',
+                text2: 'HRS',
+                text3: 'Your time saved',
+                color: AppDarkColors.black10,
+              )),
+            ],
+          ),
         )
       ],
     );

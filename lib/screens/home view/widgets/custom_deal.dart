@@ -25,8 +25,9 @@ class CustomDealDesign extends StatelessWidget {
       ),
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
                 children: [
@@ -34,15 +35,24 @@ class CustomDealDesign extends StatelessWidget {
                     text,
                     style: CustomTextStyle26.h1Bold26,
                   ),
-                  Text(
-                    text2,
-                    style: CustomTextStyle26.h1Bold26,
+                  const SizedBox(
+                    width: 8,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(0.0),
+                    child: Text(
+                      text2,
+                      style: CustomTextStyle26.h1Regular26,
+                    ),
                   )
                 ],
               ),
+              SizedBox(
+                height: 8,
+              ),
               Text(
                 text3,
-                style: CustomTextStyle26.h1Bold26,
+                style: CustomTextStyle14.h1SemiBold14,
               )
             ],
           ),
