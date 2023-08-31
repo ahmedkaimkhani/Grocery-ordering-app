@@ -7,7 +7,6 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/categories_view.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
-import 'package:grocery_order_app_flutter/screens/home%20view/widgets/appbar.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
 class HomeView extends StatefulWidget {
@@ -89,6 +88,7 @@ customAppBar() {
       Padding(
         padding: EdgeInsets.only(right: 20, top: 12),
         child: Icon(FontAwesomeIcons.cartShopping),
+        // child: Image.asset("assets/images/logo.png"),
       ),
     ],
   );
