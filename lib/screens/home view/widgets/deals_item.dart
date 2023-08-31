@@ -22,7 +22,7 @@ class DealsItem extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
-            color: Colors.grey,
+            // color: Colors.grey,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
