@@ -9,6 +9,8 @@ import 'package:grocery_order_app_flutter/screens/categories%20view/categories_v
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
+import 'widgets/appbar_method.dart';
+
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
@@ -70,30 +72,4 @@ class _HomeViewState extends State<HomeView> {
     }
     return widget;
   }
-}
-
-customAppBar({IconData? iconS}) {
-  return AppBar(
-    toolbarHeight: 80,
-    automaticallyImplyLeading: false,
-    elevation: 0.0,
-    title: Padding(
-      padding: const EdgeInsets.only(left: 8, top: 12),
-      child: Text(
-        AppText.appBarText,
-        style: CustomTextStyle22.h1SemiBold22,
-      ),
-    ),
-    actions: [
-      Padding(
-        padding: const EdgeInsets.only(right: 20, top: 12),
-        child: Icon(iconS),
-      ),
-      const Padding(
-        padding: EdgeInsets.only(right: 20, top: 12),
-        child: Icon(FontAwesomeIcons.cartShopping),
-        // child: Image.asset("assets/images/logo.png"),
-      ),
-    ],
-  );
 }
