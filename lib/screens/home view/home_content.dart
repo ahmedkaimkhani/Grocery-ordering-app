@@ -15,6 +15,7 @@ class _MyWidgetState extends State<HomeContent> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           height: 155,
@@ -85,24 +86,38 @@ class _MyWidgetState extends State<HomeContent> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Expanded(
-                  child: CustomDealDesign(
-                      text: '346', text2: 'USD', text3: 'Your total savings')),
-              const SizedBox(
-                width: 20,
+              Row(
+                children: [
+                  const Expanded(
+                      child: CustomDealDesign(
+                          text: '346',
+                          text2: 'USD',
+                          text3: 'Your total savings')),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                      child: CustomDealDesign(
+                    text: '215',
+                    text2: 'HRS',
+                    text3: 'Your time saved',
+                    color: AppDarkColors.black10,
+                  )),
+                ],
               ),
-              Expanded(
-                  child: CustomDealDesign(
-                text: '215',
-                text2: 'HRS',
-                text3: 'Your time saved',
-                color: AppDarkColors.black10,
-              )),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Deals on Fruits & Tea',
+                style: CustomTextStyle20.h1Bold20,
+              )
             ],
           ),
-        )
+        ),
       ],
     );
   }
