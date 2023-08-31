@@ -195,3 +195,16 @@ class CustomTextFieldStyle {
     color: AppDarkColors.black1,
   );
 }
+
+class CustomTextStyle45 {
+  static TextStyle h1Regular50 = TextStyle(
+      fontSize: 50,
+      fontWeight: FontWeight.w300,
+      color: AppDarkColors.black1,
+      fontFamily: 'Rubik Regular');
+  static TextStyle h1Bold50 = TextStyle(
+    fontSize: 50,
+    fontWeight: FontWeight.w700,
+    color: AppDarkColors.black1,
+  );
+}
