@@ -115,7 +115,7 @@ class _MyWidgetState extends State<HomeContent> {
                     ],
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 35,
                   ),
                   Text(
                     'Deals on Fruits & Tea',
