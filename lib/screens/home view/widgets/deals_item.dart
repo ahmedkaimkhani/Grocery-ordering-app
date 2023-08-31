@@ -1,18 +1,6 @@
 import 'package:flutter/material.dart';
 
-final List<Map<String, dynamic>> dealItems = [
-  {
-    'price': '\$325',
-    'name': 'Orange Package 1 | 1 bundle',
-    'image':
-        'https://www.wallpaperflare.com/static/583/448/1015/oranges-basket-fruit-leaves-wallpaper.jpg'
-  },
-  {
-    'price': '\$89',
-    'name': 'Green Tea Package 2 | 1 bundle',
-    'image': 'https://img.lovepik.com/desgin_photo/45003/1444_list.jpg'
-  }
-];
+import '../../../list item data/deals_fruit_tea.dart';
 
 class DealsItem extends StatelessWidget {
   const DealsItem({super.key});
@@ -22,8 +10,12 @@ class DealsItem extends StatelessWidget {
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      gridDelegate:
-          const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 12,
+        mainAxisSpacing: 12,
+        mainAxisExtent: 270,
+      ),
       itemCount: dealItems.length,
       itemBuilder: (context, index) {
         return Container(
@@ -31,6 +23,7 @@ class DealsItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ClipRRect(
                 child: Image.network(
@@ -40,6 +33,8 @@ class DealsItem extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
+              Text('${dealItems.elementAt(index)['price']}'),
+              Text('${dealItems.elementAt(index)['name']}'),
             ],
           ),
         );
