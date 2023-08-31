@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 
 import '../../../list item data/deals_fruit_tea.dart';
 
@@ -14,27 +16,62 @@ class DealsItem extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: 12,
         mainAxisSpacing: 12,
-        mainAxisExtent: 270,
+        mainAxisExtent: 210,
       ),
       itemCount: dealItems.length,
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
+            color: Colors.grey,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ClipRRect(
-                child: Image.network(
-                  '${dealItems.elementAt(index)['image']}',
-                  height: 150,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                child: Center(
+                  child: Stack(children: [
+                    Image.network(
+                      '${dealItems.elementAt(index)['image']}',
+                      height: 120,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                    Positioned(
+                      bottom: 6,
+                      right: 6,
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                          color: AppColors.blue,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          size: 12,
+                          color: AppDarkColors.black1,
+                        ),
+                      ),
+                    )
+                  ]),
                 ),
               ),
-              Text('${dealItems.elementAt(index)['price']}'),
-              Text('${dealItems.elementAt(index)['name']}'),
+              Padding(
+                padding:
+                    const EdgeInsets.only(top: 8, left: 6, right: 6, bottom: 6),
+                child: Text(
+                  '${dealItems.elementAt(index)['price']}',
+                  style: CustomTextStyle18.h1Bold318,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 6, right: 6),
+                child: Text(
+                  '${dealItems.elementAt(index)['name']}',
+                  style: CustomTextStyle14.h1Regular14,
+                ),
+              ),
             ],
           ),
         );
