@@ -19,6 +19,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  // Navigation Bar Icons
   final item = [
     Icon(
       FontAwesomeIcons.home,
@@ -28,6 +29,7 @@ class _HomeViewState extends State<HomeView> {
     Icon(FontAwesomeIcons.heart, color: AppDarkColors.black1),
     Icon(Icons.more_vert, color: AppDarkColors.black1),
   ];
+  // Condition for navigationbar
   int index = 0;
   navigateScreen(selectedIndex) {
     setState(() {
@@ -38,7 +40,9 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // AppBar
       appBar: customAppBar(),
+      // Navigation Bar Implementation
       bottomNavigationBar: CurvedNavigationBar(
         items: item,
         index: index,
@@ -49,10 +53,12 @@ class _HomeViewState extends State<HomeView> {
         color: AppColors.blue,
         backgroundColor: AppDarkColors.black1,
       ),
-      body: getSelectedWidget(index: index),
+      // Body Content
+      body: SafeArea(child: getSelectedWidget(index: index)),
     );
   }
 
+  // Condition for NavigationBar for different pages content
   Widget getSelectedWidget({required int index}) {
     Widget widget;
 

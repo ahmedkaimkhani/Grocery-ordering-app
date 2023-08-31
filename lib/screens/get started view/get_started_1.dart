@@ -111,10 +111,8 @@ class _GetStartedViewState extends State<GetStartedView> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(40),
                 child: Container(
-                  child: const Image(
-                    image: NetworkImage(
-                      'https://scontent.fkhi23-1.fna.fbcdn.net/v/t39.30808-6/373679846_807691067720543_3926578182426451910_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeEwQfHSP-L9ssw46rYKDul0haxrkhh4n3GFrGuSGHifcbp5OoGGUsjUVHym2QXbRYcpGAVhVepNdHAzawiqeZGP&_nc_ohc=efBLYz6yhNkAX9znd1x&_nc_ht=scontent.fkhi23-1.fna&oh=00_AfBm-JtzTTYpNYDcxK5ixFJRhEq65dJmJo7FO1muqkJQPw&oe=64F512BC',
-                    ),
+                  child: Image.asset(
+                    'assets/images/logo.png',
                     height: 250,
                     width: 250,
                   ),
