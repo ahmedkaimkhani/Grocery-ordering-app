@@ -15,82 +15,79 @@ class HomeContent extends StatefulWidget {
 class _MyWidgetState extends State<HomeContent> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 155,
-            width: double.infinity,
-            color: AppColors.blue,
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 20, right: 20, top: 10, bottom: 25),
-                  child: Container(
-                    height: 60,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: AppColors.textFieldColor,
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Padding(
-                      padding:
-                          const EdgeInsets.only(left: 25, right: 25, top: 7),
-                      child: customTextField(),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          height: 155,
+          width: double.infinity,
+          color: AppColors.blue,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 20, right: 20, top: 10, bottom: 25),
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: AppColors.textFieldColor,
+                      borderRadius: BorderRadius.circular(50)),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 25, right: 25, top: 7),
+                    child: customTextField(),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 4),
+                child: Row(
+                  children: [
+                    Text(
+                      'DELIVERY TO',
+                      style: CustomTextStyle11.fonts11w8,
                     ),
-                  ),
+                    const Spacer(),
+                    Text('WITHIN', style: CustomTextStyle11.fonts11w8)
+                  ],
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(left: 20, right: 20, bottom: 4),
-                  child: Row(
-                    children: [
-                      Text(
-                        'DELIVERY TO',
-                        style: CustomTextStyle11.fonts11w8,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 4),
+                child: Row(
+                  children: [
+                    Text(
+                      'Green Way 3000, Sylhet',
+                      style: CustomTextStyle14.h1Medium14,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(
+                        Icons.arrow_drop_down,
+                        color: AppDarkColors.black1,
                       ),
-                      const Spacer(),
-                      Text('WITHIN', style: CustomTextStyle11.fonts11w8)
-                    ],
-                  ),
+                    ),
+                    const Spacer(),
+                    Text('1 Hour', style: CustomTextStyle14.h1Medium14),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(
+                        Icons.arrow_drop_down,
+                        color: AppDarkColors.black1,
+                      ),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(left: 20, right: 20, bottom: 4),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Green Way 3000, Sylhet',
-                        style: CustomTextStyle14.h1Medium14,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: Icon(
-                          Icons.arrow_drop_down,
-                          color: AppDarkColors.black1,
-                        ),
-                      ),
-                      const Spacer(),
-                      Text('1 Hour', style: CustomTextStyle14.h1Medium14),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: Icon(
-                          Icons.arrow_drop_down,
-                          color: AppDarkColors.black1,
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -127,8 +124,8 @@ class _MyWidgetState extends State<HomeContent> {
               ],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
