@@ -40,17 +40,20 @@ class DealsItem extends StatelessWidget {
                     Positioned(
                       bottom: 6,
                       right: 6,
-                      child: Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                          color: AppColors.blue,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Icon(
-                          Icons.add,
-                          size: 12,
-                          color: AppDarkColors.black1,
+                      child: InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: AppColors.blue,
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Icon(
+                            Icons.add,
+                            size: 18,
+                            color: AppDarkColors.black1,
+                          ),
                         ),
                       ),
                     )
