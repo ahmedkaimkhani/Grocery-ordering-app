@@ -85,9 +85,9 @@ class _MyWidgetState extends State<HomeContent> {
         const SizedBox(
           height: 20,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SingleChildScrollView(
+        SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
