@@ -72,7 +72,7 @@ class _HomeViewState extends State<HomeView> {
   }
 }
 
-customAppBar() {
+customAppBar({IconData? iconS}) {
   return AppBar(
     toolbarHeight: 80,
     automaticallyImplyLeading: false,
@@ -84,8 +84,12 @@ customAppBar() {
         style: CustomTextStyle22.h1SemiBold22,
       ),
     ),
-    actions: const [
+    actions: [
       Padding(
+        padding: const EdgeInsets.only(right: 20, top: 12),
+        child: Icon(iconS),
+      ),
+      const Padding(
         padding: EdgeInsets.only(right: 20, top: 12),
         child: Icon(FontAwesomeIcons.cartShopping),
         // child: Image.asset("assets/images/logo.png"),

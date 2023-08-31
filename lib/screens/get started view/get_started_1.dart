@@ -5,7 +5,7 @@ import 'package:grocery_order_app_flutter/screens/get%20started%20view/widget/bu
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 class GetStartedView extends StatefulWidget {
-  GetStartedView({super.key});
+  const GetStartedView({super.key});
 
   @override
   State<GetStartedView> createState() => _GetStartedViewState();
@@ -20,15 +20,14 @@ class _GetStartedViewState extends State<GetStartedView> {
 
   @override
   Widget build(BuildContext context) {
-    final double height = MediaQuery.of(context).size.height * 1;
-    final double width = MediaQuery.of(context).size.width * 1;
+    final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: AppColors.blue,
       body: SafeArea(
         child: Padding(
-          padding:
-              const EdgeInsets.only(left: 35, right: 35, top: 40, bottom: 30),
+          padding: const EdgeInsets.only(top: 40, bottom: 30),
           child: Column(
             children: [
               Container(
@@ -43,55 +42,68 @@ class _GetStartedViewState extends State<GetStartedView> {
                       });
                     },
                     children: [
-                      Column(
-                        children: [
-                          Text(
-                            'Your holiday shopping delivered to Screen one',
-                            style: CustomTextStyle30.h1Bold30,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 35, right: 35),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Text(
+                                'Your holiday shopping delivered to Screen one',
+                                style: CustomTextStyle30.h1Bold30,
+                              ),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                'There\'s something for everyone to enjoy with Sweet Shop Favourites Screen 1',
+                                style: CustomTextStyle18.h1Medium18,
+                              ),
+                            ],
                           ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Text(
-                            'There\'s something for everyone to enjoy with Sweet Shop Favourites Screen 1',
-                            style: CustomTextStyle18.h1Medium18,
-                          ),
-                        ],
+                        ),
                       ),
-                      Column(
-                        children: [
-                          Text(
-                            'Your holiday shopping delivered to Screen two',
-                            style: CustomTextStyle30.h1Bold30,
+                      Padding(
+                        padding: const EdgeInsets.only(left: 35, right: 35),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Text(
+                                'Your holiday shopping delivered to Screen two',
+                                style: CustomTextStyle30.h1Bold30,
+                              ),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                'There\'s something for everyone to enjoy with Sweet Shop Favourites Screen 2',
+                                style: CustomTextStyle18.h1Medium18,
+                              ),
+                            ],
                           ),
-                          const SizedBox(
-                            height: 30,
-                          ),
-                          Text(
-                            'There\'s something for everyone to enjoy with Sweet Shop Favourites Screen 2',
-                            style: CustomTextStyle18.h1Medium18,
-                          ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
                 ),
               ),
-              Row(
-                children: List.generate(
-                    2,
-                    (index) => Padding(
-                          padding: const EdgeInsets.all(3),
-                          child: Container(
-                            height: activePage == index ? 7 : 5,
-                            width: activePage == index ? 45 : 25,
-                            decoration: BoxDecoration(
-                                color: activePage == index
-                                    ? AppDarkColors.black1
-                                    : AppDarkColors.black45,
-                                borderRadius: BorderRadius.circular(2)),
-                          ),
-                        )),
+              Padding(
+                padding: const EdgeInsets.only(left: 35, right: 35),
+                child: Row(
+                  children: List.generate(
+                      2,
+                      (index) => Padding(
+                            padding: const EdgeInsets.all(3),
+                            child: Container(
+                              height: activePage == index ? 7 : 5,
+                              width: activePage == index ? 45 : 25,
+                              decoration: BoxDecoration(
+                                  color: activePage == index
+                                      ? AppDarkColors.black1
+                                      : AppDarkColors.black45,
+                                  borderRadius: BorderRadius.circular(2)),
+                            ),
+                          )),
+                ),
               ),
               const SizedBox(
                 height: 50,
