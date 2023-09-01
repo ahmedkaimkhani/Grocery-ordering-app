@@ -11,7 +11,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Big & Small Fishes',
         'subtitle': 'Fresh from sea',
         'price': '\$36/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/fish.jpg',
         // Shops Products
         'product': [
           {
@@ -31,7 +31,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Halal Meats',
         'subtitle': 'Purity Meets Flavor',
         'price': '\$90/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/meat.jpeg',
         // Shops Products
         'product': [
           {'productname': 'Beef Steak', 'price': '\$325', 'image': 'imageURL'},
@@ -43,7 +43,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Seafood Sensations',
         'subtitle': 'Dive into Freshness',
         'price': '\$200/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/fish1.jpg',
         // Shops Products
         'product': [
           {
