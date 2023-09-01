@@ -9,6 +9,7 @@ List<Map<String, dynamic>> data = [
       // Shop 1 of Meants $ Fishes
       {
         'shopname': 'Big & Small Fishes',
+        'subtitle': 'Fresh from sea',
         'price': '\$36/KG',
         'image': 'imageURL',
         // Shops Products
@@ -28,6 +29,7 @@ List<Map<String, dynamic>> data = [
       // Shop 2 of Meants $ Fishes
       {
         'shopname': 'Halal Meats',
+        'subtitle': 'Purity Meets Flavor',
         'price': '\$90/KG',
         'image': 'imageURL',
         // Shops Products
@@ -39,6 +41,7 @@ List<Map<String, dynamic>> data = [
       // Shop 3 of Meants $ Fishes
       {
         'shopname': 'Seafood Sensations',
+        'subtitle': 'Dive into Freshness',
         'price': '\$200/KG',
         'image': 'imageURL',
         // Shops Products
@@ -61,6 +64,7 @@ List<Map<String, dynamic>> data = [
       // Shop 1 of Vegetables
       {
         'shopname': 'Garden of Eatables',
+        'subtitle': 'Fresh Greens, Every Day',
         'price': '\$36/KG',
         'image': 'imageURL',
         // Shops Products
@@ -72,6 +76,7 @@ List<Map<String, dynamic>> data = [
       // Shop 2 of Vegetables
       {
         'shopname': 'Fresh Harvest Market',
+        'subtitle': 'Greens Galore',
         'price': '\$90/KG',
         'image': 'imageURL',
         // Shops Products
@@ -83,6 +88,7 @@ List<Map<String, dynamic>> data = [
       // Shop 3 of Vegetables
       {
         'shopname': 'The Veggie Patch',
+        'subtitle': 'Your Veggie Wonderland',
         'price': '\$36/KG',
         'image': 'imageURL',
         // Shops Products
@@ -101,6 +107,7 @@ List<Map<String, dynamic>> data = [
       // Shop 1 of Fruits
       {
         'shopname': 'Juicy Delights Fruit',
+        'subtitle': 'Fresh and Flavorful Fruits',
         'price': '\$31/KG',
         'image': 'imageURL',
         // Shops Products
@@ -112,6 +119,7 @@ List<Map<String, dynamic>> data = [
       // Shop 2 of Fruits
       {
         'shopname': 'Pomegranate Palace',
+        'subtitle': 'Savor the Juicy Goodness',
         'price': '\$35/KG',
         'image': 'imageURL',
         // Shops Products
@@ -123,6 +131,7 @@ List<Map<String, dynamic>> data = [
       // Shop 3 of Fruits
       {
         'shopname': 'Exotic Fruit Oasis',
+        'subtitle': 'Nature\'s Sweetest Treasures',
         'price': '\$61/KG',
         'image': 'imageURL',
         // Shops Products
@@ -141,6 +150,7 @@ List<Map<String, dynamic>> data = [
       // Shop 1 of Tea Leaves
       {
         'shopname': 'TeaTreat Provisions',
+        'subtitle': 'A Journey in Every Cup',
         'price': '\$69/KG',
         'image': 'imageURL',
         // Shops Products
@@ -152,6 +162,7 @@ List<Map<String, dynamic>> data = [
       // Shop 2 of Tea Leaves
       {
         'shopname': 'Tea Leaf Treasures',
+        'subtitle': 'Crafting Tea Excellence',
         'price': '\$39/KG',
         'image': 'imageURL',
         // Shops Products
@@ -163,6 +174,7 @@ List<Map<String, dynamic>> data = [
       // Shop 3 of Tea Leaves
       {
         'shopname': 'The Flavorful Pantry',
+        'subtitle': 'Unwind with a Cup of Serenity',
         'price': '\$43/KG',
         'image': 'imageURL',
         // Shops Products
