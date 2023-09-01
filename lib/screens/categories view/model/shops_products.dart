@@ -133,4 +133,44 @@ List<Map<String, dynamic>> data = [
       }
     ]
   },
+  // Index 3
+  {
+    // Chip 4
+    'category': 'Tea Leaves',
+    'shops': [
+      // Shop 1 of Tea Leaves
+      {
+        'shopname': 'TeaTreat Provisions',
+        'price': '\$69/KG',
+        'image': 'imageURL',
+        // Shops Products
+        'product': [
+          {'productname': 'Tapal Tea', 'price': '\$90', 'image': 'imageURL'},
+          {'productname': 'Lipton', 'price': '\$69', 'image': 'imageURL'},
+        ]
+      },
+      // Shop 2 of Tea Leaves
+      {
+        'shopname': 'Tea Leaf Treasures',
+        'price': '\$39/KG',
+        'image': 'imageURL',
+        // Shops Products
+        'product': [
+          {'productname': 'Vital Tea', 'price': '\$51', 'image': 'imageURL'},
+          {'productname': 'Supreme Tea', 'price': '\$39', 'image': 'imageURL'},
+        ]
+      },
+      // Shop 3 of Tea Leaves
+      {
+        'shopname': 'The Flavorful Pantry',
+        'price': '\$43/KG',
+        'image': 'imageURL',
+        // Shops Products
+        'product': [
+          {'productname': 'Ahmed Tea', 'price': '\$94', 'image': 'imageURL'},
+          {'productname': 'Laiba Tea', 'price': '\$43', 'image': 'imageURL'},
+        ]
+      }
+    ]
+  },
 ];
