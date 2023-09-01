@@ -66,7 +66,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Garden of Eatables',
         'subtitle': 'Fresh Greens, Every Day',
         'price': '\$36/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/veg.jpg',
         // Shops Products
         'product': [
           {'productname': 'Tomatoes', 'price': '\$20', 'image': 'imageURL'},
@@ -78,7 +78,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Fresh Harvest Market',
         'subtitle': 'Greens Galore',
         'price': '\$90/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/veg1.jpg',
         // Shops Products
         'product': [
           {'productname': 'Potatoes', 'price': '\$15', 'image': 'imageURL'},
@@ -90,7 +90,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'The Veggie Patch',
         'subtitle': 'Your Veggie Wonderland',
         'price': '\$36/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/veg2.jpg',
         // Shops Products
         'product': [
           {'productname': 'Onions', 'price': '\$325', 'image': 'imageURL'},
@@ -109,7 +109,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Juicy Delights Fruit',
         'subtitle': 'Fresh and Flavorful Fruits',
         'price': '\$31/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/fruit.jpg',
         // Shops Products
         'product': [
           {'productname': 'Apples', 'price': '\$48', 'image': 'imageURL'},
@@ -121,7 +121,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Pomegranate Palace',
         'subtitle': 'Savor the Juicy Goodness',
         'price': '\$35/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/fruit1.jpg',
         // Shops Products
         'product': [
           {'productname': 'Oranges', 'price': '\$35', 'image': 'imageURL'},
@@ -133,7 +133,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Exotic Fruit Oasis',
         'subtitle': 'Nature\'s Sweetest Treasures',
         'price': '\$61/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/fruit2.png',
         // Shops Products
         'product': [
           {'productname': 'Strawberries', 'price': '\$61', 'image': 'imageURL'},
@@ -152,11 +152,11 @@ List<Map<String, dynamic>> data = [
         'shopname': 'TeaTreat Provisions',
         'subtitle': 'A Journey in Every Cup',
         'price': '\$69/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/tea.jpg',
         // Shops Products
         'product': [
           {'productname': 'Tapal Tea', 'price': '\$90', 'image': 'imageURL'},
-          {'productname': 'Lipton', 'price': '\$69', 'image': 'imageURL'},
+          {'productname': 'Ahmed Tea', 'price': '\$69', 'image': 'imageURL'},
         ]
       },
       // Shop 2 of Tea Leaves
@@ -164,11 +164,11 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Tea Leaf Treasures',
         'subtitle': 'Crafting Tea Excellence',
         'price': '\$39/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/tea1.webp',
         // Shops Products
         'product': [
           {'productname': 'Vital Tea', 'price': '\$51', 'image': 'imageURL'},
-          {'productname': 'Supreme Tea', 'price': '\$39', 'image': 'imageURL'},
+          {'productname': 'Lipton', 'price': '\$39', 'image': 'imageURL'},
         ]
       },
       // Shop 3 of Tea Leaves
@@ -176,10 +176,10 @@ List<Map<String, dynamic>> data = [
         'shopname': 'The Flavorful Pantry',
         'subtitle': 'Unwind with a Cup of Serenity',
         'price': '\$43/KG',
-        'image': 'imageURL',
+        'image': 'assets/images/tea2.webp',
         // Shops Products
         'product': [
-          {'productname': 'Ahmed Tea', 'price': '\$94', 'image': 'imageURL'},
+          {'productname': 'Supreme Tea', 'price': '\$94', 'image': 'imageURL'},
           {'productname': 'Laiba Tea', 'price': '\$43', 'image': 'imageURL'},
         ]
       }
