@@ -49,14 +49,22 @@ class _CategoriesViewState extends State<CategoriesView> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
-              padding: const EdgeInsets.only(left: 20, top: 20),
+              padding: const EdgeInsets.only(left: 20, top: 20, right: 12),
               child: Row(
                 children: data
-                    .map((categoryData) => FilterChip(
-                          showCheckmark: false,
-                          selectedColor: AppColors.orange,
-                          label: Text(categoryData['category']),
-                          onSelected: (value) {},
+                    .map((categoryData) => Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: FilterChip(
+                            showCheckmark: false,
+                            selectedColor: AppColors.orange,
+                            label: Text(categoryData['category']),
+                            onSelected: (selected) {
+                              setState(() {
+                                selectedCategory = categoryData['category'];
+                                selectedShop = {};
+                              });
+                            },
+                          ),
                         ))
                     .toList(),
               ),
