@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
+
 import '../../constants/app_colors.dart';
 
 class CategoriesView extends StatefulWidget {
@@ -12,8 +13,8 @@ class CategoriesView extends StatefulWidget {
 }
 
 class _CategoriesViewState extends State<CategoriesView> {
-  String? selectedCategory;
-  Map<String, dynamic>? selectedShop;
+  late String selectedCategory;
+  late Map<String, dynamic> selectedShop;
 
   @override
   Widget build(BuildContext context) {
@@ -54,67 +55,37 @@ class _CategoriesViewState extends State<CategoriesView> {
                 children: data
                     .map((categoryData) => Padding(
                           padding: const EdgeInsets.only(right: 8),
-                          child: FilterChip(
-                            label: Text(categoryData['category']),
-                            selected:
-                                selectedCategory == categoryData['category'],
+                          child: ActionChip(
                             backgroundColor: AppColors.orange,
-                            onSelected: (selected) {
-                              setState(() {
-                                selectedCategory =
-                                    selected ? categoryData['category'] : null;
-                                selectedShop = null;
-                              });
-                            },
+                            label: Text(categoryData['category']),
+                            onPressed: (() {}),
                           ),
                         ))
                     .toList(),
               ),
             ),
           ),
+          // Padding(
+          //   padding: const EdgeInsets.only(left: 20, right: 20),
+          //   child: Column(
+          //     children: [condition()],
+          //   ),
+          // )
         ],
       ),
     );
   }
 
-  selected() {
-    if (selectedCategory != null) {
-      Column(
-        children: [
-          Text(
-            'Shops in $selectedCategory:',
-            style: TextStyle(fontSize: 18),
-          ),
-          SizedBox(height: 10),
-          // Display shops in the selected category
-          _buildShopList(),
-        ],
-      );
-    }
-  }
-
-  Widget _buildShopList() {
-    // Find the data for the selected category
-    final categoryData = data.firstWhere(
-      (category) => category['category'] == selectedCategory,
-    );
-
-    // Extract the list of shops within the selected category
-    final List<Map<String, dynamic>> shops = categoryData['shops'];
-
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: shops.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(shops[index]['name']),
-          onTap: () {
-            setState(() {
-              selectedShop = shops[index];
-            });
-          },
-        );
-      },
-    );
-  }
+  // condition() {
+  //   if (selectedCategory.isNotEmpty) {
+  //     Column(
+  //       children: [
+  //         Text(
+  //           'Shops in $selectedCategory:',
+  //           style: TextStyle(fontSize: 18),
+  //         ),
+  //       ],
+  //     );
+  //   }
+  // }
 }
