@@ -12,8 +12,8 @@ class CategoriesView extends StatefulWidget {
 }
 
 class _CategoriesViewState extends State<CategoriesView> {
-  late String selectedCategory;
-  late Map<String, dynamic> selectedShop;
+  String? selectedCategory;
+  Map<String, dynamic>? selectedShop;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,11 @@ class _CategoriesViewState extends State<CategoriesView> {
                                 selectedCategory == categoryData['category'],
                             backgroundColor: AppColors.orange,
                             onSelected: (selected) {
-                              setState(() {});
+                              setState(() {
+                                selectedCategory =
+                                    selected ? categoryData['category'] : null;
+                                selectedShop = null;
+                              });
                             },
                           ),
                         ))
@@ -68,27 +72,49 @@ class _CategoriesViewState extends State<CategoriesView> {
               ),
             ),
           ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 20, right: 20),
-          //   child: Column(
-          //     children: [condition()],
-          //   ),
-          // )
         ],
       ),
     );
   }
 
-  // condition() {
-  //   if (selectedCategory.isNotEmpty) {
-  //     Column(
-  //       children: [
-  //         Text(
-  //           'Shops in $selectedCategory:',
-  //           style: TextStyle(fontSize: 18),
-  //         ),
-  //       ],
-  //     );
-  //   }
-  // }
+  selected() {
+    if (selectedCategory != null) {
+      Column(
+        children: [
+          Text(
+            'Shops in $selectedCategory:',
+            style: TextStyle(fontSize: 18),
+          ),
+          SizedBox(height: 10),
+          // Display shops in the selected category
+          _buildShopList(),
+        ],
+      );
+    }
+  }
+
+  Widget _buildShopList() {
+    // Find the data for the selected category
+    final categoryData = data.firstWhere(
+      (category) => category['category'] == selectedCategory,
+    );
+
+    // Extract the list of shops within the selected category
+    final List<Map<String, dynamic>> shops = categoryData['shops'];
+
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: shops.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(shops[index]['name']),
+          onTap: () {
+            setState(() {
+              selectedShop = shops[index];
+            });
+          },
+        );
+      },
+    );
+  }
 }
