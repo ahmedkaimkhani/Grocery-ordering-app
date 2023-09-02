@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
-
 import '../../constants/app_colors.dart';
 
 class CategoriesView extends StatefulWidget {
@@ -55,10 +54,14 @@ class _CategoriesViewState extends State<CategoriesView> {
                 children: data
                     .map((categoryData) => Padding(
                           padding: const EdgeInsets.only(right: 8),
-                          child: ActionChip(
-                            backgroundColor: AppColors.orange,
+                          child: FilterChip(
                             label: Text(categoryData['category']),
-                            onPressed: (() {}),
+                            selected:
+                                selectedCategory == categoryData['category'],
+                            backgroundColor: AppColors.orange,
+                            onSelected: (selected) {
+                              setState(() {});
+                            },
                           ),
                         ))
                     .toList(),
