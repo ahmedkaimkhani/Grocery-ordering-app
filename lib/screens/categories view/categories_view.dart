@@ -55,71 +55,37 @@ class _CategoriesViewState extends State<CategoriesView> {
                 children: data
                     .map((categoryData) => Padding(
                           padding: const EdgeInsets.only(right: 8),
-                          child: FilterChip(
-                            showCheckmark: false,
-                            selectedColor: AppColors.orange,
+                          child: ActionChip(
+                            backgroundColor: AppColors.orange,
                             label: Text(categoryData['category']),
-                            onSelected: (selected) {
-                              setState(() {
-                                selectedCategory = categoryData['category'];
-                                selectedShop = {};
-                              });
-                            },
+                            onPressed: (() {}),
                           ),
                         ))
                     .toList(),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Column(
-              children: [condition()],
-            ),
-          )
+          // Padding(
+          //   padding: const EdgeInsets.only(left: 20, right: 20),
+          //   child: Column(
+          //     children: [condition()],
+          //   ),
+          // )
         ],
       ),
     );
   }
 
-  condition() {
-    if (selectedCategory.isNotEmpty) {
-      Column(
-        children: [
-          Text(
-            'Shops in $selectedCategory:',
-            style: TextStyle(fontSize: 18),
-          ),
-          SizedBox(height: 10),
-          // Display shops in the selected category
-          _buildShopList(),
-        ],
-      );
-    }
-  }
-
-  Widget _buildShopList() {
-    // Find the data for the selected category
-    final categoryData = data.firstWhere(
-      (category) => category['category'] == selectedCategory,
-    );
-
-    // Extract the list of shops within the selected category
-    final List<Map<String, dynamic>> shops = categoryData['shops'];
-
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: shops.length,
-      itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(shops[index]['shopname']),
-          onTap: () {
-            setState(() {
-              selectedShop = shops[index];
-            });
-          },
-        );
-      },
-    );
-  }
+  // condition() {
+  //   if (selectedCategory.isNotEmpty) {
+  //     Column(
+  //       children: [
+  //         Text(
+  //           'Shops in $selectedCategory:',
+  //           style: TextStyle(fontSize: 18),
+  //         ),
+  //       ],
+  //     );
+  //   }
+  // }
 }
