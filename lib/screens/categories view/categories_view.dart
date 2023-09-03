@@ -107,13 +107,29 @@ class _CategoriesViewState extends State<CategoriesView> {
       itemCount: shops.length,
       itemBuilder: (context, index) {
         final shopData = shops[index];
-        return ListTile(
-          title: Text(shopData['shopname']),
-          subtitle: Text(shopData['subtitle']),
-          // You can add more shop details here if needed
-          onTap: () {
-            // Handle shop selection if needed
-          },
+        return Container(
+          child: Row(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.asset(
+                  shopData['image'],
+                  height: 165,
+                  width: 135,
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    shopData['shopname'],
+                    style: CustomTextStyle18.h1Bold318,
+                  ),
+                  Text(shopData['subtitle']),
+                ],
+              )
+            ],
+          ),
         );
       },
     );
@@ -131,3 +147,12 @@ class _CategoriesViewState extends State<CategoriesView> {
   //   }
   // }
 }
+
+// ListTile(
+          // title: Text(shopData['shopname']),
+          // subtitle: Text(shopData['subtitle']),
+//           // You can add more shop details here if needed
+//           onTap: () {
+//             // Handle shop selection if needed
+//           },
+//         );
