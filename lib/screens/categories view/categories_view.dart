@@ -131,27 +131,30 @@ class _CategoriesViewState extends State<CategoriesView> {
                 Expanded(
                   child: Container(
                     color: Colors.red,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          shopData['shopname'],
-                          style: CustomTextStyle18.h1Bold318,
-                          softWrap: true,
-                        ),
-                        Text(shopData['subtitle'],
-                            style: CustomTextColor16.h1Regular16),
-                        Spacer(),
-                        Text(
-                          AppText.byShopCtgPageText,
-                          style: CustomTextStyle14.h1Regular14,
-                        ),
-                        Text(
-                          shopData['price'],
-                          style: CustomTextColor16.h1SemiBold16,
-                        )
-                      ],
+                    child: Container(
+                      height: 145,
+                      child: Column(
+                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            shopData['shopname'],
+                            style: CustomTextStyle18.h1Bold318,
+                            softWrap: true,
+                          ),
+                          Text(shopData['subtitle'],
+                              style: CustomTextColor16.h1Regular16),
+                          Spacer(),
+                          Text(
+                            AppText.byShopCtgPageText,
+                            style: CustomTextStyle14.h1Regular14,
+                          ),
+                          Text(
+                            shopData['price'],
+                            style: CustomTextColor16.h1SemiBold16,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
