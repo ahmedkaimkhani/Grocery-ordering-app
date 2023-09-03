@@ -124,16 +124,19 @@ class _CategoriesViewState extends State<CategoriesView> {
                     ),
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      shopData['shopname'],
-                      style: CustomTextStyle18.h1Bold318,
-                      softWrap: true,
-                    ),
-                    Text(shopData['subtitle']),
-                  ],
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        shopData['shopname'],
+                        style: CustomTextStyle18.h1Bold318,
+                        softWrap: true,
+                      ),
+                      Text(shopData['subtitle'],
+                          style: CustomTextColor16.h1Regular16),
+                    ],
+                  ),
                 )
               ],
             ),

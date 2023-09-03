@@ -208,3 +208,11 @@ class CustomTextStyle45 {
     color: AppDarkColors.black1,
   );
 }
+
+class CustomTextColor16 {
+  static TextStyle h1Regular16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: AppDarkColors.black60,
+  );
+}
