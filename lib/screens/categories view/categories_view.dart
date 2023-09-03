@@ -110,6 +110,7 @@ class _CategoriesViewState extends State<CategoriesView> {
               bottom: 30,
             ),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   decoration:
@@ -126,6 +127,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                 ),
                 Expanded(
                   child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -135,6 +137,15 @@ class _CategoriesViewState extends State<CategoriesView> {
                       ),
                       Text(shopData['subtitle'],
                           style: CustomTextColor16.h1Regular16),
+                      Spacer(),
+                      Text(
+                        AppText.byShopCtgPageText,
+                        style: CustomTextStyle14.h1Regular14,
+                      ),
+                      Text(
+                        shopData['price'],
+                        style: CustomTextColor16.h1SemiBold16,
+                      )
                     ],
                   ),
                 )
