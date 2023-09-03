@@ -106,7 +106,6 @@ class _CategoriesViewState extends State<CategoriesView> {
         return Container(
           child: Padding(
             padding: const EdgeInsets.only(
-              left: 20,
               bottom: 30,
             ),
             child: Row(
@@ -137,7 +136,6 @@ class _CategoriesViewState extends State<CategoriesView> {
                       ),
                       Text(shopData['subtitle'],
                           style: CustomTextColor16.h1Regular16),
-                      Spacer(),
                       Text(
                         AppText.byShopCtgPageText,
                         style: CustomTextStyle14.h1Regular14,
