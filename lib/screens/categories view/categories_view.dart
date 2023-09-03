@@ -50,7 +50,7 @@ class _CategoriesViewState extends State<CategoriesView> {
             scrollDirection: Axis.horizontal,
             child: Padding(
               padding: const EdgeInsets.only(
-                  left: 20, top: 20, right: 12, bottom: 25),
+                  left: 20, top: 20, right: 12, bottom: 20),
               child: Row(
                 children: data
                     .map((categoryData) => Padding(
@@ -59,7 +59,10 @@ class _CategoriesViewState extends State<CategoriesView> {
                             selected:
                                 selectedCategory == categoryData['category'],
                             backgroundColor: AppColors.orange,
-                            label: Text(categoryData['category']),
+                            label: Padding(
+                              padding: const EdgeInsets.all(6.0),
+                              child: Text(categoryData['category']),
+                            ),
                             onSelected: (selected) {
                               setState(() {
                                 if (selected) {
@@ -80,7 +83,7 @@ class _CategoriesViewState extends State<CategoriesView> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Column(
                 children: [
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   // Display shops in the selected category
                   _buildShopList(selectedCategory!),
                 ],
@@ -126,7 +129,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                 ),
                 Expanded(
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
