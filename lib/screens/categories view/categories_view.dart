@@ -80,10 +80,6 @@ class _CategoriesViewState extends State<CategoriesView> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Column(
                 children: [
-                  Text(
-                    'Shops in $selectedCategory:',
-                    style: const TextStyle(fontSize: 18),
-                  ),
                   SizedBox(height: 10),
                   // Display shops in the selected category
                   _buildShopList(selectedCategory!),
@@ -108,27 +104,37 @@ class _CategoriesViewState extends State<CategoriesView> {
       itemBuilder: (context, index) {
         final shopData = shops[index];
         return Container(
-          child: Row(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset(
-                  shopData['image'],
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20, bottom: 30),
+            child: Row(
+              children: [
+                Container(
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(15)),
                   height: 165,
                   width: 135,
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    shopData['shopname'],
-                    style: CustomTextStyle18.h1Bold318,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      shopData['image'],
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  Text(shopData['subtitle']),
-                ],
-              )
-            ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Wrap(children: [
+                      Text(
+                        shopData['shopname'],
+                        style: CustomTextStyle18.h1Bold318,
+                      ),
+                    ]),
+                    Text(shopData['subtitle']),
+                  ],
+                )
+              ],
+            ),
           ),
         );
       },

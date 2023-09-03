@@ -31,7 +31,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Halal Meats',
         'subtitle': 'Purity Meets Flavor',
         'price': '\$90/KG',
-        'image': 'assets/images/meat.jpeg',
+        'image': 'assets/images/meat.jpg',
         // Shops Products
         'product': [
           {'productname': 'Beef Steak', 'price': '\$325', 'image': 'imageURL'},
