@@ -13,8 +13,8 @@ class CategoriesView extends StatefulWidget {
 }
 
 class _CategoriesViewState extends State<CategoriesView> {
-  late String selectedCategory;
-  late Map<String, dynamic> selectedShop;
+  String? selectedCategory;
+  // late Map<String, dynamic> selectedShop;
 
   @override
   Widget build(BuildContext context) {
@@ -55,27 +55,69 @@ class _CategoriesViewState extends State<CategoriesView> {
                 children: data
                     .map((categoryData) => Padding(
                           padding: const EdgeInsets.only(right: 8),
-                          child: ActionChip(
+                          child: FilterChip(
+                            selected:
+                                selectedCategory == categoryData['category'],
                             backgroundColor: AppColors.orange,
                             label: Text(categoryData['category']),
-                            onPressed: (() {}),
+                            onSelected: (selected) {
+                              setState(() {
+                                if (selected) {
+                                  selectedCategory = categoryData['category'];
+                                } else {
+                                  selectedCategory = null;
+                                }
+                              });
+                            },
                           ),
                         ))
                     .toList(),
               ),
             ),
           ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 20, right: 20),
-          //   child: Column(
-          //     children: [condition()],
-          //   ),
-          // )
+          if (selectedCategory != null)
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                children: [
+                  Text(
+                    'Shops in $selectedCategory:',
+                    style: const TextStyle(fontSize: 18),
+                  ),
+                  SizedBox(height: 10),
+                  // Display shops in the selected category
+                  _buildShopList(selectedCategory!),
+                ],
+              ),
+            )
         ],
       ),
     );
   }
 
+  Widget _buildShopList(String category) {
+    final categoryData = data.firstWhere(
+      (categoryData) => categoryData['category'] == category,
+    );
+
+    final List<Map<String, dynamic>> shops = categoryData['shops'];
+
+    return ListView.builder(
+      shrinkWrap: true,
+      itemCount: shops.length,
+      itemBuilder: (context, index) {
+        final shopData = shops[index];
+        return ListTile(
+          title: Text(shopData['shopname']),
+          subtitle: Text(shopData['subtitle']),
+          // You can add more shop details here if needed
+          onTap: () {
+            // Handle shop selection if needed
+          },
+        );
+      },
+    );
+  }
   // condition() {
   //   if (selectedCategory.isNotEmpty) {
   //     Column(
