@@ -105,7 +105,10 @@ class _CategoriesViewState extends State<CategoriesView> {
         final shopData = shops[index];
         return Container(
           child: Padding(
-            padding: const EdgeInsets.only(left: 20, bottom: 30),
+            padding: const EdgeInsets.only(
+              left: 20,
+              bottom: 30,
+            ),
             child: Row(
               children: [
                 Container(
@@ -128,6 +131,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                       Text(
                         shopData['shopname'],
                         style: CustomTextStyle18.h1Bold318,
+                        softWrap: true,
                       ),
                     ]),
                     Text(shopData['subtitle']),
