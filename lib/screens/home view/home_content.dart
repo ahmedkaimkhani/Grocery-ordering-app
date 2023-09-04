@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/custom_deal.dart';
-import 'package:grocery_order_app_flutter/screens/home%20view/widgets/deals_item.dart';
+import 'package:grocery_order_app_flutter/screens/home%20view/widgets/grid_item.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
@@ -123,7 +123,7 @@ class _MyWidgetState extends State<HomeContent> {
                 const SizedBox(
                   height: 22,
                 ),
-                const DealsItem(),
+                const CustomGridViewItem(),
               ],
             ),
           ),

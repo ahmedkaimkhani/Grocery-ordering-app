@@ -57,12 +57,15 @@ class _CategoriesViewState extends State<CategoriesView> {
                           padding: const EdgeInsets.only(right: 8),
                           child: FilterChip(
                             showCheckmark: false,
+                            selectedColor: AppColors.orange,
                             selected:
                                 selectedCategory == categoryData['category'],
-                            backgroundColor: AppColors.orange,
+                            backgroundColor: AppDarkColors.black1,
                             label: Padding(
                               padding: const EdgeInsets.all(6.0),
-                              child: Text(categoryData['category']),
+                              child: Text(
+                                categoryData['category'],
+                              ),
                             ),
                             onSelected: (selected) {
                               setState(() {

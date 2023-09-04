@@ -4,8 +4,8 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 
 import '../../../list item data/deals_fruit_tea.dart';
 
-class DealsItem extends StatelessWidget {
-  const DealsItem({super.key});
+class CustomGridViewItem extends StatelessWidget {
+  const CustomGridViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
