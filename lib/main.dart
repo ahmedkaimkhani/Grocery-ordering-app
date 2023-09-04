@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/app_fonts.dart';
+import 'package:grocery_order_app_flutter/screens/categories%20view/shops%20products/products.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/grid_item.dart';
 
@@ -18,14 +19,15 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(
         const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Grocery App',
-      theme: ThemeData(
-          backgroundColor: AppDarkColors.black1,
-          appBarTheme: AppBarTheme(
-            color: AppColors.blue,
-          )),
-      home: const GetStartedView(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Grocery App',
+        theme: ThemeData(
+            backgroundColor: AppDarkColors.black1,
+            appBarTheme: AppBarTheme(
+              color: AppColors.blue,
+            )),
+        home: const ShopProductsView()
+        // GetStartedView(),
+        );
   }
 }

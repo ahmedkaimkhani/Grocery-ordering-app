@@ -215,6 +215,11 @@ class CustomTextColor16 {
     fontWeight: FontWeight.normal,
     color: AppDarkColors.black60,
   );
+  static TextStyle h1RegularBlack = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+    color: AppDarkColors.black100,
+  );
   static TextStyle h1SemiBold16 = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,

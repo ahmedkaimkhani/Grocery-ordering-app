@@ -52,6 +52,7 @@ class _HomeViewState extends State<HomeView> {
         animationDuration: const Duration(milliseconds: 300),
         color: AppColors.blue,
         backgroundColor: AppDarkColors.black1,
+        animationCurve: Curves.slowMiddle,
       ),
       // Body Content
       body: SafeArea(child: getSelectedWidget(index: index)),
