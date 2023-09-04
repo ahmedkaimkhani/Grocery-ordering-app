@@ -67,8 +67,6 @@ class _CategoriesViewState extends State<CategoriesView> {
                               setState(() {
                                 if (selected) {
                                   selectedCategory = categoryData['category'];
-                                } else {
-                                  selectedCategory = null;
                                 }
                               });
                             },
@@ -133,7 +131,6 @@ class _CategoriesViewState extends State<CategoriesView> {
                 child: Container(
                   height: 145,
                   child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -168,18 +165,6 @@ class _CategoriesViewState extends State<CategoriesView> {
       },
     );
   }
-  // condition() {
-  //   if (selectedCategory.isNotEmpty) {
-  //     Column(
-  //       children: [
-  //         Text(
-  //           'Shops in $selectedCategory:',
-  //           style: TextStyle(fontSize: 18),
-  //         ),
-  //       ],
-  //     );
-  //   }
-  // }
 }
 
 // ListTile(
