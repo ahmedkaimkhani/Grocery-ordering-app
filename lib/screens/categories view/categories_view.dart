@@ -106,60 +106,63 @@ class _CategoriesViewState extends State<CategoriesView> {
       itemCount: shops.length,
       itemBuilder: (context, index) {
         final shopData = shops[index];
-        return Container(
-          color: Colors.grey,
-          child: Padding(
-            padding: const EdgeInsets.only(
-              bottom: 30,
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(15)),
-                  height: 165,
-                  width: 135,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15),
-                    child: Image.asset(
-                      shopData['image'],
-                      fit: BoxFit.cover,
-                    ),
+        return Padding(
+          padding: const EdgeInsets.only(
+            bottom: 30,
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                height: 165,
+                width: 135,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.asset(
+                    shopData['image'],
+                    fit: BoxFit.cover,
                   ),
                 ),
-                Expanded(
-                  child: Container(
-                    color: Colors.red,
-                    child: Container(
-                      height: 145,
-                      child: Column(
-                        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            shopData['shopname'],
-                            style: CustomTextStyle18.h1Bold318,
-                            softWrap: true,
-                          ),
-                          Text(shopData['subtitle'],
-                              style: CustomTextColor16.h1Regular16),
-                          Spacer(),
-                          Text(
-                            AppText.byShopCtgPageText,
-                            style: CustomTextStyle14.h1Regular14,
-                          ),
-                          Text(
-                            shopData['price'],
-                            style: CustomTextColor16.h1SemiBold16,
-                          )
-                        ],
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Expanded(
+                child: Container(
+                  height: 145,
+                  child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        shopData['shopname'],
+                        style: CustomTextStyle18.h1Bold318,
+                        softWrap: true,
                       ),
-                    ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(shopData['subtitle'],
+                          style: CustomTextColor16.h1Regular16),
+                      const Spacer(),
+                      Text(
+                        AppText.byShopCtgPageText,
+                        style: CustomTextStyle14.h1Regular14,
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        shopData['price'],
+                        style: CustomTextColor16.h1SemiBold16,
+                      )
+                    ],
                   ),
-                )
-              ],
-            ),
+                ),
+              )
+            ],
           ),
         );
       },

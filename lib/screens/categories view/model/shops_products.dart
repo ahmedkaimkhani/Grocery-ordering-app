@@ -11,7 +11,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Big & Small Fishes',
         'subtitle': 'Fresh from sea',
         'price': '\$36/KG',
-        'image': 'assets/images/fish.jpg',
+        'image': 'assets/images/fish1.jpg',
         // Shops Products
         'product': [
           {
@@ -43,7 +43,7 @@ List<Map<String, dynamic>> data = [
         'shopname': 'Seafood Sensations',
         'subtitle': 'Dive into Freshness',
         'price': '\$200/KG',
-        'image': 'assets/images/fish1.jpg',
+        'image': 'assets/images/fish.jpg',
         // Shops Products
         'product': [
           {
