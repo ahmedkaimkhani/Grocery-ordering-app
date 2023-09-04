@@ -81,12 +81,14 @@ class _CategoriesViewState extends State<CategoriesView> {
           if (selectedCategory != null)
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Column(
-                children: [
-                  const SizedBox(height: 10),
-                  // Display shops in the selected category
-                  _buildShopList(selectedCategory!),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const SizedBox(height: 10),
+                    // Display shops in the selected category
+                    _buildShopList(selectedCategory!),
+                  ],
+                ),
               ),
             )
         ],
