@@ -56,6 +56,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                     .map((categoryData) => Padding(
                           padding: const EdgeInsets.only(right: 8),
                           child: FilterChip(
+                            showCheckmark: false,
                             selected:
                                 selectedCategory == categoryData['category'],
                             backgroundColor: AppColors.orange,
