@@ -67,6 +67,8 @@ class _CategoriesViewState extends State<CategoriesView> {
                               setState(() {
                                 if (selected) {
                                   selectedCategory = categoryData['category'];
+                                } else {
+                                  selectedCategory = null;
                                 }
                               });
                             },
@@ -131,6 +133,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                 child: Container(
                   height: 145,
                   child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
