@@ -15,12 +15,38 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Clown Tang.H03',
             'price': '\$325',
-            'image': 'assets/images/fish1.jpg'
+            'image':
+                'https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351618_2ggRlHpK6pSwjUNtgMqhdaYliUYA5Jox.jpg'
           },
           {
             'productname': 'Clownfish.H03',
             'price': '\$89',
-            'image': 'assets/images/fish1.jpg'
+            'image':
+                'https://www.biometic.com/wp-content/uploads/2021/09/food_quality_problems_fish_meat_industry_food_inspection-scaled.jpg'
+          },
+          {
+            'productname': 'Crispy Cod Fillets',
+            'price': '\$110',
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/287/338/512/meat-fish-pieces-cabbage-wallpaper-preview.jpg'
+          },
+          {
+            'productname': 'Spicy Tuna Tacos',
+            'price': '\$88',
+            'image':
+                'https://www.wallpaperflare.com/static/405/419/819/food-lunch-sliced-raw-wallpaper.jpg'
+          },
+          {
+            'productname': 'Grilled Swordfish Steaks',
+            'price': '\$95',
+            'image':
+                'https://pluspng.com/img-png/fish-and-meat-png-salmon-fish-meat-png-image-and-clipart-650.jpg'
+          },
+          {
+            'productname': 'Lobster Bisque',
+            'price': '\$99',
+            'image':
+                'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-photo%2Fsalmon-trout-steak-slice-fresh-raw-fish-isolated-white-background_16586639.htm&psig=AOvVaw1MOBg54yIQMOexw1oh_9dM&ust=1694032165647000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiuhN6nlIEDFQAAAAAdAAAAABAY'
           },
         ]
       },
