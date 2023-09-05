@@ -23,7 +23,7 @@ class CustomGridViewItem extends StatelessWidget {
         mainAxisSpacing: 12,
         mainAxisExtent: 210,
       ),
-      itemCount: itemLenght ?? dealItems.length,
+      itemCount: dealItems.length,
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(

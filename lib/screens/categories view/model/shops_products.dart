@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 List<Map<String, dynamic>> data = [
   // Index 0
   {
@@ -81,8 +79,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/veg.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Tomatoes', 'price': '\$20', 'image': 'imageURL'},
-          {'productname': 'Cabbage', 'price': '\$45', 'image': 'imageURL'},
+          {
+            'productname': 'Tomatoes',
+            'price': '\$20',
+            'image': 'assets/images/veg.jpg'
+          },
+          {
+            'productname': 'Cabbage',
+            'price': '\$45',
+            'image': 'assets/images/veg.jpg'
+          },
         ]
       },
       // Shop 2 of Vegetables
@@ -93,8 +99,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/veg1.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Potatoes', 'price': '\$15', 'image': 'imageURL'},
-          {'productname': 'Carrots', 'price': '\$32', 'image': 'imageURL'},
+          {
+            'productname': 'Potatoes',
+            'price': '\$15',
+            'image': 'assets/images/veg1.jpg'
+          },
+          {
+            'productname': 'Carrots',
+            'price': '\$32',
+            'image': 'assets/images/veg1.jpg'
+          },
         ]
       },
       // Shop 3 of Vegetables
@@ -105,8 +119,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/veg2.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Onions', 'price': '\$325', 'image': 'imageURL'},
-          {'productname': 'Mushrooms', 'price': '\$89', 'image': 'imageURL'},
+          {
+            'productname': 'Onions',
+            'price': '\$325',
+            'image': 'assets/images/veg2.jpg'
+          },
+          {
+            'productname': 'Mushrooms',
+            'price': '\$89',
+            'image': 'assets/images/veg2.jpg'
+          },
         ]
       }
     ]
@@ -124,8 +146,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/fruit.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Apples', 'price': '\$48', 'image': 'imageURL'},
-          {'productname': 'Bananas', 'price': '\$31', 'image': 'imageURL'},
+          {
+            'productname': 'Apples',
+            'price': '\$48',
+            'image': 'assets/images/fruit.jpg'
+          },
+          {
+            'productname': 'Bananas',
+            'price': '\$31',
+            'image': 'assets/images/fruit.jpg'
+          },
         ]
       },
       // Shop 2 of Fruits
@@ -136,8 +166,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/fruit1.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Oranges', 'price': '\$35', 'image': 'imageURL'},
-          {'productname': 'Grapes', 'price': '\$43', 'image': 'imageURL'},
+          {
+            'productname': 'Oranges',
+            'price': '\$35',
+            'image': 'assets/images/fruit1.jpg'
+          },
+          {
+            'productname': 'Grapes',
+            'price': '\$43',
+            'image': 'assets/images/fruit1.jpg'
+          },
         ]
       },
       // Shop 3 of Fruits
@@ -148,8 +186,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/fruit2.png',
         // Shops Products
         'product': [
-          {'productname': 'Strawberries', 'price': '\$61', 'image': 'imageURL'},
-          {'productname': 'Mangoes', 'price': '\$90', 'image': 'imageURL'},
+          {
+            'productname': 'Strawberries',
+            'price': '\$61',
+            'image': 'assets/images/fruit2.png'
+          },
+          {
+            'productname': 'Mangoes',
+            'price': '\$90',
+            'image': 'assets/images/fruit2.png'
+          },
         ]
       }
     ]
@@ -167,8 +213,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/tea.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Tapal Tea', 'price': '\$90', 'image': 'imageURL'},
-          {'productname': 'Ahmed Tea', 'price': '\$69', 'image': 'imageURL'},
+          {
+            'productname': 'Tapal Tea',
+            'price': '\$90',
+            'image': 'assets/images/tea.jpg'
+          },
+          {
+            'productname': 'Ahmed Tea',
+            'price': '\$69',
+            'image': 'assets/images/tea.jpg'
+          },
         ]
       },
       // Shop 2 of Tea Leaves
@@ -179,8 +233,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/tea1.webp',
         // Shops Products
         'product': [
-          {'productname': 'Vital Tea', 'price': '\$51', 'image': 'imageURL'},
-          {'productname': 'Lipton', 'price': '\$39', 'image': 'imageURL'},
+          {
+            'productname': 'Vital Tea',
+            'price': '\$51',
+            'image': 'assets/images/tea1.webp'
+          },
+          {
+            'productname': 'Lipton',
+            'price': '\$39',
+            'image': 'assets/images/tea1.webp'
+          },
         ]
       },
       // Shop 3 of Tea Leaves
@@ -191,8 +253,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/tea2.webp',
         // Shops Products
         'product': [
-          {'productname': 'Supreme Tea', 'price': '\$94', 'image': 'imageURL'},
-          {'productname': 'Laiba Tea', 'price': '\$43', 'image': 'imageURL'},
+          {
+            'productname': 'Supreme Tea',
+            'price': '\$94',
+            'image': 'assets/images/tea2.webp'
+          },
+          {
+            'productname': 'Laiba Tea',
+            'price': '\$43',
+            'image': 'assets/images/tea2.webp'
+          },
         ]
       }
     ]
