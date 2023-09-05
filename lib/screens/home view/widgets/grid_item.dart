@@ -48,15 +48,15 @@ class CustomGridViewItem extends StatelessWidget {
                       child: InkWell(
                         onTap: () {},
                         child: Container(
-                          height: 30,
-                          width: 30,
+                          height: 25,
+                          width: 25,
                           decoration: BoxDecoration(
                             color: AppColors.blue,
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Icon(
                             Icons.add,
-                            size: 18,
+                            size: 15,
                             color: AppDarkColors.black1,
                           ),
                         ),

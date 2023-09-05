@@ -73,12 +73,49 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Beef Steak',
             'price': '\$325',
-            'image': 'assets/images/meat.jpg'
+            'image':
+                'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'
           },
           {
             'productname': 'Quail Meat',
             'price': '\$150',
-            'image': 'assets/images/meat.jpg'
+            'image': 'https://wallpaperaccess.com/full/1462795.jpg'
+          },
+          {
+            'productname': 'Smoky BBQ Ribs',
+            'price': '\$200',
+            'image':
+                'https://watermark.lovepik.com/photo/20211121/large/lovepik-beef-picture_500550952.jpg'
+          },
+          {
+            'productname': 'Spicy Chicken Wings',
+            'price': '\$180',
+            'image':
+                'https://img.freepik.com/premium-photo/raw-chicken-meat-white-background_58830-688.jpg'
+          },
+          {
+            'productname': 'Gourmet Meatballs',
+            'price': '\$185',
+            'image':
+                'https://cdn.pixabay.com/photo/2018/02/08/15/02/meat-3139641_640.jpg'
+          },
+          {
+            'productname': 'Gourmet Meatballs',
+            'price': '\$210',
+            'image':
+                'https://e1.pxfuel.com/desktop-wallpaper/20/639/desktop-wallpaper-raw-meat-1920x1080-raw-meat-thumbnail.jpg'
+          },
+          {
+            'productname': 'Goulash Galore',
+            'price': '\$205',
+            'image':
+                'https://e0.pxfuel.com/wallpapers/528/136/desktop-wallpaper-beef-raw-red-meat-closeup-texture-background-stock-raw-meat.jpg'
+          },
+          {
+            'productname': 'Smoked Turkey Legs',
+            'price': '\$301',
+            'image':
+                'https://media.istockphoto.com/id/907961332/photo/raw-chicken-meat.jpg?s=170667a&w=0&k=20&c=64pLX48cYIdXeFaXs5VqCj4dXWW24wgrsjdGxhDiqQk='
           },
         ]
       },
@@ -92,13 +129,51 @@ List<Map<String, dynamic>> data = [
         'product': [
           {
             'productname': 'Salmon Fillet',
-            'price': '\$325',
-            'image': 'assets/images/meat.jpg'
+            'price': '\$80',
+            'image':
+                'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNlYWZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80'
           },
           {
             'productname': 'Swordfish',
             'price': '\$89',
-            'image': 'assets/images/meat.jpg'
+            'image':
+                'https://media.istockphoto.com/id/490641566/photo/salmon-fillet.webp?b=1&s=170667a&w=0&k=20&c=QAfTLCj2XPbhCrGnq1fL6CLkKTR7kYcneSojVg8Xkvw='
+          },
+          {
+            'productname': 'Oceanic Delight',
+            'price': '\$100',
+            'image':
+                'https://us.123rf.com/450wm/only4k/only4k2306/only4k230600212/207644670-seafood-sensation-fresh-fish-and-shellfish-seasoned-with-sea-salt-and-spices-in-exquisite-4k-close.jpg?ver=6'
+          },
+          {
+            'productname': 'Seared Salmon Supreme',
+            'price': '\$110',
+            'image':
+                'https://media.istockphoto.com/id/175028181/photo/fillet-of-salmon-with-vegetable.webp?b=1&s=170667a&w=0&k=20&c=0ja5tiwhh-X8cb3aRrcv7ysdcLExgGyD6jQcT1sQXJQ='
+          },
+          {
+            'productname': 'Lemon Butter Tilapia',
+            'price': '\$120',
+            'image':
+                'https://img.freepik.com/free-photo/top-view-fresh-fish-slices-with-seasonings-ice-dark-background-restaurant-dinner-meal-seafood-health-meat-ocean-food_140725-165658.jpg?w=360'
+          },
+          {
+            'productname': 'Grilled Swordfish Steaks',
+            'price': '\$128',
+            'image':
+                'https://img.freepik.com/free-photo/arrangement-veggies-salmon-fish-copy-space_23-2148708655.jpg'
+          },
+          {
+            'productname': 'Creamy Garlic Shrimp',
+            'price': '\$135',
+            'image':
+                'https://img.freepik.com/free-photo/raw-salmon-fillet-ingredients-cooking_2829-5177.jpg'
+          },
+          {
+            'productname': 'Tuna Tartare',
+            'price': '\$190',
+            'image':
+                'https://media.istockphoto.com/id/532571540/photo/raw-salmon-on-baking-paper.webp?b=1&s=170667a&w=0&k=20&c=OLZfDFYdam4iNY7Jh0MD98w90V9NWEB5ajhQWm0y-9k='
           },
         ]
       }

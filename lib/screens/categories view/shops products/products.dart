@@ -12,6 +12,7 @@ class ShopProductsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: SingleChildScrollView(
         child: Column(children: [
           CustomWhiteAppBar(
@@ -35,7 +36,7 @@ class ShopProductsPage extends StatelessWidget {
                 final product = shopData['product'][index];
                 return Container(
                   decoration: BoxDecoration(
-                    // color: Colors.grey,
+                    color: AppDarkColors.black1,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Column(
@@ -59,15 +60,15 @@ class ShopProductsPage extends StatelessWidget {
                               child: InkWell(
                                 onTap: () {},
                                 child: Container(
-                                  height: 30,
-                                  width: 30,
+                                  height: 25,
+                                  width: 25,
                                   decoration: BoxDecoration(
                                     color: AppColors.blue,
                                     borderRadius: BorderRadius.circular(15),
                                   ),
                                   child: Icon(
                                     Icons.add,
-                                    size: 18,
+                                    size: 15,
                                     color: AppDarkColors.black1,
                                   ),
                                 ),
