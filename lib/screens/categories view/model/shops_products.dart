@@ -17,12 +17,12 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Clown Tang.H03',
             'price': '\$325',
-            'image': 'imageURL'
+            'image': 'assets/images/fish1.jpg'
           },
           {
             'productname': 'Clownfish.H03',
             'price': '\$89',
-            'image': 'imageURL'
+            'image': 'assets/images/fish1.jpg'
           },
         ]
       },
@@ -34,8 +34,16 @@ List<Map<String, dynamic>> data = [
         'image': 'assets/images/meat.jpg',
         // Shops Products
         'product': [
-          {'productname': 'Beef Steak', 'price': '\$325', 'image': 'imageURL'},
-          {'productname': 'Quail Meat', 'price': '\$150', 'image': 'imageURL'},
+          {
+            'productname': 'Beef Steak',
+            'price': '\$325',
+            'image': 'assets/images/meat.jpg'
+          },
+          {
+            'productname': 'Quail Meat',
+            'price': '\$150',
+            'image': 'assets/images/meat.jpg'
+          },
         ]
       },
       // Shop 3 of Meants $ Fishes
@@ -49,9 +57,13 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Salmon Fillet',
             'price': '\$325',
-            'image': 'imageURL'
+            'image': 'assets/images/meat.jpg'
           },
-          {'productname': 'Swordfish', 'price': '\$89', 'image': 'imageURL'},
+          {
+            'productname': 'Swordfish',
+            'price': '\$89',
+            'image': 'assets/images/meat.jpg'
+          },
         ]
       }
     ]
