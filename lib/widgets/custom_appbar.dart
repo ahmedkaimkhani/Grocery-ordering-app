@@ -18,7 +18,9 @@ class CustomWhiteAppBar extends StatelessWidget {
             backgroundColor: AppDarkColors.black10,
             radius: 20,
             child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   Icons.arrow_back_ios_new_sharp,
                   size: 10,
