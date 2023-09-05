@@ -46,7 +46,19 @@ List<Map<String, dynamic>> data = [
             'productname': 'Lobster Bisque',
             'price': '\$99',
             'image':
-                'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-photo%2Fsalmon-trout-steak-slice-fresh-raw-fish-isolated-white-background_16586639.htm&psig=AOvVaw1MOBg54yIQMOexw1oh_9dM&ust=1694032165647000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiuhN6nlIEDFQAAAAAdAAAAABAY'
+                'https://img.freepik.com/premium-photo/salmon-trout-steak-slice-fresh-raw-fish-isolated-white-background_143106-396.jpg'
+          },
+          {
+            'productname': 'Cajun Catfish Creole',
+            'price': '\$140',
+            'image':
+                'https://www.wallpaperflare.com/static/586/548/1009/fish-meat-smoked-sliced-wallpaper.jpg'
+          },
+          {
+            'productname': 'Spiced Gravlax',
+            'price': '\$120',
+            'image':
+                'https://c1.wallpaperflare.com/preview/654/350/530/pacific-wild-red-salmon-fresh-fish-food.jpg'
           },
         ]
       },
