@@ -4,6 +4,7 @@ import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
 
 import '../../constants/app_colors.dart';
+import 'shops products/products.dart';
 
 class CategoriesView extends StatefulWidget {
   const CategoriesView({super.key});
@@ -111,63 +112,72 @@ class _CategoriesViewState extends State<CategoriesView> {
       itemCount: shops.length,
       itemBuilder: (context, index) {
         final shopData = shops[index];
-        return Padding(
-          padding: const EdgeInsets.only(
-            bottom: 30,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(15)),
-                height: 165,
-                width: 135,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
-                  child: Image.asset(
-                    shopData['image'],
-                    fit: BoxFit.cover,
+        return InkWell(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => ShopProductsPage(shopData: shopData),
+              ),
+            );
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(
+              bottom: 30,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                  height: 165,
+                  width: 135,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      shopData['image'],
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Expanded(
-                child: Container(
-                  height: 145,
-                  child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        shopData['shopname'],
-                        style: CustomTextStyle18.h1Bold318,
-                        softWrap: true,
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Text(shopData['subtitle'],
-                          style: CustomTextColor16.h1Regular16),
-                      const Spacer(),
-                      Text(
-                        AppText.byShopCtgPageText,
-                        style: CustomTextStyle14.h1Regular14,
-                      ),
-                      const SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        shopData['price'],
-                        style: CustomTextColor16.h1SemiBold16,
-                      )
-                    ],
-                  ),
+                const SizedBox(
+                  width: 10,
                 ),
-              )
-            ],
+                Expanded(
+                  child: Container(
+                    height: 145,
+                    child: Column(
+                      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          shopData['shopname'],
+                          style: CustomTextStyle18.h1Bold318,
+                          softWrap: true,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(shopData['subtitle'],
+                            style: CustomTextColor16.h1Regular16),
+                        const Spacer(),
+                        Text(
+                          AppText.byShopCtgPageText,
+                          style: CustomTextStyle14.h1Regular14,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          shopData['price'],
+                          style: CustomTextColor16.h1SemiBold16,
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         );
       },
