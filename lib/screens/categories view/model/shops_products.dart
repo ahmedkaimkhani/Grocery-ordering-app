@@ -293,27 +293,31 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Mushrooms',
             'price': '\$18',
-            'image': 'assets/images/veg2.jpg'
+            'image':
+                'https://5.imimg.com/data5/SELLER/Default/2021/2/WH/PG/UM/98166444/whatsapp-image-2021-02-04-at-8-05-17-pm-500x500.jpeg'
           },
           {
             'productname': 'Radishes',
             'price': '\$30',
-            'image': 'assets/images/veg2.jpg'
+            'image':
+                'https://media.istockphoto.com/id/598131422/photo/white-daikon-radish.jpg?s=612x612&w=0&k=20&c=tw2qkUvxhNeESAVwYoDLXAI_jTgq-ayH56ZY6ad0E4k='
           },
           {
             'productname': 'Kale',
             'price': '\$40',
-            'image': 'assets/images/veg2.jpg'
+            'image':
+                'https://t3.ftcdn.net/jpg/02/30/97/16/360_F_230971608_hsf90qBGPcmUuv3m0LkWPAuI5i5PnQmL.jpg'
           },
           {
             'productname': 'Peas',
             'price': '\$55',
-            'image': 'assets/images/veg2.jpg'
+            'image': 'https://wallpapercave.com/wp/wp9221825.jpg'
           },
           {
             'productname': 'Beets',
             'price': '\$74',
-            'image': 'assets/images/veg2.jpg'
+            'image':
+                'https://health.clevelandclinic.org/wp-content/uploads/sites/3/2020/12/Health-Benefits-Beets-626329388-770x533-1.jpg'
           },
         ]
       }
