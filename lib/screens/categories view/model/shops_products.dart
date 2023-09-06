@@ -395,14 +395,38 @@ List<Map<String, dynamic>> data = [
         // Shops Products
         'product': [
           {
-            'productname': 'Oranges',
-            'price': '\$35',
-            'image': 'assets/images/fruit1.jpg'
+            'productname': 'Pomegranate',
+            'price': '\$21',
+            'image': 'https://images3.alphacoders.com/100/1004890.jpg'
           },
           {
-            'productname': 'Grapes',
+            'productname': 'Pineapple',
+            'price': '\$27',
+            'image':
+                'https://wallpaperswide.com/download/pineapple-wallpaper-1920x1080.jpg'
+          },
+          {
+            'productname': 'Watermelon',
+            'price': '\$35',
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/72/665/231/4k-watermelon-wallpaper-preview.jpg'
+          },
+          {
+            'productname': 'Peach',
             'price': '\$43',
-            'image': 'assets/images/fruit1.jpg'
+            'image': 'https://images6.alphacoders.com/708/708113.jpg'
+          },
+          {
+            'productname': 'Pear',
+            'price': '\$55',
+            'image':
+                'https://e1.pxfuel.com/desktop-wallpaper/349/35/desktop-wallpaper-pics-of-pear-fruit-pear-fruit-thumbnail.jpg'
+          },
+          {
+            'productname': 'Kiwi',
+            'price': '\$43',
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/96/26/395/fruits-kiwi-fruit-wallpaper-preview.jpg'
           },
         ]
       },
