@@ -338,13 +338,51 @@ List<Map<String, dynamic>> data = [
         'product': [
           {
             'productname': 'Apples',
-            'price': '\$48',
-            'image': 'assets/images/fruit.jpg'
+            'price': '\$25',
+            'image':
+                'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80'
           },
           {
             'productname': 'Bananas',
             'price': '\$31',
-            'image': 'assets/images/fruit.jpg'
+            'image':
+                'https://media.istockphoto.com/id/509533014/photo/raw-organic-bunch-of-bananas.jpg?b=1&s=612x612&w=0&k=20&c=aicsQsdSPBAqrOiiO1cdJcN6CUG-Cva0CGBCtduX5AA='
+          },
+          {
+            'productname': 'Orange',
+            'price': '\$35',
+            'image':
+                'https://media.istockphoto.com/id/1371566508/photo/orange-fruits-wooden-crate-box-in-harvest-with-orange-tree-leaves-fresh.webp?b=1&s=170667a&w=0&k=20&c=8YffxuWhHpGSA_Ptto2gh4JQVX8chSFhEYVlQ_zU4Yg='
+          },
+          {
+            'productname': 'Grape',
+            'price': '\$40',
+            'image':
+                'https://www.nicepng.com/png/detail/8-82812_grape-red-grapes-hd.png'
+          },
+          {
+            'productname': 'Strawberry',
+            'price': '\$47',
+            'image':
+                'https://www.hdwallpapers.in/download/two_strawberries_in_black_background_4k_hd_strawberry-HD.jpg'
+          },
+          {
+            'productname': 'Blueberry',
+            'price': '\$55',
+            'image':
+                'https://images.pling.com/img/00/00/33/91/33/1210425/5fcd7833fc116f84bde05dc72b375a209653.jpg'
+          },
+          {
+            'productname': 'Cherry',
+            'price': '\$31',
+            'image':
+                'https://www.kindpng.com/picc/m/113-1133187_cherry-png-free-download-sour-cherry-transparent-png.png'
+          },
+          {
+            'productname': 'Mango',
+            'price': '\$61',
+            'image':
+                'https://img.freepik.com/premium-psd/ripe-cut-mango-with-green-leaf-isolated-transparent-background_901492-437.jpg'
           },
         ]
       },
