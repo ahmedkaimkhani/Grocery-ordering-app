@@ -572,13 +572,39 @@ List<Map<String, dynamic>> data = [
         'product': [
           {
             'productname': 'Supreme Tea',
-            'price': '\$94',
-            'image': 'assets/images/tea2.webp'
+            'price': '\$55',
+            'image':
+                'https://static-01.daraz.pk/p/9e380f485db343202b9f50aa61c65316.jpg'
           },
           {
             'productname': 'Laiba Tea',
+            'price': '\$61',
+            'image':
+                'https://i1.sndcdn.com/avatars-000384063137-alijb2-t500x500.jpg'
+          },
+          {
+            'productname': 'Kho Cha',
+            'price': '\$75',
+            'image':
+                'https://theplatememoirs.files.wordpress.com/2015/05/img_4934.jpg'
+          },
+          {
+            'productname': 'Tetley',
             'price': '\$43',
-            'image': 'assets/images/tea2.webp'
+            'image':
+                'https://5.imimg.com/data5/SELLER/Default/2021/7/ZG/BH/BF/37470450/whatsapp-image-2021-07-21-at-11-27-02-am.jpeg'
+          },
+          {
+            'productname': 'Bigelow Tea',
+            'price': '\$79',
+            'image':
+                'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe'
+          },
+          {
+            'productname': 'Typhoo Tea',
+            'price': '\$85',
+            'image':
+                'https://www.grocerygazette.co.uk/wp-content/uploads/2021/07/EiCl-RTWkAIv06T-600x337.jpg'
           },
         ]
       }
