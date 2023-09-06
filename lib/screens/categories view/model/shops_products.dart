@@ -533,13 +533,32 @@ List<Map<String, dynamic>> data = [
         'product': [
           {
             'productname': 'Vital Tea',
-            'price': '\$51',
-            'image': 'assets/images/tea1.webp'
+            'price': '\$35',
+            'image':
+                'https://toppng.com/uploads/preview/vital-tea-11563081439cp0hxjkdzc.png'
           },
           {
-            'productname': 'Lipton',
-            'price': '\$39',
-            'image': 'assets/images/tea1.webp'
+            'productname': 'Lipton Tea',
+            'price': '\$45',
+            'image':
+                'https://w7.pngwing.com/pngs/110/196/png-transparent-green-tea-darjeeling-tea-lipton-tea-bag-tea-food-tea-herbal-tea.png'
+          },
+          {
+            'productname': 'Harney & Sons',
+            'price': '\$47',
+            'image':
+                'https://images.squarespace-cdn.com/content/v1/6008e4b84dfdb80938cd0442/5cf20e59-ce49-4fba-b9dc-16f1f43a1349/harney+tea+with+plant.JPG'
+          },
+          {
+            'productname': 'Celestial Seasonings',
+            'price': '\$50',
+            'image': 'https://images.heb.com/is/image/HEBGrocery/000160502-1'
+          },
+          {
+            'productname': 'Yogi Tea',
+            'price': '\$55',
+            'image':
+                'https://m.media-amazon.com/images/I/715UQNB5pmL._AC_UF1000,1000_QL80_.jpg'
           },
         ]
       },
