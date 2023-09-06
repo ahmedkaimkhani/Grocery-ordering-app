@@ -439,14 +439,40 @@ List<Map<String, dynamic>> data = [
         // Shops Products
         'product': [
           {
-            'productname': 'Strawberries',
-            'price': '\$61',
-            'image': 'assets/images/fruit2.png'
+            'productname': 'Plum',
+            'price': '\$30',
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/704/168/987/fruit-plum-prunes-plum-wallpaper-preview.jpg'
           },
           {
-            'productname': 'Mangoes',
+            'productname': 'Apricot',
+            'price': '\$34',
+            'image':
+                'https://w0.peakpx.com/wallpaper/729/32/HD-wallpaper-food-apricot-fruit.jpg'
+          },
+          {
+            'productname': 'Papaya',
+            'price': '\$42',
+            'image':
+                'https://media.istockphoto.com/id/1353655115/photo/papaya-and-mango-tropical-fruits.webp?b=1&s=170667a&w=0&k=20&c=qL3-bmYq99hHBf4wvGSlYaJl75YY7jNZ7hSV50RsAxo='
+          },
+          {
+            'productname': 'Lemon',
+            'price': '\$50',
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/333/452/33/water-squirt-yellow-background-lemon-hd-wallpaper-preview.jpg'
+          },
+          {
+            'productname': 'Lime',
+            'price': '\$62',
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/956/724/890/summer-fruits-green-lime-citrus-wallpaper-preview.jpg'
+          },
+          {
+            'productname': 'Cranberry',
             'price': '\$90',
-            'image': 'assets/images/fruit2.png'
+            'image':
+                'https://c4.wallpaperflare.com/wallpaper/80/786/415/fruit-cranberries-red-dishes-wallpaper-preview.jpg'
           },
         ]
       }
