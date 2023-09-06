@@ -494,12 +494,32 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Tapal Tea',
             'price': '\$90',
-            'image': 'assets/images/tea.jpg'
+            'image':
+                'https://cdn.fishry.com/product/815096003206-1-4f37675-concepts-stores.jpg'
           },
           {
             'productname': 'Ahmed Tea',
             'price': '\$69',
-            'image': 'assets/images/tea.jpg'
+            'image':
+                'https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/61mjK0g3acL._SL1200_.jpg'
+          },
+          {
+            'productname': 'Twinings Tea',
+            'price': '\$69',
+            'image':
+                'https://qtxasset.com/quartz/qcloud1/media/image/5%20-%20Twinings.jpg?VersionId=gpMY7qBd4HsfUD0V.0d2tOqRUvV8Dg.t'
+          },
+          {
+            'productname': 'Tazo Tea',
+            'price': '\$69',
+            'image':
+                'https://stir-tea-coffee.com/downloads/4053/download/News-624-366px-TAZO.jpg?cb=0df0af0c5caa29f5b141b2f2dde9a130'
+          },
+          {
+            'productname': 'Numi Organic Tea',
+            'price': '\$69',
+            'image':
+                'https://numitea.com/wp-content/uploads/2022/12/numi-organic-rooibos-tea.jpg'
           },
         ]
       },
