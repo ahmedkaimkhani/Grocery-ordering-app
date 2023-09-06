@@ -195,12 +195,38 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Tomatoes',
             'price': '\$20',
-            'image': 'assets/images/veg.jpg'
+            'image':
+                'https://e0.pxfuel.com/wallpapers/115/779/desktop-wallpaper-vegetables-graphy-tomatoes-abstract-fresh-vegetables.jpg'
           },
           {
             'productname': 'Cabbage',
             'price': '\$45',
-            'image': 'assets/images/veg.jpg'
+            'image':
+                'https://e0.pxfuel.com/wallpapers/50/572/desktop-wallpaper-fresh-veggies-fresh-vegetables.jpg'
+          },
+          {
+            'productname': 'Broccoli',
+            'price': '\$21',
+            'image':
+                'https://freedesignfile.com/upload/2017/04/Fruits-and-vegetables-with-a-white-background-HD-picture.jpg'
+          },
+          {
+            'productname': 'Cucumbers',
+            'price': '\$23',
+            'image':
+                'https://previews.123rf.com/images/alinamd/alinamd1503/alinamd150300007/37197650-set-of-fruits-and-vegetables-isolated-on-white-background.jpg'
+          },
+          {
+            'productname': 'Onions',
+            'price': '\$31',
+            'image':
+                'https://us.123rf.com/450wm/alinamd/alinamd1309/alinamd130900003/21972079-set-of-different-fruits-and-vegetables-isolated-on-white-background.jpg?ver=6'
+          },
+          {
+            'productname': 'Lettuce',
+            'price': '\$14',
+            'image':
+                'https://w0.peakpx.com/wallpaper/165/64/HD-wallpaper-fruits-and-veggies-vegtables-abstract-fruits-foods.jpg'
           },
         ]
       },
@@ -215,12 +241,38 @@ List<Map<String, dynamic>> data = [
           {
             'productname': 'Potatoes',
             'price': '\$15',
-            'image': 'assets/images/veg1.jpg'
+            'image':
+                'https://img.freepik.com/premium-photo/potatoes-fresh-natural-potatoes-isolated-sliced-potatoes_121234-17.jpg'
           },
           {
             'productname': 'Carrots',
+            'price': '\$25',
+            'image':
+                'https://media.istockphoto.com/id/545454816/photo/fresh-carrots-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=ABrFz1h6Vx62kC_QBzH1wUKv6BCMf7II_QnysmfYOr4='
+          },
+          {
+            'productname': 'Zucchini',
             'price': '\$32',
-            'image': 'assets/images/veg1.jpg'
+            'image':
+                'https://www.tastingtable.com/img/gallery/how-to-transform-canned-vegetables-for-chowder/l-intro-1691437122.jpg'
+          },
+          {
+            'productname': 'Cauliflower',
+            'price': '\$40',
+            'image':
+                'https://www.wine-searcher.com/images/fw-article/21-8-1-3.jpg'
+          },
+          {
+            'productname': 'Green beans',
+            'price': '\$43',
+            'image':
+                'https://media.istockphoto.com/id/897528572/photo/healthy-fresh-green-vegetables-heap-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=irVjLF7adLKbxBLxFjDl68kqzNCd0lLEio4tQ_mPTpg='
+          },
+          {
+            'productname': 'Eggplant (aubergine)',
+            'price': '\$52',
+            'image':
+                'https://img.freepik.com/premium-photo/green-fruits-vegetables-white-background_372197-900.jpg'
           },
         ]
       },
@@ -234,12 +286,33 @@ List<Map<String, dynamic>> data = [
         'product': [
           {
             'productname': 'Onions',
-            'price': '\$325',
-            'image': 'assets/images/veg2.jpg'
+            'price': '\$15',
+            'image':
+                'https://media.istockphoto.com/id/480134211/photo/golden-onions-on-rustic-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=LoJbh2k4ZQ-K8NFOYOmYrFX00b7UNY7848d6ENKXETk='
           },
           {
             'productname': 'Mushrooms',
-            'price': '\$89',
+            'price': '\$18',
+            'image': 'assets/images/veg2.jpg'
+          },
+          {
+            'productname': 'Radishes',
+            'price': '\$30',
+            'image': 'assets/images/veg2.jpg'
+          },
+          {
+            'productname': 'Kale',
+            'price': '\$40',
+            'image': 'assets/images/veg2.jpg'
+          },
+          {
+            'productname': 'Peas',
+            'price': '\$55',
+            'image': 'assets/images/veg2.jpg'
+          },
+          {
+            'productname': 'Beets',
+            'price': '\$74',
             'image': 'assets/images/veg2.jpg'
           },
         ]
