@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:grocery_order_app_flutter/cart%20item/cart_view.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
@@ -42,7 +43,35 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       extendBody: true,
       // AppBar
-      appBar: customAppBar(),
+      appBar: AppBar(
+        toolbarHeight: 80,
+        automaticallyImplyLeading: false,
+        elevation: 0.0,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 8, top: 12),
+          child: Text(
+            AppText.appBarText,
+            style: CustomTextStyle22.h1SemiBold22,
+          ),
+        ),
+        actions: [
+          // Padding(
+          //   padding: const EdgeInsets.only(right: 20, top: 12),
+          //   child: Icon(iconS),
+          // ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, top: 12),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => CartView(),
+                  ));
+                },
+                icon: const Icon(Icons.shopping_bag_outlined)),
+            // child: Image.asset("assets/images/logo.png"),
+          ),
+        ],
+      ),
       // Navigation Bar Implementation
       bottomNavigationBar: CurvedNavigationBar(
         items: item,
@@ -81,3 +110,8 @@ class _HomeViewState extends State<HomeView> {
     return widget;
   }
 }
+
+// customAppBar({IconData? iconS}) {
+//   return 
+// }
+// Navigator.of(context).push(MaterialPageRoute(builder: (context) => CartView(),));
