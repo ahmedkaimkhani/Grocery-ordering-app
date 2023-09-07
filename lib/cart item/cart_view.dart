@@ -19,20 +19,34 @@ class _CartViewState extends State<CartView> {
           CustomWhiteAppBar(
             title: 'Shopping Cart (${myCart.length})',
           ),
-          ListView.builder(
-            itemBuilder: (context, index) {
-              return ListTile(
-                leading: Image.network(''),
-                title: Text(
-                  'Apple',
-                  style: CustomTextStyle14.h1Medium14,
-                ),
-                subtitle: Text(
-                  '\$90',
-                  style: CustomTextStyle14.h1Regular14,
-                ),
-              );
-            },
+          Expanded(
+            child: ListView.builder(
+              itemCount: 5,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: const CircleAvatar(
+                    radius: 20,
+                    backgroundImage: NetworkImage(
+                      'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe',
+                    ),
+                  ),
+                  title: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Text(
+                      'Apple',
+                      style: CustomTextStyle14.h1SemiBold14,
+                    ),
+                  ),
+                  subtitle: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Text(
+                      '\$90',
+                      style: CustomTextStyle14.h1Regular14,
+                    ),
+                  ),
+                );
+              },
+            ),
           )
         ],
       ),
