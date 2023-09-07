@@ -36,7 +36,7 @@ class ShopProductsPage extends StatelessWidget {
                 final product = shopData['product'][index];
                 return Container(
                   decoration: BoxDecoration(
-                    color: AppDarkColors.black1,
+                    color: AppDarkColors.black10,
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Column(

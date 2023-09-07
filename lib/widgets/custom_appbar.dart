@@ -15,7 +15,7 @@ class CustomWhiteAppBar extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            backgroundColor: AppDarkColors.black1,
+            backgroundColor: AppDarkColors.black10,
             radius: 20,
             child: IconButton(
                 onPressed: () {
