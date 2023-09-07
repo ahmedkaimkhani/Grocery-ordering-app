@@ -64,7 +64,7 @@ class _HomeViewState extends State<HomeView> {
             child: IconButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => CartView(),
+                    builder: (context) => const CartView(),
                   ));
                 },
                 icon: const Icon(Icons.shopping_bag_outlined)),
