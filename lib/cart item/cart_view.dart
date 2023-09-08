@@ -27,25 +27,28 @@ class _CartViewState extends State<CartView> {
                 itemCount: myCart.length,
                 itemBuilder: (context, index) {
                   final cartItem = myCart[index];
-                  return ListTile(
-                    leading: CircleAvatar(
-                      // radius: 24,
-                      backgroundImage: NetworkImage(
-                        cartItem['image'],
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 5),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        // radius: 24,
+                        backgroundImage: NetworkImage(
+                          cartItem['image'],
+                        ),
                       ),
-                    ),
-                    title: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Text(
-                        cartItem['productname'],
-                        style: CustomTextStyle14.h1SemiBold14,
+                      title: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Text(
+                          cartItem['productname'],
+                          style: CustomTextStyle14.h1SemiBold14,
+                        ),
                       ),
-                    ),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Text(
-                        cartItem['price'],
-                        style: CustomTextStyle14.h1Regular14,
+                      subtitle: Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: Text(
+                          cartItem['price'],
+                          style: CustomTextStyle14.h1Regular14,
+                        ),
                       ),
                     ),
                   );
