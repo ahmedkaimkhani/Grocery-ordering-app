@@ -1,1 +1,1 @@
-List myCart = [];
+List<Map<String, dynamic>> myCart = [];

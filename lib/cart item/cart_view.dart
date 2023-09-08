@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 class CartView extends StatefulWidget {
