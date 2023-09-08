@@ -16,36 +16,42 @@ class _CartViewState extends State<CartView> {
     return Scaffold(
       body: Column(
         children: [
-          CustomWhiteAppBar(
-            title: 'Shopping Cart (${myCart.length})',
+          Padding(
+            padding: const EdgeInsets.all(0.0),
+            child: CustomWhiteAppBar(
+              title: 'Shopping Cart (${myCart.length})',
+            ),
           ),
           Expanded(
-            child: ListView.builder(
-              itemCount: 5,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: const CircleAvatar(
-                    radius: 20,
-                    backgroundImage: NetworkImage(
-                      'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe',
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: const CircleAvatar(
+                      // radius: 24,
+                      backgroundImage: NetworkImage(
+                        'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe',
+                      ),
                     ),
-                  ),
-                  title: Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      'Apple',
-                      style: CustomTextStyle14.h1SemiBold14,
+                    title: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        'Apple',
+                        style: CustomTextStyle14.h1SemiBold14,
+                      ),
                     ),
-                  ),
-                  subtitle: Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Text(
-                      '\$90',
-                      style: CustomTextStyle14.h1Regular14,
+                    subtitle: Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        '\$90',
+                        style: CustomTextStyle14.h1Regular14,
+                      ),
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
             ),
           )
         ],
