@@ -13,11 +13,7 @@ class CustomWhiteAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        left: 25,
-        right: 25,
-        top: 50,
-      ),
+      padding: const EdgeInsets.only(left: 25, right: 25, top: 50, bottom: 40),
       child: Row(
         children: [
           CircleAvatar(

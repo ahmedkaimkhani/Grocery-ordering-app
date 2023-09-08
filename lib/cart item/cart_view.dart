@@ -24,26 +24,27 @@ class _CartViewState extends State<CartView> {
             child: Padding(
               padding: const EdgeInsets.only(left: 12, right: 12),
               child: ListView.builder(
-                itemCount: 15,
+                itemCount: myCart.length,
                 itemBuilder: (context, index) {
+                  final cartItem = myCart[index];
                   return ListTile(
-                    leading: const CircleAvatar(
+                    leading: CircleAvatar(
                       // radius: 24,
                       backgroundImage: NetworkImage(
-                        'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe',
+                        cartItem['image'],
                       ),
                     ),
                     title: Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Text(
-                        'Apple',
+                        cartItem['productname'],
                         style: CustomTextStyle14.h1SemiBold14,
                       ),
                     ),
                     subtitle: Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Text(
-                        '\$90',
+                        cartItem['price'],
                         style: CustomTextStyle14.h1Regular14,
                       ),
                     ),

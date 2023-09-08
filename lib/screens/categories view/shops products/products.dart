@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
+import '../../../cart item/cart.list.dart';
 import '../../../constants/app_colors.dart';
 import '../../../constants/custom_textstyle.dart';
 
-class ShopProductsPage extends StatelessWidget {
+class ShopProductsPage extends StatefulWidget {
   final Map<String, dynamic> shopData;
 
   ShopProductsPage({required this.shopData});
+
+  @override
+  State<ShopProductsPage> createState() => _ShopProductsPageState();
+}
+
+class _ShopProductsPageState extends State<ShopProductsPage> {
+  addToCart(Map<String, dynamic> product) {
+    setState(() {
+      myCart.add(product);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +28,7 @@ class ShopProductsPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(children: [
           CustomWhiteAppBar(
-            title: shopData['shopname'],
+            title: widget.shopData['shopname'],
             icon: Icons.search,
             iconCart: Icons.shopping_bag_outlined,
           ),
@@ -31,9 +43,9 @@ class ShopProductsPage extends StatelessWidget {
                 mainAxisSpacing: 12,
                 mainAxisExtent: 210,
               ),
-              itemCount: shopData['product'].length,
+              itemCount: widget.shopData['product'].length,
               itemBuilder: (context, index) {
-                final product = shopData['product'][index];
+                final product = widget.shopData['product'][index];
                 return Container(
                   decoration: BoxDecoration(
                     color: AppDarkColors.black10,
@@ -58,7 +70,9 @@ class ShopProductsPage extends StatelessWidget {
                               bottom: 6,
                               right: 6,
                               child: InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  addToCart(product);
+                                },
                                 child: Container(
                                   height: 25,
                                   width: 25,
@@ -103,16 +117,3 @@ class ShopProductsPage extends StatelessWidget {
     );
   }
 }
-
-  //  ListView.builder(
-          //   shrinkWrap: true,
-          //   itemCount: shopData['product'].length,
-          //   itemBuilder: (context, index) {
-          //     final product = shopData['product'][index];
-          //     return ListTile(
-          //       title: Text(product['productname']),
-          //       subtitle: Text(product['price']),
-          //       // You can add more product details here if needed
-          //     );
-          //   },
-          // ),
