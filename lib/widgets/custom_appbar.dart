@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 
-import '../cart item/cart_view.dart';
+import '../screens/cart item/cart_view.dart';
 
 class CustomWhiteAppBar extends StatelessWidget {
   final String? title;

@@ -1,7 +1,9 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'package:grocery_order_app_flutter/cart%20item/cart.list.dart';
+import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
-import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
+import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 class CartView extends StatefulWidget {
@@ -12,6 +14,7 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
+  int itemQuantity = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +51,16 @@ class _CartViewState extends State<CartView> {
                         child: Text(
                           cartItem['price'],
                           style: CustomTextStyle14.h1Regular14,
+                        ),
+                      ),
+                      trailing: SizedBox(
+                        width: 70,
+                        child: Row(
+                          children: [
+                            CustomIconButton(),
+                            Text(itemQuantity.toString()),
+                            CustomIconButton(),
+                          ],
                         ),
                       ),
                     ),

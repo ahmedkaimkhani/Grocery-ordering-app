@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
-import '../../../cart item/cart.list.dart';
+import '../../cart item/cart.list.dart';
 import '../../../constants/app_colors.dart';
 import '../../../constants/custom_textstyle.dart';
 
@@ -70,23 +71,10 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
                               bottom: 6,
                               right: 6,
                               child: InkWell(
-                                onTap: () {
-                                  addToCart(product);
-                                },
-                                child: Container(
-                                  height: 25,
-                                  width: 25,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.blue,
-                                    borderRadius: BorderRadius.circular(15),
-                                  ),
-                                  child: Icon(
-                                    Icons.add,
-                                    size: 15,
-                                    color: AppDarkColors.black1,
-                                  ),
-                                ),
-                              ),
+                                  onTap: () {
+                                    addToCart(product);
+                                  },
+                                  child: const CustomIconButton()),
                             )
                           ]),
                         ),
