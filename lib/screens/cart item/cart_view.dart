@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
@@ -57,9 +58,28 @@ class _CartViewState extends State<CartView> {
                         width: 70,
                         child: Row(
                           children: [
-                            CustomIconButton(),
+                            Container(
+                              height: 25,
+                              width: 25,
+                              decoration: BoxDecoration(
+                                color: AppDarkColors.black10,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Center(
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(horizontal: 5),
+                                  child: Text(
+                                    '-',
+                                    style: CustomTextStyle14.h1Medium14,
+                                  ),
+                                ),
+                              ),
+                            ),
                             Text(itemQuantity.toString()),
-                            CustomIconButton(),
+                            CustomIconButton(
+                              color: AppDarkColors.black10,
+                            ),
                           ],
                         ),
                       ),

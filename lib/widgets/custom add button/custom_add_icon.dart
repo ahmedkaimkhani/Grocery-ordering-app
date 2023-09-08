@@ -5,6 +5,7 @@ import '../../constants/app_colors.dart';
 class CustomIconButton extends StatelessWidget {
   final double? height;
   final double? width;
+  final String? text;
   final Color? color;
   final IconData? icon;
   final double? iconSize;
@@ -16,7 +17,8 @@ class CustomIconButton extends StatelessWidget {
       this.color,
       this.icon,
       this.iconColor,
-      this.iconSize});
+      this.iconSize,
+      this.text});
 
   @override
   Widget build(BuildContext context) {
