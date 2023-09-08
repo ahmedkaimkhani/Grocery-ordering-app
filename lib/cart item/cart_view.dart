@@ -16,17 +16,14 @@ class _CartViewState extends State<CartView> {
     return Scaffold(
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(0.0),
-            child: CustomWhiteAppBar(
-              title: 'Shopping Cart (${myCart.length})',
-            ),
+          CustomWhiteAppBar(
+            title: 'Shopping Cart (${myCart.length})',
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10),
+              padding: const EdgeInsets.only(left: 12, right: 12),
               child: ListView.builder(
-                itemCount: 5,
+                itemCount: 15,
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: const CircleAvatar(
