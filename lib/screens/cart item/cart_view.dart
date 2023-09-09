@@ -15,12 +15,6 @@ class CartView extends StatefulWidget {
 class _CartViewState extends State<CartView> {
   int itemQuantity = 1;
 
-  increaseItem() {
-    setState(() {
-      itemQuantity++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +30,14 @@ class _CartViewState extends State<CartView> {
                 itemCount: myCart.length,
                 itemBuilder: (context, index) {
                   final cartItem = myCart[index];
+                  // Parse the 'price' string to a double
+                  final double price = double.parse(cartItem['price']);
+                  // for loop to add quantity in myCart
+                  for (var item in myCart) {
+                    item['quantity'] = 1;
+                  }
+                  int quantity = cartItem['quantity'];
+
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 5),
                     child: ListTile(
@@ -78,10 +80,13 @@ class _CartViewState extends State<CartView> {
                                 ),
                               ),
                             ),
-                            Text(itemQuantity.toString()),
+                            Text(quantity.toString()),
                             InkWell(
                               onTap: () {
-                                increaseItem();
+                                setState(() {
+                                  quantity++;
+                                  cartItem['quantity'] = quantity;
+                                });
                               },
                               child: CustomIconButton(
                                 color: AppDarkColors.black10,
