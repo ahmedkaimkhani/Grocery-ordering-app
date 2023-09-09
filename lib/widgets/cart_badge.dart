@@ -1,8 +1,13 @@
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:badges/badges.dart';
+import 'package:flutter/material.dart';
+
+import '../constants/app_colors.dart';
+import '../constants/custom_textstyle.dart';
+import '../screens/cart item/cart.list.dart';
 
 class CartBadge extends StatefulWidget {
-  const CartBadge({super.key});
+  final Widget? chilD;
+  const CartBadge({super.key, required this.chilD});
 
   @override
   State<CartBadge> createState() => _CartBadgeState();
@@ -11,6 +16,13 @@ class CartBadge extends StatefulWidget {
 class _CartBadgeState extends State<CartBadge> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Badge(
+      badgeContent: Text(
+        myCart.length.toString(),
+        style: CustomTextStyle14.h1Medium14,
+      ),
+      badgeStyle: BadgeStyle(badgeColor: AppColors.orange),
+      position: BadgePosition.topEnd(top: 0, end: 0),
+    );
   }
 }

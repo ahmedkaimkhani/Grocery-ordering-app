@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'package:grocery_order_app_flutter/screens/categories%20view/categories_v
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
+import '../cart item/cart.list.dart';
 import 'widgets/appbar_method.dart';
 
 class HomeView extends StatefulWidget {
@@ -61,13 +63,21 @@ class _HomeViewState extends State<HomeView> {
           // ),
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 12),
-            child: IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const CartView(),
-                  ));
-                },
-                icon: const Icon(Icons.shopping_bag_outlined)),
+            child: Badge(
+              badgeContent: Text(
+                myCart.length.toString(),
+                style: CustomTextStyle14.h1Medium14,
+              ),
+              badgeStyle: BadgeStyle(badgeColor: AppColors.orange),
+              position: BadgePosition.topEnd(top: 0, end: 0),
+              child: IconButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const CartView(),
+                    ));
+                  },
+                  icon: const Icon(Icons.shopping_bag_outlined)),
+            ),
             // child: Image.asset("assets/images/logo.png"),
           ),
         ],
