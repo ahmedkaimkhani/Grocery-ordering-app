@@ -47,7 +47,11 @@ class CustomWhiteAppBar extends StatelessWidget {
               onPressed: () {},
               icon: Icon(icon, size: 22, color: AppDarkColors.black100)),
           Badge(
-            badgeContent: Text(myCart.length.toString()),
+            badgeContent: Text(
+              myCart.length.toString(),
+              style: CustomTextStyle14.h1Medium14,
+            ),
+            badgeStyle: BadgeStyle(badgeColor: AppColors.orange),
             position: BadgePosition.topEnd(top: 0, end: 0),
             child: IconButton(
                 onPressed: () {
