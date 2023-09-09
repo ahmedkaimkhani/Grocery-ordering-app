@@ -1,6 +1,8 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 
 import '../screens/cart item/cart_view.dart';
 
@@ -44,17 +46,21 @@ class CustomWhiteAppBar extends StatelessWidget {
           IconButton(
               onPressed: () {},
               icon: Icon(icon, size: 22, color: AppDarkColors.black100)),
-          IconButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const CartView(),
-                ));
-              },
-              icon: Icon(
-                iconCart,
-                size: 22,
-                color: AppDarkColors.black100,
-              )),
+          Badge(
+            badgeContent: Text(myCart.length.toString()),
+            position: BadgePosition.topEnd(top: 0, end: 0),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const CartView(),
+                  ));
+                },
+                icon: Icon(
+                  iconCart,
+                  size: 22,
+                  color: AppDarkColors.black100,
+                )),
+          ),
         ],
       ),
     );
