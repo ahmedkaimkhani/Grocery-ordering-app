@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
@@ -16,6 +14,13 @@ class CartView extends StatefulWidget {
 
 class _CartViewState extends State<CartView> {
   int itemQuantity = 1;
+
+  increaseItem() {
+    setState(() {
+      itemQuantity++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,8 +60,9 @@ class _CartViewState extends State<CartView> {
                         ),
                       ),
                       trailing: SizedBox(
-                        width: 70,
+                        width: 80,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
                               height: 25,
@@ -66,19 +72,21 @@ class _CartViewState extends State<CartView> {
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: Center(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 5),
-                                  child: Text(
-                                    '-',
-                                    style: CustomTextStyle14.h1Medium14,
-                                  ),
+                                child: Text(
+                                  '-',
+                                  style: CustomTextStyle20.h1Bold20,
                                 ),
                               ),
                             ),
                             Text(itemQuantity.toString()),
-                            CustomIconButton(
-                              color: AppDarkColors.black10,
+                            InkWell(
+                              onTap: () {
+                                increaseItem();
+                              },
+                              child: CustomIconButton(
+                                color: AppDarkColors.black10,
+                                iconColor: AppDarkColors.black100,
+                              ),
                             ),
                           ],
                         ),
