@@ -13,8 +13,6 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
-  int itemQuantity = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,12 +29,10 @@ class _CartViewState extends State<CartView> {
                 itemBuilder: (context, index) {
                   final cartItem = myCart[index];
                   // Parse the 'price' string to a double
-                  final double price = double.parse(cartItem['price']);
-                  // for loop to add quantity in myCart
-                  for (var item in myCart) {
-                    item['quantity'] = 1;
-                  }
-                  int quantity = cartItem['quantity'];
+                  String priceString = cartItem['price'];
+                  double price = double.parse(priceString.replaceAll('\$', ''));
+                  // Get the quantity from cartItem
+                  int quantity = cartItem['quantity'] ?? 1;
 
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 5),
@@ -57,7 +53,7 @@ class _CartViewState extends State<CartView> {
                       subtitle: Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: Text(
-                          cartItem['price'],
+                          '\$${price.toStringAsFixed(2)}',
                           style: CustomTextStyle14.h1Regular14,
                         ),
                       ),
