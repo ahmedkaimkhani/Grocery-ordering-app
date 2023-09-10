@@ -19,7 +19,9 @@ class _CartViewState extends State<CartView> {
       body: Column(
         children: [
           CustomWhiteAppBar(
-            title: 'Shopping Cart (${myCart.length})',
+            title: myCart.isNotEmpty
+                ? 'Shopping Cart (${myCart.length})'
+                : 'No Item in Cart',
           ),
           Expanded(
             child: Padding(
@@ -31,8 +33,8 @@ class _CartViewState extends State<CartView> {
                   // Parse the 'price' string to a double
                   String priceString = cartItem['price'];
                   double price = double.parse(priceString.replaceAll('\$', ''));
-                  // Get the quantity from cartItem
-                  int quantity = cartItem['quantity'] ?? 1;
+
+                  int quantity = cartItem['quantity'];
 
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 5),
@@ -53,7 +55,7 @@ class _CartViewState extends State<CartView> {
                       subtitle: Padding(
                         padding: const EdgeInsets.all(4.0),
                         child: Text(
-                          '\$${price.toStringAsFixed(2)}',
+                          price.toString(),
                           style: CustomTextStyle14.h1Regular14,
                         ),
                       ),
