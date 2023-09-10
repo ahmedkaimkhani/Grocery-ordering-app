@@ -64,17 +64,25 @@ class _CartViewState extends State<CartView> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              height: 25,
-                              width: 25,
-                              decoration: BoxDecoration(
-                                color: AppDarkColors.black10,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  '-',
-                                  style: CustomTextStyle20.h1Bold20,
+                            InkWell(
+                              onTap: () {
+                                setState(() {
+                                  quantity--;
+                                  cartItem['quantity'] = quantity;
+                                });
+                              },
+                              child: Container(
+                                height: 25,
+                                width: 25,
+                                decoration: BoxDecoration(
+                                  color: AppDarkColors.black10,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '-',
+                                    style: CustomTextStyle20.h1Bold20,
+                                  ),
                                 ),
                               ),
                             ),
