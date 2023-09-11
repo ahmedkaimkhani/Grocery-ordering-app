@@ -40,6 +40,14 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  searchIcon() {
+    setState(() {
+      if (index == 1) {
+        const Icon(Icons.search);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,10 +65,10 @@ class _HomeViewState extends State<HomeView> {
           ),
         ),
         actions: [
-          // Padding(
-          //   padding: const EdgeInsets.only(right: 20, top: 12),
-          //   child: Icon(iconS),
-          // ),
+          Padding(
+            padding: const EdgeInsets.only(right: 20, top: 12),
+            child: searchIcon(),
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 12),
             child: Badge(
@@ -93,7 +101,7 @@ class _HomeViewState extends State<HomeView> {
         animationDuration: const Duration(milliseconds: 300),
         color: AppColors.blue,
         backgroundColor: Colors.transparent,
-        animationCurve: Curves.slowMiddle,
+        // animationCurve: Curves.slowMiddle,
       ),
       // Body Content
       body: SafeArea(child: getSelectedWidget(index: index)),
