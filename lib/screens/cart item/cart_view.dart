@@ -69,45 +69,45 @@ class _CartViewState extends State<CartView> {
                           style: CustomTextStyle14.h1Regular14,
                         ),
                       ),
-                      trailing: SizedBox(
-                        width: 80,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                decreasedCartQuantity(index);
-                              },
-                              child: Container(
-                                height: 25,
-                                width: 25,
-                                decoration: BoxDecoration(
-                                  color: AppDarkColors.black10,
-                                  borderRadius: BorderRadius.circular(15),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    '-',
-                                    style: CustomTextStyle20.h1Bold20,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text(quantity.toString()),
-                            InkWell(
-                              onTap: () {
-                                setState(() {
-                                  quantity++;
-                                  cartItem['quantity'] = quantity;
-                                });
-                              },
-                              child: CustomIconButton(
+                      trailing: Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              decreasedCartQuantity(index);
+                            },
+                            child: Container(
+                              height: 25,
+                              width: 25,
+                              decoration: BoxDecoration(
                                 color: AppDarkColors.black10,
-                                iconColor: AppDarkColors.black100,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '-',
+                                  style: CustomTextStyle20.h1Bold20,
+                                ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                            child: Text(quantity.toString()),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              setState(() {
+                                quantity++;
+                                cartItem['quantity'] = quantity;
+                              });
+                            },
+                            child: CustomIconButton(
+                              color: AppDarkColors.black10,
+                              iconColor: AppDarkColors.black100,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   );
