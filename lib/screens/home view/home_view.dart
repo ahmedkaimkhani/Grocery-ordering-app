@@ -91,7 +91,7 @@ class _HomeViewState extends State<HomeView> {
         },
         animationDuration: const Duration(milliseconds: 300),
         color: AppColors.blue,
-        backgroundColor: AppDarkColors.black1,
+        backgroundColor: Colors.transparent,
         animationCurve: Curves.slowMiddle,
       ),
       // Body Content
