@@ -13,6 +13,16 @@ class CartView extends StatefulWidget {
 }
 
 class _CartViewState extends State<CartView> {
+  decreasedCartQuantity(index) {
+    setState(() {
+      if (myCart[index]['quantity'] > 1) {
+        myCart[index]['quantity']--;
+      } else {
+        myCart.removeAt(index);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,10 +76,7 @@ class _CartViewState extends State<CartView> {
                           children: [
                             InkWell(
                               onTap: () {
-                                setState(() {
-                                  quantity--;
-                                  cartItem['quantity'] = quantity;
-                                });
+                                decreasedCartQuantity(index);
                               },
                               child: Container(
                                 height: 25,
