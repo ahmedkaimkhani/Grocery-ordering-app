@@ -40,13 +40,11 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
-  searchIcon() {
-    setState(() {
-      if (index == 1) {
-        const Icon(Icons.search);
-      }
-    });
-  }
+  // searchIcon() {
+  //     if (index == 1) {
+  //       const Icon(Icons.search);
+  //     }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -65,10 +63,10 @@ class _HomeViewState extends State<HomeView> {
           ),
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20, top: 12),
-            child: searchIcon(),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(right: 20, top: 12),
+          //   child: searchIcon(),
+          // ),
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 12),
             child: Badge(
