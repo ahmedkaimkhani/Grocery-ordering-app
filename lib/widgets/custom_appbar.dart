@@ -47,6 +47,7 @@ class CustomWhiteAppBar extends StatelessWidget {
               onPressed: () {},
               icon: Icon(icon, size: 22, color: AppDarkColors.black100)),
           Badge(
+            showBadge: myCart.isEmpty ? false : true,
             badgeContent: Text(
               myCart.length.toString(),
               style: CustomTextStyle14.h1Medium14,
