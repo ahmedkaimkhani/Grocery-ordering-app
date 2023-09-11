@@ -23,6 +23,12 @@ class _CartViewState extends State<CartView> {
     });
   }
 
+  increaseCartQuantity(index) {
+    setState(() {
+      myCart[index]['quantity']++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,10 +103,7 @@ class _CartViewState extends State<CartView> {
                           ),
                           InkWell(
                             onTap: () {
-                              setState(() {
-                                quantity++;
-                                cartItem['quantity'] = quantity;
-                              });
+                              increaseCartQuantity(index);
                             },
                             child: CustomIconButton(
                               color: AppDarkColors.black10,
