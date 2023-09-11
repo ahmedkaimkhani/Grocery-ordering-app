@@ -64,6 +64,7 @@ class _HomeViewState extends State<HomeView> {
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 12),
             child: Badge(
+              showBadge: myCart.isEmpty ? false : true,
               badgeContent: Text(
                 myCart.length.toString(),
                 style: CustomTextStyle14.h1Medium14,
