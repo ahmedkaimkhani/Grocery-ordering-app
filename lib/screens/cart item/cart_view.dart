@@ -150,11 +150,14 @@ class _CartViewState extends State<CartView> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(
-                          left: 40, right: 40, bottom: 15),
+                          left: 40, right: 40, bottom: 15, top: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text('Subtotal'),
+                          Text(
+                            'Subtotal',
+                            style: CustomTextStyle12.h1Medium12,
+                          ),
                           Text('\$${calculateSubtotal().toStringAsFixed(2)}'),
                         ],
                       ),
@@ -164,8 +167,11 @@ class _CartViewState extends State<CartView> {
                           left: 40, right: 40, bottom: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Text('Delivery'),
+                        children: [
+                          Text(
+                            'Delivery',
+                            style: CustomTextStyle12.h1Medium12,
+                          ),
                           Text('\$2.00'),
                         ],
                       ),
@@ -176,7 +182,10 @@ class _CartViewState extends State<CartView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text('Total'),
+                          Text(
+                            'Total',
+                            style: CustomTextStyle12.h1Medium12,
+                          ),
                           Text('\$${calculateTotal().toStringAsFixed(2)}'),
                         ],
                       ),

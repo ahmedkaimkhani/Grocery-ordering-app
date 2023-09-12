@@ -24,6 +24,7 @@ class _CustomWhiteAppBarState extends State<CustomWhiteAppBar> {
         left: 25,
         right: 25,
         top: 50,
+        bottom: 30,
       ),
       child: Row(
         children: [
