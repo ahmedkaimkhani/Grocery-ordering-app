@@ -35,6 +35,7 @@ class _CartViewState extends State<CartView> {
     return double.parse(price.replaceAll('\$', ''));
   }
 
+  // Calculate subtotal
   double calculateSubtotal() {
     double subtotal = 0.00;
     for (final cartItem in myCart) {
@@ -151,7 +152,7 @@ class _CartViewState extends State<CartView> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Subtotal'),
+                        const Text('Subtotal'),
                         Text('\$${calculateSubtotal().toStringAsFixed(2)}'),
                       ],
                     ),
@@ -164,9 +165,9 @@ class _CartViewState extends State<CartView> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text('Total'),
-                        Text('\$37.00'),
+                      children: [
+                        const Text('Total'),
+                        Text('\$${calculateTotal().toStringAsFixed(2)}'),
                       ],
                     ),
                     SizedBox(
