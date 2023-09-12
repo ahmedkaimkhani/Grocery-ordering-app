@@ -30,10 +30,17 @@ class _CartViewState extends State<CartView> {
     });
   }
 
+  // parse price to covert String to double
+  double parsePrice(String price) {
+    return double.parse(price.replaceAll('\$', ''));
+  }
+
   double calculateSubtotal() {
     double subtotal = 0.00;
     for (final cartItem in myCart) {
-      subtotal += cartItem['price'] * cartItem['quantity'];
+      double itemPrice = parsePrice(cartItem['price']);
+      int quantity = cartItem['quantity'];
+      subtotal += itemPrice * quantity;
     }
     return subtotal;
   }
@@ -63,10 +70,6 @@ class _CartViewState extends State<CartView> {
                   itemCount: myCart.length,
                   itemBuilder: (context, index) {
                     final cartItem = myCart[index];
-                    // Parse the 'price' string to a double
-                    String priceString = cartItem['price'];
-                    double price =
-                        double.parse(priceString.replaceAll('\$', ''));
 
                     int quantity = cartItem['quantity'];
 
@@ -89,7 +92,7 @@ class _CartViewState extends State<CartView> {
                         subtitle: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Text(
-                            price.toString(),
+                            cartItem['price'],
                             style: CustomTextStyle14.h1Regular14,
                           ),
                         ),
@@ -147,9 +150,9 @@ class _CartViewState extends State<CartView> {
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text('Subtotal'),
-                        Text('\$35.00'),
+                        Text('\$${calculateSubtotal().toStringAsFixed(2)}'),
                       ],
                     ),
                     Row(
