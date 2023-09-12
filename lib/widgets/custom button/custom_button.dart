@@ -4,17 +4,19 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 
 class CustomButton extends StatelessWidget {
   final String buttonText;
-  final TextStyle? buttonTextColor;
+  final TextStyle? buttonTextStyle;
   final Color? buttonColor;
   final IconData? buttonIcon;
   final Function()? onPressed;
+  final Padding? height;
   const CustomButton(
       {super.key,
       required this.buttonText,
       this.buttonColor,
       this.buttonIcon,
-      this.buttonTextColor,
-      this.onPressed});
+      this.buttonTextStyle,
+      this.onPressed,
+      this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +24,17 @@ class CustomButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        backgroundColor: buttonColor ?? AppColors.blue,
+        primary: buttonColor ?? AppColors.blue,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
             side: BorderSide(color: AppColors.blue)),
       ),
-      child: Text(
-        buttonText,
-        style: buttonTextColor ?? CustomTextStyle14.h1SemiBold14,
+      child: Padding(
+        padding: EdgeInsets.all(20),
+        child: Text(
+          buttonText,
+          style: buttonTextStyle ?? CustomTextStyle14.h1SemiBold14,
+        ),
       ),
     );
   }
