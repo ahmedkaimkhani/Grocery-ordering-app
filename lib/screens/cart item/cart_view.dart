@@ -30,6 +30,19 @@ class _CartViewState extends State<CartView> {
     });
   }
 
+  double calculateSubtotal() {
+    double subtotal = 0.00;
+    for (final cartItem in myCart) {
+      subtotal += cartItem['price'] * cartItem['quantity'];
+    }
+    return subtotal;
+  }
+
+  double calculateTotal() {
+    double deliveryCost = 2.00;
+    return calculateSubtotal() + deliveryCost;
+  }
+
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
