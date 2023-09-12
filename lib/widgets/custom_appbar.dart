@@ -6,12 +6,17 @@ import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 
 import '../screens/cart item/cart_view.dart';
 
-class CustomWhiteAppBar extends StatelessWidget {
+class CustomWhiteAppBar extends StatefulWidget {
   final String? title;
   final IconData? icon;
   final IconData? iconCart;
   const CustomWhiteAppBar({super.key, this.title, this.icon, this.iconCart});
 
+  @override
+  State<CustomWhiteAppBar> createState() => _CustomWhiteAppBarState();
+}
+
+class _CustomWhiteAppBarState extends State<CustomWhiteAppBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,13 +44,13 @@ class CustomWhiteAppBar extends StatelessWidget {
             width: 20,
           ),
           Text(
-            title ?? '',
+            widget.title ?? '',
             style: CustomTextColor16.h1RegularBlack,
           ),
           const Spacer(),
           IconButton(
               onPressed: () {},
-              icon: Icon(icon, size: 22, color: AppDarkColors.black100)),
+              icon: Icon(widget.icon, size: 22, color: AppDarkColors.black100)),
           Badge(
             showBadge: myCart.isEmpty ? false : true,
             badgeContent: Text(
@@ -55,13 +60,14 @@ class CustomWhiteAppBar extends StatelessWidget {
             badgeStyle: BadgeStyle(badgeColor: AppColors.orange),
             position: BadgePosition.topEnd(top: 0, end: 0),
             child: IconButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
+                onPressed: () async {
+                  await Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const CartView(),
                   ));
+                  setState(() {});
                 },
                 icon: Icon(
-                  iconCart,
+                  widget.iconCart,
                   size: 22,
                   color: AppDarkColors.black100,
                 )),
