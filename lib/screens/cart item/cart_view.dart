@@ -129,6 +129,27 @@ class _CartViewState extends State<CartView> {
               height: 300,
               child: Column(
                 children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text('Subtotal'),
+                      Text('\$35.00'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text('Delivery'),
+                      Text('\$2.00'),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text('Total'),
+                      Text('\$37.00'),
+                    ],
+                  ),
                   SizedBox(
                     width: width * 0.9,
                     child: CustomButton(
