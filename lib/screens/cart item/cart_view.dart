@@ -127,38 +127,42 @@ class _CartViewState extends State<CartView> {
             Container(
               color: AppDarkColors.black20,
               height: 300,
-              child: Column(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text('Subtotal'),
-                      Text('\$35.00'),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text('Delivery'),
-                      Text('\$2.00'),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text('Total'),
-                      Text('\$37.00'),
-                    ],
-                  ),
-                  SizedBox(
-                    width: width * 0.9,
-                    child: CustomButton(
-                      buttonText: 'Proceed To checkout',
-                      onPressed: () {},
-                      buttonTextStyle: CustomTextStyle14.h1Medium14,
+              width: double.infinity,
+              child: SizedBox(
+                width: width * 0.90,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Subtotal'),
+                        Text('\$35.00'),
+                      ],
                     ),
-                  )
-                ],
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Delivery'),
+                        Text('\$2.00'),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text('Total'),
+                        Text('\$37.00'),
+                      ],
+                    ),
+                    SizedBox(
+                      width: width * 0.90,
+                      child: CustomButton(
+                        buttonText: 'Proceed To checkout',
+                        onPressed: () {},
+                        buttonTextStyle: CustomTextStyle14.h1Medium14,
+                      ),
+                    )
+                  ],
+                ),
               ),
             )
           ],
