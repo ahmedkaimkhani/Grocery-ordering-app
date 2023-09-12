@@ -117,6 +117,9 @@ class _CartViewState extends State<CartView> {
                 },
               ),
             ),
+          ),
+          Column(
+            children: [],
           )
         ],
       ),
