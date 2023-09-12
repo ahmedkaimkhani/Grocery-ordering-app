@@ -142,33 +142,44 @@ class _CartViewState extends State<CartView> {
               ),
             ),
             Container(
-              color: AppDarkColors.black20,
-              height: 300,
+              height: 225,
               width: double.infinity,
               child: SizedBox(
                 width: width * 0.90,
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Subtotal'),
-                        Text('\$${calculateSubtotal().toStringAsFixed(2)}'),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 40, right: 40, bottom: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text('Subtotal'),
+                          Text('\$${calculateSubtotal().toStringAsFixed(2)}'),
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text('Delivery'),
-                        Text('\$2.00'),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 40, right: 40, bottom: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text('Delivery'),
+                          Text('\$2.00'),
+                        ],
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Total'),
-                        Text('\$${calculateTotal().toStringAsFixed(2)}'),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(
+                          left: 40, right: 40, bottom: 40),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text('Total'),
+                          Text('\$${calculateTotal().toStringAsFixed(2)}'),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       width: width * 0.90,
