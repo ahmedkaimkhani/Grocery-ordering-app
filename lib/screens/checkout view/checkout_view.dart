@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 import '../../constants/custom_textstyle.dart';
@@ -31,6 +32,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                 ));
               },
               buttonTextStyle: CustomTextStyle14.h1Regular14,
+              buttonColor: AppDarkColors.black1,
             ),
           )
         ],
