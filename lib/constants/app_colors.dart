@@ -1,6 +1,7 @@
 import 'package:flutter/animation.dart';
 
 class AppDarkColors {
+  static Color black = const Color(0xff000000);
   static Color black100 = const Color(0xff1B262E);
   static Color black90 = const Color(0xff354349);
   static Color black60 = const Color(0xff606D76);

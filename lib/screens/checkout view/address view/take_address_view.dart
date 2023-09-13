@@ -28,6 +28,16 @@ class _AddressViewState extends State<AddressView> {
               'Delivery Address',
               style: CustomTextColor16.h1RegularBlack,
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: TextField(
+              decoration: const InputDecoration(
+                hintText: 'Home Address',
+                border: InputBorder.none,
+              ),
+              style: CustomTextStyle16.h1Medium16,
+            ),
           )
         ],
       ),
