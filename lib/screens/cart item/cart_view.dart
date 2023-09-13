@@ -64,13 +64,16 @@ class _CartViewState extends State<CartView> {
                   ? 'Shopping Cart (${myCart.length})'
                   : 'No Item in Cart',
             ),
-            myCart.isEmpty
-                ? Center(
-                    child: Text('You haven\'t added anything to your cart'))
-                : Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 12, right: 12),
-                      child: ListView.builder(
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 12, right: 12),
+                child: myCart.isEmpty
+                    ? Center(
+                        child: Text(
+                        'You haven\'t added anything to your cart',
+                        style: CustomTextStyle14.h1SemiBold14,
+                      ))
+                    : ListView.builder(
                         itemCount: myCart.length,
                         itemBuilder: (context, index) {
                           final cartItem = myCart[index];
@@ -142,11 +145,10 @@ class _CartViewState extends State<CartView> {
                           );
                         },
                       ),
-                    ),
-                  ),
+              ),
+            ),
             myCart.isEmpty
-                ? Center(
-                    child: Text('You haven\'t added anything to your cart'))
+                ? const Text('')
                 : Container(
                     height: 225,
                     width: double.infinity,
