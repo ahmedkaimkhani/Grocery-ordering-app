@@ -7,6 +7,8 @@ import '../../constants/custom_textstyle.dart';
 import '../../widgets/custom_appbar.dart';
 import '../cart item/cart.list.dart';
 
+List address = [];
+
 class CheckoutView extends StatefulWidget {
   const CheckoutView({super.key});
 
@@ -19,24 +21,50 @@ class _CheckoutViewState extends State<CheckoutView> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: Column(
-        children: [
-          CustomWhiteAppBar(title: 'Shopping Cart (${myCart.length})'),
-          SizedBox(
-            width: width * 0.90,
-            child: CustomButton(
-              buttonIcon: Icons.add_circle_outline,
-              buttonText: 'Add New Address',
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const AddressView(),
-                ));
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomWhiteAppBar(title: 'Shopping Cart (${myCart.length})'),
+            ListView.builder(
+              itemCount: address.length,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Row(
+                    children: [
+                      const Text('Home'),
+                      Icon(
+                        Icons.check_circle,
+                        color: AppColors.orange,
+                      )
+                    ],
+                  ),
+                  subtitle: Row(
+                    children: [
+                      Text(address[index].toString()),
+                      TextButton(onPressed: () {}, child: const Text('Edit'))
+                    ],
+                  ),
+                );
               },
-              buttonTextStyle: CustomTextStyle14.h1Regular14,
-              buttonColor: AppDarkColors.black1,
             ),
-          )
-        ],
+            SizedBox(
+              width: width * 0.90,
+              child: CustomButton(
+                buttonIcon: Icons.add_circle_outline,
+                buttonText: 'Add New Address',
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AddressView(),
+                  ));
+                },
+                buttonTextStyle: CustomTextStyle14.h1Regular14,
+                buttonColor: AppDarkColors.black1,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -14,6 +14,13 @@ class AddressView extends StatefulWidget {
 }
 
 class _AddressViewState extends State<AddressView> {
+  TextEditingController textEditController = TextEditingController();
+
+  addHomeAddress() {
+    address.add(textEditController.text);
+    textEditController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -28,8 +35,9 @@ class _AddressViewState extends State<AddressView> {
               width: 60,
             ),
             const CustomWhiteAppBar(title: 'Address'),
-            const CustomTextField(
+            CustomTextField(
               textName: 'Home',
+              myTextEditingController: textEditController,
             ),
             const SizedBox(
               height: 30,
@@ -45,10 +53,12 @@ class _AddressViewState extends State<AddressView> {
                 width: width * 0.90,
                 child: CustomButton(
                   buttonText: 'Save',
-                  onPressed: () {
+                  onPressed: () async {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const CheckoutView(),
                     ));
+                    addHomeAddress();
+                    setState(() {});
                   },
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                 ),
