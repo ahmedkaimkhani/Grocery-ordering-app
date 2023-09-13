@@ -29,13 +29,35 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             side: BorderSide(color: AppColors.blue)),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(20),
-        child: Text(
-          buttonText,
-          style: buttonTextStyle ?? CustomTextStyle14.h1SemiBold14,
-        ),
-      ),
+      child: buttonIcon != null
+          ? Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Icon(
+                    buttonIcon,
+                    color: AppColors.orange,
+                    size: 30,
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  buttonText,
+                  style: buttonTextStyle ?? CustomTextStyle14.h1SemiBold14,
+                ),
+              ],
+            )
+          : Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(
+                buttonText,
+                style: buttonTextStyle ?? CustomTextStyle14.h1SemiBold14,
+              ),
+            ),
     );
   }
 }
