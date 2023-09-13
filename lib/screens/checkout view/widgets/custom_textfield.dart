@@ -5,8 +5,9 @@ import '../../../constants/custom_textstyle.dart';
 class CustomTextField extends StatelessWidget {
   final TextEditingController? myTextEditingController;
   final String? textName;
+  final String? hintText;
   const CustomTextField(
-      {super.key, this.myTextEditingController, this.textName});
+      {super.key, this.myTextEditingController, this.textName, this.hintText});
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,8 @@ class CustomTextField extends StatelessWidget {
             style: CustomTextStyle12.h1Medium12,
           ),
           TextField(
-            decoration: const InputDecoration(
-              hintText: 'Home Address',
+            decoration: InputDecoration(
+              hintText: hintText ?? 'Home Address',
               border: InputBorder.none,
             ),
             style: CustomTextStyle16.h1Medium16,
