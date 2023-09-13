@@ -24,13 +24,13 @@ class _CheckoutViewState extends State<CheckoutView> {
             width: width * 0.90,
             child: CustomButton(
               buttonIcon: Icons.add_circle_outline,
-              buttonText: 'Proceed To checkout',
+              buttonText: 'Add New Address',
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const CheckoutView(),
                 ));
               },
-              buttonTextStyle: CustomTextStyle14.h1Medium14,
+              buttonTextStyle: CustomTextStyle14.h1Regular14,
             ),
           )
         ],
