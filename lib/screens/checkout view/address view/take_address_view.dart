@@ -3,6 +3,7 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 
 import '../../../widgets/custom_appbar.dart';
 import '../../cart item/cart.list.dart';
+import '../widgets/custom_textfield.dart';
 
 class AddressView extends StatefulWidget {
   const AddressView({super.key});
@@ -29,15 +30,8 @@ class _AddressViewState extends State<AddressView> {
               style: CustomTextColor16.h1RegularBlack,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            child: TextField(
-              decoration: const InputDecoration(
-                hintText: 'Home Address',
-                border: InputBorder.none,
-              ),
-              style: CustomTextStyle16.h1Medium16,
-            ),
+          const CustomTextField(
+            textName: 'Home',
           )
         ],
       ),
