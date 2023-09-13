@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/screens/checkout%20view/address%20view/take_address_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 import '../../constants/custom_textstyle.dart';
@@ -28,7 +29,7 @@ class _CheckoutViewState extends State<CheckoutView> {
               buttonText: 'Add New Address',
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const CheckoutView(),
+                  builder: (context) => const AddressView(),
                 ));
               },
               buttonTextStyle: CustomTextStyle14.h1Regular14,
