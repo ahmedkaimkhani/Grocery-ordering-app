@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/checkout%20view/checkout_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
@@ -211,7 +212,11 @@ class _CartViewState extends State<CartView> {
                             width: width * 0.90,
                             child: CustomButton(
                               buttonText: 'Proceed To checkout',
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => const CheckoutView(),
+                                ));
+                              },
                               buttonTextStyle: CustomTextStyle14.h1Medium14,
                             ),
                           )
