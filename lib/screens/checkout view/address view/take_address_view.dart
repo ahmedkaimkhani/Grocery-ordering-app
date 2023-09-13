@@ -3,6 +3,7 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 
 import '../../../widgets/custom button/custom_button.dart';
 import '../../../widgets/custom_appbar.dart';
+import '../checkout_view.dart';
 import '../widgets/custom_textfield.dart';
 
 class AddressView extends StatefulWidget {
@@ -44,7 +45,11 @@ class _AddressViewState extends State<AddressView> {
                 width: width * 0.90,
                 child: CustomButton(
                   buttonText: 'Save',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const CheckoutView(),
+                    ));
+                  },
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                 ),
               ),
