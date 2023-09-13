@@ -113,12 +113,13 @@ class _CategoriesViewState extends State<CategoriesView> {
       itemBuilder: (context, index) {
         final shopData = shops[index];
         return InkWell(
-          onTap: () {
-            Navigator.of(context).push(
+          onTap: () async {
+            await Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => ShopProductsPage(shopData: shopData),
               ),
             );
+            setState(() {});
           },
           child: Padding(
             padding: const EdgeInsets.only(

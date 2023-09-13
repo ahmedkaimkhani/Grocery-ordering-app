@@ -78,10 +78,11 @@ class _HomeViewState extends State<HomeView> {
               badgeStyle: BadgeStyle(badgeColor: AppColors.orange),
               position: BadgePosition.topEnd(top: 0, end: 0),
               child: IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
+                  onPressed: () async {
+                    await Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const CartView(),
                     ));
+                    setState(() {});
                   },
                   icon: const Icon(Icons.shopping_bag_outlined)),
             ),
