@@ -10,7 +10,9 @@ class CustomWhiteAppBar extends StatefulWidget {
   final String? title;
   final IconData? icon;
   final IconData? iconCart;
-  const CustomWhiteAppBar({super.key, this.title, this.icon, this.iconCart});
+  final Padding? padding;
+  const CustomWhiteAppBar(
+      {super.key, this.title, this.icon, this.iconCart, this.padding});
 
   @override
   State<CustomWhiteAppBar> createState() => _CustomWhiteAppBarState();

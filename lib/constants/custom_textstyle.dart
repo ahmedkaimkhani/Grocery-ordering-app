@@ -180,6 +180,11 @@ class CustomTextStyle12 {
     fontWeight: FontWeight.w500,
     color: AppColors.blue,
   );
+  static TextStyle h1Regular12White = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
+    color: AppDarkColors.black1,
+  );
 }
 
 // Font 11
