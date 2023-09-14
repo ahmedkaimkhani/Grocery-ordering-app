@@ -111,6 +111,14 @@ class _CheckoutViewState extends State<CheckoutView> {
                 buttonTextStyle: CustomTextStyle14.h1Regular14,
                 buttonColor: AppDarkColors.black1,
               ),
+            ),
+            SizedBox(
+              width: width * 0.90,
+              child: CustomButton(
+                buttonText: 'Add Card',
+                onPressed: () {},
+                buttonTextStyle: CustomTextStyle14.h1Medium14,
+              ),
             )
           ],
         ),

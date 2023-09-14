@@ -18,13 +18,19 @@ class _AddressViewState extends State<AddressView> {
   TextEditingController editControllerOffice = TextEditingController();
 
   addHomeAddress() {
-    address.add(editControllerHome.text);
-    editControllerHome.clear();
+    var addressHome = editControllerHome.text;
+    if (addressHome.isNotEmpty) {
+      address.add(addressHome);
+      editControllerOffice.clear();
+    }
   }
 
   addOfficeAddress() {
-    address.add(editControllerOffice.text);
-    editControllerOffice.clear();
+    var addressOffice = editControllerOffice.text;
+    if (addressOffice.isNotEmpty) {
+      address.add(addressOffice);
+      editControllerOffice.clear();
+    }
   }
 
   @override
