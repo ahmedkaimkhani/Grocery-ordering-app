@@ -159,6 +159,11 @@ class CustomTextStyle14 {
     fontWeight: FontWeight.normal,
     color: AppDarkColors.black100,
   );
+  static TextStyle h1SemiBold14CBlue = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    color: AppColors.blue,
+  );
 }
 
 class CustomTextStyle12 {

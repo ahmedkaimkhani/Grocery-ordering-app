@@ -3,84 +3,174 @@ import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
+import '../../widgets/custom button/custom_button.dart';
+
 class DetailView extends StatelessWidget {
   const DetailView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const CustomWhiteAppBar(
-            iconCart: Icons.shopping_bag_outlined,
-          ),
-          Stack(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(100)),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.asset(
-                    'assets/images/fruit1.jpg',
-                    fit: BoxFit.fill,
+              const CustomWhiteAppBar(
+                iconCart: Icons.shopping_bag_outlined,
+              ),
+              Stack(
+                children: [
+                  Center(
+                    child: Container(
+                      height: 200,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(100)),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Image.asset(
+                          'assets/images/fruit1.jpg',
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    ),
                   ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 25, right: 25, top: 10, bottom: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Thin Choice Top Orange',
+                      style: CustomTextStyle20.h1Bold20,
+                    ),
+                    Icon(
+                      Icons.favorite,
+                      color: AppDarkColors.black60,
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '\$34.70/KG',
+                      style: CustomTextStyle14.h1Regular14,
+                    ),
+                    Container(
+                      width: 80,
+                      decoration: BoxDecoration(
+                          color: AppColors.blue,
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(6),
+                        child: Center(
+                          child: Text(
+                            '\$22.04 OFF',
+                            style: CustomTextStyle12.h1Regular12White,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Text(
+                      'Reg: \$56.70 USD',
+                      style: CustomTextStyle12.h1Medium12,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 30),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: CustomButton(
+                        buttonText: 'Add to Cart',
+                        onPressed: () {},
+                        buttonColor: AppDarkColors.black1,
+                        borderColor: AppColors.blue,
+                        buttonTextStyle: CustomTextStyle14.h1SemiBold14CBlue,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: CustomButton(
+                        buttonText: 'Buy Now',
+                        onPressed: () {},
+                        buttonTextStyle: CustomTextStyle14.h1Medium14,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 20),
+                child: Text(
+                  'Details',
+                  style: CustomTextStyle16.h1Medium16,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 30),
+                child: Text(
+                  'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                  style: CustomTextColor16.h1Regular16,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 25, right: 25, top: 10, bottom: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Nutritional facts',
+                      style: CustomTextStyle16.h1Medium16,
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 35,
+                      color: AppDarkColors.black45,
+                    ),
+                  ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 25, right: 25, bottom: 15),
+                child: Divider(
+                  thickness: 2,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, bottom: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Reviews',
+                      style: CustomTextStyle16.h1Medium16,
+                    ),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 35,
+                      color: AppDarkColors.black45,
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
-          Padding(
-            padding:
-                const EdgeInsets.only(left: 25, right: 25, top: 10, bottom: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Thin Choice Top Orange',
-                  style: CustomTextStyle20.h1Bold20,
-                ),
-                Icon(
-                  Icons.favorite,
-                  color: AppDarkColors.black60,
-                )
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 25, right: 25),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '\$34.70/KG',
-                  style: CustomTextStyle14.h1Regular14,
-                ),
-                Container(
-                  width: 80,
-                  decoration: BoxDecoration(
-                      color: AppColors.blue,
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6),
-                    child: Center(
-                      child: Text(
-                        '\$22.04 OFF',
-                        style: CustomTextStyle12.h1Regular12White,
-                      ),
-                    ),
-                  ),
-                ),
-                Text(
-                  'Reg: \$56.70 USD',
-                  style: CustomTextStyle12.h1Medium12,
-                ),
-              ],
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
