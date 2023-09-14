@@ -70,11 +70,3 @@ class _AddressViewState extends State<AddressView> {
     );
   }
 }
-
-// Padding(
-//             padding: const EdgeInsets.all(25),
-//             child: Text(
-//               'Delivery Address',
-//               style: CustomTextColor16.h1RegularBlack,
-//             ),
-//           ),

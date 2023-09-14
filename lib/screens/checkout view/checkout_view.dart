@@ -25,6 +25,16 @@ class _CheckoutViewState extends State<CheckoutView> {
         child: Column(
           children: [
             CustomWhiteAppBar(title: 'Shopping Cart (${myCart.length})'),
+            Padding(
+              padding: const EdgeInsets.all(25),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Delivery Address',
+                  style: CustomTextColor16.h1RegularBlack,
+                ),
+              ),
+            ),
             ListView.builder(
               itemCount: address.length,
               shrinkWrap: true,
