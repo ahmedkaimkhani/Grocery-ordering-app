@@ -14,11 +14,17 @@ class AddressView extends StatefulWidget {
 }
 
 class _AddressViewState extends State<AddressView> {
-  TextEditingController textEditController = TextEditingController();
+  TextEditingController editControllerHome = TextEditingController();
+  TextEditingController editControllerOffice = TextEditingController();
 
   addHomeAddress() {
-    address.add(textEditController.text);
-    textEditController.clear();
+    address.add(editControllerHome.text);
+    editControllerHome.clear();
+  }
+
+  addOfficeAddress() {
+    address.add(editControllerOffice.text);
+    editControllerOffice.clear();
   }
 
   @override
@@ -37,14 +43,15 @@ class _AddressViewState extends State<AddressView> {
             const CustomWhiteAppBar(title: 'Address'),
             CustomTextField(
               textName: 'Home',
-              myTextEditingController: textEditController,
+              myTextEditingController: editControllerHome,
             ),
             const SizedBox(
               height: 30,
             ),
-            const CustomTextField(
+            CustomTextField(
               textName: 'Office',
               hintText: 'Office Address',
+              myTextEditingController: editControllerOffice,
             ),
             const Spacer(),
             Align(
@@ -58,6 +65,7 @@ class _AddressViewState extends State<AddressView> {
                       builder: (context) => const CheckoutView(),
                     ));
                     addHomeAddress();
+                    addOfficeAddress();
                     setState(() {});
                   },
                   buttonTextStyle: CustomTextStyle14.h1Medium14,

@@ -26,7 +26,7 @@ class _CheckoutViewState extends State<CheckoutView> {
           children: [
             CustomWhiteAppBar(title: 'Shopping Cart (${myCart.length})'),
             Padding(
-              padding: const EdgeInsets.all(25),
+              padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -41,46 +41,53 @@ class _CheckoutViewState extends State<CheckoutView> {
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding:
+                      const EdgeInsets.only(left: 25, right: 25, bottom: 25),
                   child: Container(
-                    height: 95,
+                    // height: 95,
                     decoration: BoxDecoration(
                         // color: AppDarkColors.black20,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: AppColors.orange, width: 2)),
                     child: Center(
-                      child: ListTile(
-                        // tileColor: AppDarkColors.black20,
-                        title: Wrap(
-                          alignment: WrapAlignment.spaceBetween,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 18),
-                              child: Text(
-                                'Home',
-                                style: CustomTextStyle14.h1Regular14,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 15),
+                        child: ListTile(
+                          // tileColor: AppDarkColors.black20,
+                          title: Wrap(
+                            alignment: WrapAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 18),
+                                child: Text(
+                                  'Home',
+                                  style: CustomTextStyle14.h1Regular14,
+                                ),
                               ),
-                            ),
-                            const Spacer(),
-                            Icon(
-                              Icons.check_circle,
-                              color: AppColors.orange,
-                            ),
-                          ],
-                        ),
-                        subtitle: Wrap(
-                          alignment: WrapAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              address[index].toString(),
-                              style: CustomTextStyle14.h1SemiBold14,
-                            ),
-                            const Spacer(),
-                            Text(
-                              'Edit',
-                              style: CustomTextStyle12.h1Medium12Blue,
-                            )
-                          ],
+                              const Spacer(),
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 18),
+                                child: Icon(
+                                  Icons.check_circle,
+                                  color: AppColors.orange,
+                                ),
+                              ),
+                            ],
+                          ),
+                          subtitle: Wrap(
+                            alignment: WrapAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                address[index].toString(),
+                                style: CustomTextStyle14.h1SemiBold14,
+                              ),
+                              const Spacer(),
+                              Text(
+                                'Edit',
+                                style: CustomTextStyle12.h1Medium12Blue,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
