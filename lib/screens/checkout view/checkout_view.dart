@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/checkout%20view/address%20view/take_address_view.dart';
+import 'package:grocery_order_app_flutter/screens/checkout%20view/widgets/custom_listtile.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 import '../../constants/custom_textstyle.dart';
@@ -40,58 +41,8 @@ class _CheckoutViewState extends State<CheckoutView> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
-                return Padding(
-                  padding:
-                      const EdgeInsets.only(left: 25, right: 25, bottom: 25),
-                  child: Container(
-                    // height: 95,
-                    decoration: BoxDecoration(
-                        // color: AppDarkColors.black20,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: AppColors.orange, width: 2)),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 15),
-                        child: ListTile(
-                          // tileColor: AppDarkColors.black20,
-                          title: Wrap(
-                            alignment: WrapAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 18),
-                                child: Text(
-                                  'Home',
-                                  style: CustomTextStyle14.h1Regular14,
-                                ),
-                              ),
-                              const Spacer(),
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 18),
-                                child: Icon(
-                                  Icons.check_circle,
-                                  color: AppColors.orange,
-                                ),
-                              ),
-                            ],
-                          ),
-                          subtitle: Wrap(
-                            alignment: WrapAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                address[index].toString(),
-                                style: CustomTextStyle14.h1SemiBold14,
-                              ),
-                              const Spacer(),
-                              Text(
-                                'Edit',
-                                style: CustomTextStyle12.h1Medium12Blue,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                return CustomListTile(
+                  index: index,
                 );
               },
             ),
