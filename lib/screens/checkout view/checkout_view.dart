@@ -30,27 +30,59 @@ class _CheckoutViewState extends State<CheckoutView> {
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Row(
-                    children: [
-                      const Text('Home'),
-                      Icon(
-                        Icons.check_circle,
-                        color: AppColors.orange,
-                      )
-                    ],
-                  ),
-                  subtitle: Row(
-                    children: [
-                      Text(address[index].toString()),
-                      TextButton(onPressed: () {}, child: const Text('Edit'))
-                    ],
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: Container(
+                    height: 95,
+                    decoration: BoxDecoration(
+                        // color: AppDarkColors.black20,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: AppColors.orange, width: 2)),
+                    child: Center(
+                      child: ListTile(
+                        // tileColor: AppDarkColors.black20,
+                        title: Wrap(
+                          alignment: WrapAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 18),
+                              child: Text(
+                                'Home',
+                                style: CustomTextStyle14.h1Regular14,
+                              ),
+                            ),
+                            const Spacer(),
+                            Icon(
+                              Icons.check_circle,
+                              color: AppColors.orange,
+                            ),
+                          ],
+                        ),
+                        subtitle: Wrap(
+                          alignment: WrapAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              address[index].toString(),
+                              style: CustomTextStyle14.h1SemiBold14,
+                            ),
+                            const Spacer(),
+                            Text(
+                              'Edit',
+                              style: CustomTextStyle12.h1Medium12Blue,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 );
               },
             ),
+            const SizedBox(
+              height: 35,
+            ),
             SizedBox(
-              width: width * 0.90,
+              width: width * 0.85,
               child: CustomButton(
                 buttonIcon: Icons.add_circle_outline,
                 buttonText: 'Add New Address',
