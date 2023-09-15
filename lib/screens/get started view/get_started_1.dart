@@ -118,7 +118,7 @@ class _GetStartedViewState extends State<GetStartedView> {
                   ),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 height: height * 0.08,
                 width: width * 0.65,
