@@ -14,6 +14,11 @@ class DetailView extends StatefulWidget {
 }
 
 class _DetailViewState extends State<DetailView> {
+  double afterDiscountPrice(detailPage) {
+    final double sellingPrice = detailPage['price'] - detailPage['discount'];
+    return sellingPrice;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +93,7 @@ class _DetailViewState extends State<DetailView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                '\$34.70/KG',
+                                '\$${afterDiscountPrice(detailPage)}',
                                 style: CustomTextStyle14.h1Regular14,
                               ),
                               Container(
@@ -107,7 +112,7 @@ class _DetailViewState extends State<DetailView> {
                                 ),
                               ),
                               Text(
-                                'Reg: \$${detailPage['productname']}',
+                                'Reg: \$${detailPage['price']}',
                                 style: CustomTextStyle12.h1Medium12,
                               ),
                             ],

@@ -24,6 +24,7 @@ List<Map<String, dynamic>> data = [
                 'productname': 'Clown Tang.H03',
                 'price': 325.00,
                 'discount': 88.75,
+                'isFav': false,
                 'description':
                     'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
                 'image':
@@ -43,6 +44,7 @@ List<Map<String, dynamic>> data = [
                 'productname': 'Clownfish.H03',
                 'price': 89.00,
                 'discount': 23.75,
+                'isFav': false,
                 'description':
                     'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
                 'image':
@@ -62,6 +64,7 @@ List<Map<String, dynamic>> data = [
                 'productname': 'Crispy Cod Fillets',
                 'price': 110.00,
                 'discount': 27.70,
+                'isFav': false,
                 'description':
                     'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
                 'image':
