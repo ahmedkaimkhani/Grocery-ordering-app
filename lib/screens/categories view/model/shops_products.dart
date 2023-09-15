@@ -19,8 +19,9 @@ List<Map<String, dynamic>> data = [
             'image':
                 'https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351618_2ggRlHpK6pSwjUNtgMqhdaYliUYA5Jox.jpg',
             'detail': [
+              // 1
               {
-                'shopname': 'Fish & Meat',
+                'category': 'Fish & Meat',
                 'productname': 'Clown Tang.H03',
                 'price': 325.00,
                 'discount': 88.75,
@@ -39,8 +40,9 @@ List<Map<String, dynamic>> data = [
             'image':
                 'https://www.biometic.com/wp-content/uploads/2021/09/food_quality_problems_fish_meat_industry_food_inspection-scaled.jpg',
             'detail': [
+              // 2
               {
-                'shopname': 'Fish & Meat',
+                'category': 'Fish & Meat',
                 'productname': 'Clownfish.H03',
                 'price': 89.00,
                 'discount': 23.75,
@@ -59,8 +61,9 @@ List<Map<String, dynamic>> data = [
             'image':
                 'https://c4.wallpaperflare.com/wallpaper/287/338/512/meat-fish-pieces-cabbage-wallpaper-preview.jpg',
             'detail': [
+              // 3
               {
-                'shopname': 'Fish & Meat',
+                'category': 'Fish & Meat',
                 'productname': 'Crispy Cod Fillets',
                 'price': 110.00,
                 'discount': 27.70,
@@ -77,35 +80,105 @@ List<Map<String, dynamic>> data = [
             'price': '\$88',
             'quantity': 1,
             'image':
-                'https://www.wallpaperflare.com/static/405/419/819/food-lunch-sliced-raw-wallpaper.jpg'
+                'https://www.wallpaperflare.com/static/405/419/819/food-lunch-sliced-raw-wallpaper.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Spicy Tuna Tacos',
+                'price': 88.00,
+                'discount': 20.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.wallpaperflare.com/static/405/419/819/food-lunch-sliced-raw-wallpaper.jpg',
+              }
+            ]
           },
           {
             'productname': 'Grilled Swordfish Steaks',
             'price': '\$95',
             'quantity': 1,
             'image':
-                'https://pluspng.com/img-png/fish-and-meat-png-salmon-fish-meat-png-image-and-clipart-650.jpg'
+                'https://pluspng.com/img-png/fish-and-meat-png-salmon-fish-meat-png-image-and-clipart-650.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Grilled Swordfish Steaks',
+                'price': 95.00,
+                'discount': 29.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://pluspng.com/img-png/fish-and-meat-png-salmon-fish-meat-png-image-and-clipart-650.jpg',
+              }
+            ]
           },
           {
             'productname': 'Lobster Bisque',
             'price': '\$99',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/premium-photo/salmon-trout-steak-slice-fresh-raw-fish-isolated-white-background_143106-396.jpg'
+                'https://img.freepik.com/premium-photo/salmon-trout-steak-slice-fresh-raw-fish-isolated-white-background_143106-396.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Lobster Bisque',
+                'price': 99.00,
+                'discount': 34.45,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/premium-photo/salmon-trout-steak-slice-fresh-raw-fish-isolated-white-background_143106-396.jpg',
+              }
+            ]
           },
           {
             'productname': 'Cajun Catfish Creole',
             'price': '\$140',
             'quantity': 1,
             'image':
-                'https://www.wallpaperflare.com/static/586/548/1009/fish-meat-smoked-sliced-wallpaper.jpg'
+                'https://www.wallpaperflare.com/static/586/548/1009/fish-meat-smoked-sliced-wallpaper.jpg',
+            'detail': [
+              // 7
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Cajun Catfish Creole',
+                'price': 140.00,
+                'discount': 38.45,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.wallpaperflare.com/static/586/548/1009/fish-meat-smoked-sliced-wallpaper.jpg',
+              }
+            ]
           },
           {
             'productname': 'Spiced Gravlax',
             'price': '\$120',
             'quantity': 1,
             'image':
-                'https://c1.wallpaperflare.com/preview/654/350/530/pacific-wild-red-salmon-fresh-fish-food.jpg'
+                'https://c1.wallpaperflare.com/preview/654/350/530/pacific-wild-red-salmon-fresh-fish-food.jpg',
+            'detail': [
+              // 8
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Spiced Gravlax',
+                'price': 120.22,
+                'discount': 28.15,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c1.wallpaperflare.com/preview/654/350/530/pacific-wild-red-salmon-fresh-fish-food.jpg',
+              }
+            ]
           },
         ]
       },

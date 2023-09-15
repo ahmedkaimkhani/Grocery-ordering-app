@@ -70,7 +70,7 @@ class _DetailViewState extends State<DetailView> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    detailPage['shopname'],
+                                    detailPage['category'],
                                     style: CustomTextStyle20.h1Bold20,
                                   ),
                                   Text(
@@ -112,7 +112,7 @@ class _DetailViewState extends State<DetailView> {
                                 ),
                               ),
                               Text(
-                                'Reg: \$${detailPage['price']}',
+                                'Reg: \$${detailPage['price'].toStringAsFixed(2)}',
                                 style: CustomTextStyle12.h1Medium12,
                               ),
                             ],
