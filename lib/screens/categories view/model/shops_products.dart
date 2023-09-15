@@ -318,14 +318,42 @@ List<Map<String, dynamic>> data = [
             'productname': 'Goulash Galore',
             'price': '\$205',
             'image':
-                'https://e0.pxfuel.com/wallpapers/528/136/desktop-wallpaper-beef-raw-red-meat-closeup-texture-background-stock-raw-meat.jpg'
+                'https://e0.pxfuel.com/wallpapers/528/136/desktop-wallpaper-beef-raw-red-meat-closeup-texture-background-stock-raw-meat.jpg',
+            'detail': [
+              // 7
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Goulash Galore',
+                'price': 205.00,
+                'discount': 99.99,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://e0.pxfuel.com/wallpapers/528/136/desktop-wallpaper-beef-raw-red-meat-closeup-texture-background-stock-raw-meat.jpg',
+              }
+            ]
           },
           {
             'productname': 'Smoked Turkey Legs',
             'price': '\$301',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/907961332/photo/raw-chicken-meat.jpg?s=170667a&w=0&k=20&c=64pLX48cYIdXeFaXs5VqCj4dXWW24wgrsjdGxhDiqQk='
+                'https://media.istockphoto.com/id/907961332/photo/raw-chicken-meat.jpg?s=170667a&w=0&k=20&c=64pLX48cYIdXeFaXs5VqCj4dXWW24wgrsjdGxhDiqQk=',
+            'detail': [
+              // 8
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Goulash Galore',
+                'price': 301.00,
+                'discount': 89.39,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/907961332/photo/raw-chicken-meat.jpg?s=170667a&w=0&k=20&c=64pLX48cYIdXeFaXs5VqCj4dXWW24wgrsjdGxhDiqQk=',
+              }
+            ]
           },
         ]
       },
@@ -342,56 +370,168 @@ List<Map<String, dynamic>> data = [
             'price': '\$80',
             'quantity': 1,
             'image':
-                'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNlYWZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80'
+                'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNlYWZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
+            'detail': [
+              // 1
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 80.00,
+                'discount': 23.11,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNlYWZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80',
+              }
+            ]
           },
           {
             'productname': 'Swordfish',
             'price': '\$89',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/490641566/photo/salmon-fillet.webp?b=1&s=170667a&w=0&k=20&c=QAfTLCj2XPbhCrGnq1fL6CLkKTR7kYcneSojVg8Xkvw='
+                'https://media.istockphoto.com/id/490641566/photo/salmon-fillet.webp?b=1&s=170667a&w=0&k=20&c=QAfTLCj2XPbhCrGnq1fL6CLkKTR7kYcneSojVg8Xkvw=',
+            'detail': [
+              // 2
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 89.00,
+                'discount': 23.01,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/490641566/photo/salmon-fillet.webp?b=1&s=170667a&w=0&k=20&c=QAfTLCj2XPbhCrGnq1fL6CLkKTR7kYcneSojVg8Xkvw=',
+              }
+            ]
           },
           {
             'productname': 'Oceanic Delight',
             'price': '\$100',
             'quantity': 1,
             'image':
-                'https://us.123rf.com/450wm/only4k/only4k2306/only4k230600212/207644670-seafood-sensation-fresh-fish-and-shellfish-seasoned-with-sea-salt-and-spices-in-exquisite-4k-close.jpg?ver=6'
+                'https://us.123rf.com/450wm/only4k/only4k2306/only4k230600212/207644670-seafood-sensation-fresh-fish-and-shellfish-seasoned-with-sea-salt-and-spices-in-exquisite-4k-close.jpg?ver=6',
+            'detail': [
+              // 3
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 100.00,
+                'discount': 24.51,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://us.123rf.com/450wm/only4k/only4k2306/only4k230600212/207644670-seafood-sensation-fresh-fish-and-shellfish-seasoned-with-sea-salt-and-spices-in-exquisite-4k-close.jpg?ver=6',
+              }
+            ]
           },
           {
             'productname': 'Seared Salmon Supreme',
             'price': '\$110',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/175028181/photo/fillet-of-salmon-with-vegetable.webp?b=1&s=170667a&w=0&k=20&c=0ja5tiwhh-X8cb3aRrcv7ysdcLExgGyD6jQcT1sQXJQ='
+                'https://media.istockphoto.com/id/175028181/photo/fillet-of-salmon-with-vegetable.webp?b=1&s=170667a&w=0&k=20&c=0ja5tiwhh-X8cb3aRrcv7ysdcLExgGyD6jQcT1sQXJQ=',
+            'detail': [
+              // 4
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 110.00,
+                'discount': 27.25,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/175028181/photo/fillet-of-salmon-with-vegetable.webp?b=1&s=170667a&w=0&k=20&c=0ja5tiwhh-X8cb3aRrcv7ysdcLExgGyD6jQcT1sQXJQ=',
+              }
+            ]
           },
           {
             'productname': 'Lemon Butter Tilapia',
             'price': '\$120',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/free-photo/top-view-fresh-fish-slices-with-seasonings-ice-dark-background-restaurant-dinner-meal-seafood-health-meat-ocean-food_140725-165658.jpg?w=360'
+                'https://img.freepik.com/free-photo/top-view-fresh-fish-slices-with-seasonings-ice-dark-background-restaurant-dinner-meal-seafood-health-meat-ocean-food_140725-165658.jpg?w=360',
+            'detail': [
+              // 5
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 120.00,
+                'discount': 35.72,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/free-photo/top-view-fresh-fish-slices-with-seasonings-ice-dark-background-restaurant-dinner-meal-seafood-health-meat-ocean-food_140725-165658.jpg?w=360',
+              }
+            ]
           },
           {
             'productname': 'Grilled Swordfish Steaks',
             'price': '\$128',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/free-photo/arrangement-veggies-salmon-fish-copy-space_23-2148708655.jpg'
+                'https://img.freepik.com/free-photo/arrangement-veggies-salmon-fish-copy-space_23-2148708655.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 128.00,
+                'discount': 55.11,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/free-photo/arrangement-veggies-salmon-fish-copy-space_23-2148708655.jpg',
+              }
+            ]
           },
           {
             'productname': 'Creamy Garlic Shrimp',
             'price': '\$135',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/free-photo/raw-salmon-fillet-ingredients-cooking_2829-5177.jpg'
+                'https://img.freepik.com/free-photo/raw-salmon-fillet-ingredients-cooking_2829-5177.jpg',
+            'detail': [
+              // 7
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 135.00,
+                'discount': 22.83,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/free-photo/raw-salmon-fillet-ingredients-cooking_2829-5177.jpg',
+              }
+            ]
           },
           {
             'productname': 'Tuna Tartare',
             'price': '\$190',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/532571540/photo/raw-salmon-on-baking-paper.webp?b=1&s=170667a&w=0&k=20&c=OLZfDFYdam4iNY7Jh0MD98w90V9NWEB5ajhQWm0y-9k='
+                'https://media.istockphoto.com/id/532571540/photo/raw-salmon-on-baking-paper.webp?b=1&s=170667a&w=0&k=20&c=OLZfDFYdam4iNY7Jh0MD98w90V9NWEB5ajhQWm0y-9k=',
+            'detail': [
+              // 7
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Salmon Fillet',
+                'price': 190.00,
+                'discount': 35.73,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/532571540/photo/raw-salmon-on-baking-paper.webp?b=1&s=170667a&w=0&k=20&c=OLZfDFYdam4iNY7Jh0MD98w90V9NWEB5ajhQWm0y-9k=',
+              }
+            ]
           },
         ]
       }
