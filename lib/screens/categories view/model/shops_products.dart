@@ -195,41 +195,124 @@ List<Map<String, dynamic>> data = [
             'price': '\$325',
             'quantity': 1,
             'image':
-                'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80'
+                'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+            'detail': [
+              // 1
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Beef Steak',
+                'price': 325.00,
+                'discount': 90.15,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80',
+              }
+            ]
           },
           {
             'productname': 'Quail Meat',
             'price': '\$150',
             'quantity': 1,
-            'image': 'https://wallpaperaccess.com/full/1462795.jpg'
+            'image': 'https://wallpaperaccess.com/full/1462795.jpg',
+            'detail': [
+              // 2
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Quail Meat',
+                'price': 150.00,
+                'discount': 34.19,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image': 'https://wallpaperaccess.com/full/1462795.jpg',
+              }
+            ]
           },
           {
             'productname': 'Smoky BBQ Ribs',
             'price': '\$200',
             'quantity': 1,
             'image':
-                'https://watermark.lovepik.com/photo/20211121/large/lovepik-beef-picture_500550952.jpg'
+                'https://watermark.lovepik.com/photo/20211121/large/lovepik-beef-picture_500550952.jpg',
+            'detail': [
+              // 3
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Smoky BBQ Ribs',
+                'price': 200.00,
+                'discount': 52.19,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://watermark.lovepik.com/photo/20211121/large/lovepik-beef-picture_500550952.jpg',
+              }
+            ]
           },
           {
             'productname': 'Spicy Chicken Wings',
             'price': '\$180',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/premium-photo/raw-chicken-meat-white-background_58830-688.jpg'
+                'https://img.freepik.com/premium-photo/raw-chicken-meat-white-background_58830-688.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Spicy Chicken Wings',
+                'price': 180.00,
+                'discount': 66.33,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/premium-photo/raw-chicken-meat-white-background_58830-688.jpg',
+              }
+            ]
           },
           {
             'productname': 'Gourmet Meatballs',
             'price': '\$185',
             'quantity': 1,
             'image':
-                'https://cdn.pixabay.com/photo/2018/02/08/15/02/meat-3139641_640.jpg'
+                'https://cdn.pixabay.com/photo/2018/02/08/15/02/meat-3139641_640.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Gourmet Meatballs',
+                'price': 185.00,
+                'discount': 22.56,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://cdn.pixabay.com/photo/2018/02/08/15/02/meat-3139641_640.jpg',
+              }
+            ]
           },
           {
             'productname': 'Gourmet Meatballs',
             'price': '\$210',
             'quantity': 1,
             'image':
-                'https://e1.pxfuel.com/desktop-wallpaper/20/639/desktop-wallpaper-raw-meat-1920x1080-raw-meat-thumbnail.jpg'
+                'https://e1.pxfuel.com/desktop-wallpaper/20/639/desktop-wallpaper-raw-meat-1920x1080-raw-meat-thumbnail.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Fish & Meat',
+                'productname': 'Gourmet Meatballs',
+                'price': 210.00,
+                'discount': 76.56,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://e1.pxfuel.com/desktop-wallpaper/20/639/desktop-wallpaper-raw-meat-1920x1080-raw-meat-thumbnail.jpg',
+              }
+            ]
           },
           {
             'productname': 'Goulash Galore',
