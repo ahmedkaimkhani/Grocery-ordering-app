@@ -105,7 +105,7 @@ class _DetailViewState extends State<DetailView> {
                                   padding: const EdgeInsets.all(6),
                                   child: Center(
                                     child: Text(
-                                      '\$${detailPage['discount']}',
+                                      '\$${detailPage['discount']} OFF',
                                       style: CustomTextStyle12.h1Regular12White,
                                     ),
                                   ),
