@@ -36,14 +36,38 @@ List<Map<String, dynamic>> data = [
             'price': '\$89',
             'quantity': 1,
             'image':
-                'https://www.biometic.com/wp-content/uploads/2021/09/food_quality_problems_fish_meat_industry_food_inspection-scaled.jpg'
+                'https://www.biometic.com/wp-content/uploads/2021/09/food_quality_problems_fish_meat_industry_food_inspection-scaled.jpg',
+            'detail': [
+              {
+                'shopname': 'Fish & Meat',
+                'productname': 'Clownfish.H03',
+                'price': 89.00,
+                'discount': 23.75,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.biometic.com/wp-content/uploads/2021/09/food_quality_problems_fish_meat_industry_food_inspection-scaled.jpg',
+              }
+            ]
           },
           {
             'productname': 'Crispy Cod Fillets',
             'price': '\$110',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/287/338/512/meat-fish-pieces-cabbage-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/287/338/512/meat-fish-pieces-cabbage-wallpaper-preview.jpg',
+            'detail': [
+              {
+                'shopname': 'Fish & Meat',
+                'productname': 'Crispy Cod Fillets',
+                'price': 110.00,
+                'discount': 27.70,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/287/338/512/meat-fish-pieces-cabbage-wallpaper-preview.jpg',
+              }
+            ]
           },
           {
             'productname': 'Spicy Tuna Tacos',

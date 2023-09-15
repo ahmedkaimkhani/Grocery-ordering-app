@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),
-      home: const DetailView(),
+      home: const GetStartedView(),
     );
   }
 }
