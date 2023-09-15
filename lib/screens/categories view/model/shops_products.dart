@@ -18,6 +18,15 @@ List<Map<String, dynamic>> data = [
             'quantity': 1,
             'image':
                 'https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351618_2ggRlHpK6pSwjUNtgMqhdaYliUYA5Jox.jpg',
+            'detail': [
+              {
+                'shopname': 'Big & Small Fishes',
+                'productname': 'Clown Tang.H03',
+                'price': '\$325',
+                'image':
+                    'https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351618_2ggRlHpK6pSwjUNtgMqhdaYliUYA5Jox.jpg',
+              }
+            ]
           },
           {
             'productname': 'Clownfish.H03',
