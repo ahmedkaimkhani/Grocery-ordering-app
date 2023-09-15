@@ -100,14 +100,14 @@ class _DetailViewState extends State<DetailView> {
                                   padding: const EdgeInsets.all(6),
                                   child: Center(
                                     child: Text(
-                                      '\$22.04 OFF',
+                                      '\$${detailPage['discount']}',
                                       style: CustomTextStyle12.h1Regular12White,
                                     ),
                                   ),
                                 ),
                               ),
                               Text(
-                                'Reg: \$56.70 USD',
+                                'Reg: \$${detailPage['productname']}',
                                 style: CustomTextStyle12.h1Medium12,
                               ),
                             ],
@@ -153,7 +153,7 @@ class _DetailViewState extends State<DetailView> {
                           padding: const EdgeInsets.only(
                               left: 25, right: 25, bottom: 30),
                           child: Text(
-                            'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                            detailPage['description'],
                             style: CustomTextColor16.h1Regular16,
                           ),
                         ),

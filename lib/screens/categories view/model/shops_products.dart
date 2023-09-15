@@ -23,7 +23,7 @@ List<Map<String, dynamic>> data = [
                 'shopname': 'Fish & Meat',
                 'productname': 'Clown Tang.H03',
                 'price': 325.00,
-                'discount': 24.75,
+                'discount': 88.75,
                 'description':
                     'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
                 'image':
