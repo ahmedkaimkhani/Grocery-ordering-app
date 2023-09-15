@@ -20,9 +20,12 @@ List<Map<String, dynamic>> data = [
                 'https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351618_2ggRlHpK6pSwjUNtgMqhdaYliUYA5Jox.jpg',
             'detail': [
               {
-                'shopname': 'Big & Small Fishes',
+                'shopname': 'Fish & Meat',
                 'productname': 'Clown Tang.H03',
-                'price': '\$325',
+                'price': 325.00,
+                'discount': 24.75,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
                 'image':
                     'https://t3.ftcdn.net/jpg/02/91/35/16/360_F_291351618_2ggRlHpK6pSwjUNtgMqhdaYliUYA5Jox.jpg',
               }

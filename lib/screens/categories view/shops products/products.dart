@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/screens/detail%20view/detail_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
@@ -47,54 +48,61 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
               itemCount: widget.shopData['product'].length,
               itemBuilder: (context, index) {
                 final product = widget.shopData['product'][index];
-                return Container(
-                  decoration: BoxDecoration(
-                    color: AppDarkColors.black10,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        child: Center(
-                          child: Stack(children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(10),
-                              child: Image.network(
-                                product['image'],
-                                height: 120,
-                                width: double.infinity,
-                                fit: BoxFit.cover,
+                return InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => DetailView(shopProducts: product),
+                    ));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: AppDarkColors.black10,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                          child: Center(
+                            child: Stack(children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.network(
+                                  product['image'],
+                                  height: 120,
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            Positioned(
-                              bottom: 6,
-                              right: 6,
-                              child: InkWell(
-                                  onTap: () {
-                                    addToCart(product);
-                                  },
-                                  child: const CustomIconButton()),
-                            )
-                          ]),
+                              Positioned(
+                                bottom: 6,
+                                right: 6,
+                                child: InkWell(
+                                    onTap: () {
+                                      addToCart(product);
+                                    },
+                                    child: const CustomIconButton()),
+                              )
+                            ]),
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                            top: 8, left: 6, right: 6, bottom: 6),
-                        child: Text(
-                          product['price'],
-                          style: CustomTextStyle18.h1Bold318,
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              top: 8, left: 6, right: 6, bottom: 6),
+                          child: Text(
+                            product['price'],
+                            style: CustomTextStyle18.h1Bold318,
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 6, right: 6),
-                        child: Text(
-                          product['productname'],
-                          style: CustomTextStyle14.h1Regular14,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 6, right: 6),
+                          child: Text(
+                            product['productname'],
+                            style: CustomTextStyle14.h1Regular14,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
               },
