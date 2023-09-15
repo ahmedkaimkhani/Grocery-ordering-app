@@ -396,7 +396,7 @@ List<Map<String, dynamic>> data = [
               // 2
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Swordfish',
                 'price': 89.00,
                 'discount': 23.01,
                 'isFav': false,
@@ -417,7 +417,7 @@ List<Map<String, dynamic>> data = [
               // 3
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Oceanic Delight',
                 'price': 100.00,
                 'discount': 24.51,
                 'isFav': false,
@@ -438,7 +438,7 @@ List<Map<String, dynamic>> data = [
               // 4
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Seared Salmon Supreme',
                 'price': 110.00,
                 'discount': 27.25,
                 'isFav': false,
@@ -459,7 +459,7 @@ List<Map<String, dynamic>> data = [
               // 5
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Lemon Butter Tilapia',
                 'price': 120.00,
                 'discount': 35.72,
                 'isFav': false,
@@ -480,7 +480,7 @@ List<Map<String, dynamic>> data = [
               // 6
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Grilled Swordfish Steaks',
                 'price': 128.00,
                 'discount': 55.11,
                 'isFav': false,
@@ -501,7 +501,7 @@ List<Map<String, dynamic>> data = [
               // 7
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Creamy Garlic Shrimp',
                 'price': 135.00,
                 'discount': 22.83,
                 'isFav': false,
@@ -519,10 +519,10 @@ List<Map<String, dynamic>> data = [
             'image':
                 'https://media.istockphoto.com/id/532571540/photo/raw-salmon-on-baking-paper.webp?b=1&s=170667a&w=0&k=20&c=OLZfDFYdam4iNY7Jh0MD98w90V9NWEB5ajhQWm0y-9k=',
             'detail': [
-              // 7
+              // 8
               {
                 'category': 'Fish & Meat',
-                'productname': 'Salmon Fillet',
+                'productname': 'Tuna Tartare',
                 'price': 190.00,
                 'discount': 35.73,
                 'isFav': false,
@@ -555,42 +555,126 @@ List<Map<String, dynamic>> data = [
             'price': '\$20',
             'quantity': 1,
             'image':
-                'https://e0.pxfuel.com/wallpapers/115/779/desktop-wallpaper-vegetables-graphy-tomatoes-abstract-fresh-vegetables.jpg'
+                'https://e0.pxfuel.com/wallpapers/115/779/desktop-wallpaper-vegetables-graphy-tomatoes-abstract-fresh-vegetables.jpg',
+            'detail': [
+              // 1
+              {
+                'category': 'Vegetables',
+                'productname': 'Tomatoes',
+                'price': 20.00,
+                'discount': 5.73,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://e0.pxfuel.com/wallpapers/115/779/desktop-wallpaper-vegetables-graphy-tomatoes-abstract-fresh-vegetables.jpg',
+              }
+            ]
           },
           {
             'productname': 'Cabbage',
             'price': '\$45',
             'quantity': 1,
             'image':
-                'https://e0.pxfuel.com/wallpapers/50/572/desktop-wallpaper-fresh-veggies-fresh-vegetables.jpg'
+                'https://e0.pxfuel.com/wallpapers/50/572/desktop-wallpaper-fresh-veggies-fresh-vegetables.jpg',
+            'detail': [
+              // 2
+              {
+                'category': 'Vegetables',
+                'productname': 'Cabbage',
+                'price': 45.00,
+                'discount': 10.13,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://e0.pxfuel.com/wallpapers/50/572/desktop-wallpaper-fresh-veggies-fresh-vegetables.jpg',
+              }
+            ]
           },
           {
             'productname': 'Broccoli',
             'price': '\$21',
             'quantity': 1,
             'image':
-                'https://freedesignfile.com/upload/2017/04/Fruits-and-vegetables-with-a-white-background-HD-picture.jpg'
+                'https://freedesignfile.com/upload/2017/04/Fruits-and-vegetables-with-a-white-background-HD-picture.jpg',
+            'detail': [
+              // 3
+              {
+                'category': 'Vegetables',
+                'productname': 'Broccoli',
+                'price': 21.00,
+                'discount': 5.70,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://freedesignfile.com/upload/2017/04/Fruits-and-vegetables-with-a-white-background-HD-picture.jpg',
+              }
+            ]
           },
           {
             'productname': 'Cucumbers',
             'price': '\$23',
             'quantity': 1,
             'image':
-                'https://previews.123rf.com/images/alinamd/alinamd1503/alinamd150300007/37197650-set-of-fruits-and-vegetables-isolated-on-white-background.jpg'
+                'https://previews.123rf.com/images/alinamd/alinamd1503/alinamd150300007/37197650-set-of-fruits-and-vegetables-isolated-on-white-background.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Vegetables',
+                'productname': 'Cucumbers',
+                'price': 23.00,
+                'discount': 7.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://previews.123rf.com/images/alinamd/alinamd1503/alinamd150300007/37197650-set-of-fruits-and-vegetables-isolated-on-white-background.jpg',
+              }
+            ]
           },
           {
             'productname': 'Onions',
             'price': '\$31',
             'quantity': 1,
             'image':
-                'https://us.123rf.com/450wm/alinamd/alinamd1309/alinamd130900003/21972079-set-of-different-fruits-and-vegetables-isolated-on-white-background.jpg?ver=6'
+                'https://us.123rf.com/450wm/alinamd/alinamd1309/alinamd130900003/21972079-set-of-different-fruits-and-vegetables-isolated-on-white-background.jpg?ver=6',
+            'detail': [
+              // 5
+              {
+                'category': 'Vegetables',
+                'productname': 'Onions',
+                'price': 31.00,
+                'discount': 9.78,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://us.123rf.com/450wm/alinamd/alinamd1309/alinamd130900003/21972079-set-of-different-fruits-and-vegetables-isolated-on-white-background.jpg?ver=6',
+              }
+            ]
           },
           {
             'productname': 'Lettuce',
             'price': '\$14',
             'quantity': 1,
             'image':
-                'https://w0.peakpx.com/wallpaper/165/64/HD-wallpaper-fruits-and-veggies-vegtables-abstract-fruits-foods.jpg'
+                'https://w0.peakpx.com/wallpaper/165/64/HD-wallpaper-fruits-and-veggies-vegtables-abstract-fruits-foods.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Vegetables',
+                'productname': 'Lettuce',
+                'price': 14.00,
+                'discount': 2.00,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://w0.peakpx.com/wallpaper/165/64/HD-wallpaper-fruits-and-veggies-vegtables-abstract-fruits-foods.jpg',
+              }
+            ]
           },
         ]
       },

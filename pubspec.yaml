@@ -42,6 +42,7 @@ dependencies:
   font_awesome_flutter:
   curved_navigation_bar: ^1.0.3
   badges:  
+  animated_rating_stars: ^1.0.1
   
 
 dev_dependencies:
