@@ -19,7 +19,11 @@ class _DetailViewState extends State<DetailView> {
     return sellingPrice;
   }
 
-  final int imageIndex = 0;
+  int activePage = 0;
+
+  final PageController pageController = PageController(
+    initialPage: 0,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +63,9 @@ class _DetailViewState extends State<DetailView> {
                                           borderRadius:
                                               BorderRadius.circular(100)),
                                       child: Image.asset(
-                                        imageIndex == 0
+                                        activePage == 0
                                             ? 'assets/images/fruit1.jpg'
-                                            : imageIndex == 1
+                                            : activePage == 1
                                                 ? 'assets/images/fruit.jpg'
                                                 : 'assets/images/fruit2.png',
                                         fit: BoxFit.fill,
@@ -71,6 +75,22 @@ class _DetailViewState extends State<DetailView> {
                                 },
                               )),
                         ),
+                      ),
+                      Row(
+                        children: List.generate(
+                            2,
+                            (index) => Padding(
+                                  padding: const EdgeInsets.all(3),
+                                  child: Container(
+                                    height: activePage == index ? 7 : 5,
+                                    width: activePage == index ? 45 : 25,
+                                    decoration: BoxDecoration(
+                                        color: activePage == index
+                                            ? AppDarkColors.black1
+                                            : AppDarkColors.black45,
+                                        borderRadius: BorderRadius.circular(2)),
+                                  ),
+                                )),
                       ),
                     ],
                   ),
