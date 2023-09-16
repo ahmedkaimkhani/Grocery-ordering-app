@@ -60,7 +60,7 @@ class _DetailViewState extends State<DetailView> {
                                     },
                                     itemCount: 3,
                                     itemBuilder: (context, index) {
-                                      final String image1 =
+                                      final String image =
                                           detailPage['category'];
                                       final String image2 =
                                           detailPage['category'];
@@ -76,12 +76,12 @@ class _DetailViewState extends State<DetailView> {
                                               color: Colors.grey,
                                               borderRadius:
                                                   BorderRadius.circular(100)),
-                                          child: Image.asset(
+                                          child: Image.network(
                                             activePage == 0
-                                                ? 'assets/images/fruit1.jpg'
+                                                ? image
                                                 : activePage == 1
-                                                    ? 'assets/images/fruit.jpg'
-                                                    : 'assets/images/fruit2.png',
+                                                    ? image2
+                                                    : image3,
                                             fit: BoxFit.fill,
                                           ),
                                         ),
