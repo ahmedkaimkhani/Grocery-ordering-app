@@ -50,8 +50,8 @@ class _DetailViewState extends State<DetailView> {
                           child: Column(
                             children: [
                               Container(
-                                  height: 250,
-                                  width: 250,
+                                  height: 245,
+                                  width: 245,
                                   child: PageView.builder(
                                     onPageChanged: (index) {
                                       setState(() {
@@ -64,8 +64,8 @@ class _DetailViewState extends State<DetailView> {
                                         borderRadius:
                                             BorderRadius.circular(180),
                                         child: Container(
-                                          height: 250,
-                                          width: 250,
+                                          height: 245,
+                                          width: 245,
                                           decoration: BoxDecoration(
                                               color: Colors.grey,
                                               borderRadius:
