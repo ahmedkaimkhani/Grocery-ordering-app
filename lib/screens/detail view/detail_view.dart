@@ -19,6 +19,8 @@ class _DetailViewState extends State<DetailView> {
     return sellingPrice;
   }
 
+  final int imageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,19 +44,32 @@ class _DetailViewState extends State<DetailView> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: 50),
                           child: Container(
-                            height: 200,
-                            width: 200,
-                            decoration: BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius: BorderRadius.circular(100)),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(100),
-                              child: Image.asset(
-                                'assets/images/fruit1.jpg',
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
+                              height: 200,
+                              width: 200,
+                              child: PageView.builder(
+                                itemCount: 3,
+                                itemBuilder: (context, index) {
+                                  return ClipRRect(
+                                    borderRadius: BorderRadius.circular(100),
+                                    child: Container(
+                                      height: 200,
+                                      width: 200,
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey,
+                                          borderRadius:
+                                              BorderRadius.circular(100)),
+                                      child: Image.asset(
+                                        imageIndex == 0
+                                            ? 'assets/images/fruit1.jpg'
+                                            : imageIndex == 1
+                                                ? 'assets/images/fruit.jpg'
+                                                : 'assets/images/fruit2.png',
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                  );
+                                },
+                              )),
                         ),
                       ),
                     ],
