@@ -49,10 +49,11 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
               itemBuilder: (context, index) {
                 final product = widget.shopData['product'][index];
                 return InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
+                  onTap: () async {
+                    await Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => DetailView(shopProducts: product),
                     ));
+                    setState(() {});
                   },
                   child: Container(
                     decoration: BoxDecoration(
