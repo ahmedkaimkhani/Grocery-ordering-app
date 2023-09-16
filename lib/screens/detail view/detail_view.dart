@@ -75,13 +75,16 @@ class _DetailViewState extends State<DetailView> {
                                               color: Colors.grey,
                                               borderRadius:
                                                   BorderRadius.circular(100)),
-                                          child: Image.network(
-                                            activePage == 0
-                                                ? image
-                                                : activePage == 1
-                                                    ? image2
-                                                    : image3,
-                                            fit: BoxFit.fill,
+                                          child: Hero(
+                                            tag: 'image',
+                                            child: Image.network(
+                                              activePage == 0
+                                                  ? image
+                                                  : activePage == 1
+                                                      ? image2
+                                                      : image3,
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                       );

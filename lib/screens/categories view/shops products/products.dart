@@ -68,11 +68,14 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
                             child: Stack(children: [
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
-                                child: Image.network(
-                                  product['image'],
-                                  height: 120,
-                                  width: double.infinity,
-                                  fit: BoxFit.cover,
+                                child: Hero(
+                                  tag: 'image',
+                                  child: Image.network(
+                                    product['image'],
+                                    height: 120,
+                                    width: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               Positioned(
