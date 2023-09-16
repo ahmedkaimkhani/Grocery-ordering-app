@@ -47,52 +47,68 @@ class _DetailViewState extends State<DetailView> {
                       Center(
                         child: Padding(
                           padding: const EdgeInsets.only(top: 50),
-                          child: Container(
-                              height: 200,
-                              width: 200,
-                              child: PageView.builder(
-                                itemCount: 3,
-                                itemBuilder: (context, index) {
-                                  return ClipRRect(
-                                    borderRadius: BorderRadius.circular(100),
-                                    child: Container(
-                                      height: 200,
-                                      width: 200,
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          borderRadius:
-                                              BorderRadius.circular(100)),
-                                      child: Image.asset(
-                                        activePage == 0
-                                            ? 'assets/images/fruit1.jpg'
-                                            : activePage == 1
-                                                ? 'assets/images/fruit.jpg'
-                                                : 'assets/images/fruit2.png',
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                  );
-                                },
-                              )),
+                          child: Column(
+                            children: [
+                              Container(
+                                  height: 250,
+                                  width: 250,
+                                  child: PageView.builder(
+                                    onPageChanged: (index) {
+                                      setState(() {
+                                        activePage = index;
+                                      });
+                                    },
+                                    itemCount: 3,
+                                    itemBuilder: (context, index) {
+                                      return ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(180),
+                                        child: Container(
+                                          height: 250,
+                                          width: 250,
+                                          decoration: BoxDecoration(
+                                              color: Colors.grey,
+                                              borderRadius:
+                                                  BorderRadius.circular(100)),
+                                          child: Image.asset(
+                                            activePage == 0
+                                                ? 'assets/images/fruit1.jpg'
+                                                : activePage == 1
+                                                    ? 'assets/images/fruit.jpg'
+                                                    : 'assets/images/fruit2.png',
+                                            fit: BoxFit.fill,
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  )),
+                            ],
+                          ),
                         ),
                       ),
-                      Row(
-                        children: List.generate(
-                            2,
-                            (index) => Padding(
-                                  padding: const EdgeInsets.all(3),
-                                  child: Container(
-                                    height: activePage == index ? 7 : 5,
-                                    width: activePage == index ? 45 : 25,
-                                    decoration: BoxDecoration(
-                                        color: activePage == index
-                                            ? AppDarkColors.black1
-                                            : AppDarkColors.black45,
-                                        borderRadius: BorderRadius.circular(2)),
-                                  ),
-                                )),
-                      ),
                     ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      top: 15,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                          3,
+                          (index) => Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Container(
+                                  height: activePage == index ? 6 : 4,
+                                  width: activePage == index ? 30 : 20,
+                                  decoration: BoxDecoration(
+                                      color: activePage == index
+                                          ? AppColors.orange
+                                          : AppDarkColors.black20,
+                                      borderRadius: BorderRadius.circular(2)),
+                                ),
+                              )),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
