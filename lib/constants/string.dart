@@ -5,4 +5,7 @@ class AppText {
   static String categoryPageText2 = 'By Category';
 
   static String byShopCtgPageText = 'Starting from';
+
+  static String favorite = 'Favorite';
+  static String favProducts = 'Products';
 }

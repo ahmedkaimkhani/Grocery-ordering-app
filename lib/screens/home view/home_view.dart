@@ -12,6 +12,7 @@ import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart'
 import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
 import '../cart item/cart.list.dart';
+import '../favorite view/favorite_view.dart';
 import 'widgets/appbar_method.dart';
 
 class HomeView extends StatefulWidget {
@@ -119,7 +120,7 @@ class _HomeViewState extends State<HomeView> {
         widget = const CategoriesView();
         break;
       case 2:
-        widget = const CategoriesView();
+        widget = const FavoriteView();
         break;
       default:
         widget = const CategoriesView();
