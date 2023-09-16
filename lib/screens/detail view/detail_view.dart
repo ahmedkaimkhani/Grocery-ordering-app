@@ -60,6 +60,12 @@ class _DetailViewState extends State<DetailView> {
                                     },
                                     itemCount: 3,
                                     itemBuilder: (context, index) {
+                                      final String image1 =
+                                          detailPage['category'];
+                                      final String image2 =
+                                          detailPage['category'];
+                                      final String image3 =
+                                          detailPage['category'];
                                       return ClipRRect(
                                         borderRadius:
                                             BorderRadius.circular(180),
