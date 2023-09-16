@@ -1,6 +1,5 @@
 import 'package:badges/badges.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart_view.dart';
@@ -9,11 +8,9 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/categories_view.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
-import 'package:grocery_order_app_flutter/screens/home%20view/widgets/navigation_bar.dart';
 
 import '../cart item/cart.list.dart';
 import '../favorite view/favorite_view.dart';
-import 'widgets/appbar_method.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

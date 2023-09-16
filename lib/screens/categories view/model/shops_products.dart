@@ -691,42 +691,126 @@ List<Map<String, dynamic>> data = [
             'price': '\$15',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/premium-photo/potatoes-fresh-natural-potatoes-isolated-sliced-potatoes_121234-17.jpg'
+                'https://img.freepik.com/premium-photo/potatoes-fresh-natural-potatoes-isolated-sliced-potatoes_121234-17.jpg',
+            'detail': [
+              // 1
+              {
+                'category': 'Vegetables',
+                'productname': 'Potatoes',
+                'price': 15.00,
+                'discount': 4.05,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/premium-photo/potatoes-fresh-natural-potatoes-isolated-sliced-potatoes_121234-17.jpg',
+              }
+            ]
           },
           {
             'productname': 'Carrots',
             'price': '\$25',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/545454816/photo/fresh-carrots-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=ABrFz1h6Vx62kC_QBzH1wUKv6BCMf7II_QnysmfYOr4='
+                'https://media.istockphoto.com/id/545454816/photo/fresh-carrots-isolated-on-white-background.jpg?b=1&s=612x612&w=0&k=20&c=ABrFz1h6Vx62kC_QBzH1wUKv6BCMf7II_QnysmfYOr4=',
+            'detail': [
+              // 2
+              {
+                'category': 'Vegetables',
+                'productname': 'Carrots',
+                'price': 25.00,
+                'discount': 5.25,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/premium-photo/potatoes-fresh-natural-potatoes-isolated-sliced-potatoes_121234-17.jpg',
+              }
+            ]
           },
           {
             'productname': 'Zucchini',
             'price': '\$32',
             'quantity': 1,
             'image':
-                'https://www.tastingtable.com/img/gallery/how-to-transform-canned-vegetables-for-chowder/l-intro-1691437122.jpg'
+                'https://www.tastingtable.com/img/gallery/how-to-transform-canned-vegetables-for-chowder/l-intro-1691437122.jpg',
+            'detail': [
+              // 3
+              {
+                'category': 'Vegetables',
+                'productname': 'Zucchini',
+                'price': 32.00,
+                'discount': 8.44,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.tastingtable.com/img/gallery/how-to-transform-canned-vegetables-for-chowder/l-intro-1691437122.jpg',
+              }
+            ]
           },
           {
             'productname': 'Cauliflower',
             'price': '\$40',
             'quantity': 1,
             'image':
-                'https://www.wine-searcher.com/images/fw-article/21-8-1-3.jpg'
+                'https://www.wine-searcher.com/images/fw-article/21-8-1-3.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Vegetables',
+                'productname': 'Cauliflower',
+                'price': 40.00,
+                'discount': 10.30,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.wine-searcher.com/images/fw-article/21-8-1-3.jpg',
+              }
+            ]
           },
           {
             'productname': 'Green beans',
             'price': '\$43',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/897528572/photo/healthy-fresh-green-vegetables-heap-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=irVjLF7adLKbxBLxFjDl68kqzNCd0lLEio4tQ_mPTpg='
+                'https://media.istockphoto.com/id/897528572/photo/healthy-fresh-green-vegetables-heap-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=irVjLF7adLKbxBLxFjDl68kqzNCd0lLEio4tQ_mPTpg=',
+            'detail': [
+              // 5
+              {
+                'category': 'Vegetables',
+                'productname': 'Green beans',
+                'price': 43.00,
+                'discount': 10.90,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/897528572/photo/healthy-fresh-green-vegetables-heap-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=irVjLF7adLKbxBLxFjDl68kqzNCd0lLEio4tQ_mPTpg=',
+              }
+            ]
           },
           {
             'productname': 'Eggplant (aubergine)',
             'price': '\$52',
             'quantity': 1,
             'image':
-                'https://img.freepik.com/premium-photo/green-fruits-vegetables-white-background_372197-900.jpg'
+                'https://img.freepik.com/premium-photo/green-fruits-vegetables-white-background_372197-900.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Vegetables',
+                'productname': 'Eggplant (aubergine)',
+                'price': 52.00,
+                'discount': 15.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/897528572/photo/healthy-fresh-green-vegetables-heap-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=irVjLF7adLKbxBLxFjDl68kqzNCd0lLEio4tQ_mPTpg=',
+              }
+            ]
           },
         ]
       },
@@ -743,40 +827,123 @@ List<Map<String, dynamic>> data = [
             'price': '\$15',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/480134211/photo/golden-onions-on-rustic-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=LoJbh2k4ZQ-K8NFOYOmYrFX00b7UNY7848d6ENKXETk='
+                'https://media.istockphoto.com/id/480134211/photo/golden-onions-on-rustic-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=LoJbh2k4ZQ-K8NFOYOmYrFX00b7UNY7848d6ENKXETk=',
+            'detail': [
+              // 1
+              {
+                'category': 'Vegetables',
+                'productname': 'Onions',
+                'price': 15.00,
+                'discount': 3.30,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/480134211/photo/golden-onions-on-rustic-wooden-background.jpg?b=1&s=612x612&w=0&k=20&c=LoJbh2k4ZQ-K8NFOYOmYrFX00b7UNY7848d6ENKXETk=',
+              }
+            ]
           },
           {
             'productname': 'Mushrooms',
             'price': '\$18',
             'quantity': 1,
             'image':
-                'https://5.imimg.com/data5/SELLER/Default/2021/2/WH/PG/UM/98166444/whatsapp-image-2021-02-04-at-8-05-17-pm-500x500.jpeg'
+                'https://5.imimg.com/data5/SELLER/Default/2021/2/WH/PG/UM/98166444/whatsapp-image-2021-02-04-at-8-05-17-pm-500x500.jpeg',
+            'detail': [
+              // 2
+              {
+                'category': 'Vegetables',
+                'productname': 'Mushrooms',
+                'price': 18.00,
+                'discount': 4.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://5.imimg.com/data5/SELLER/Default/2021/2/WH/PG/UM/98166444/whatsapp-image-2021-02-04-at-8-05-17-pm-500x500.jpeg',
+              }
+            ]
           },
           {
             'productname': 'Radishes',
             'price': '\$30',
             'image':
-                'https://media.istockphoto.com/id/598131422/photo/white-daikon-radish.jpg?s=612x612&w=0&k=20&c=tw2qkUvxhNeESAVwYoDLXAI_jTgq-ayH56ZY6ad0E4k='
+                'https://media.istockphoto.com/id/598131422/photo/white-daikon-radish.jpg?s=612x612&w=0&k=20&c=tw2qkUvxhNeESAVwYoDLXAI_jTgq-ayH56ZY6ad0E4k=',
+            'detail': [
+              // 3
+              {
+                'category': 'Vegetables',
+                'productname': 'Radishes',
+                'price': 30.00,
+                'discount': 8.99,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/598131422/photo/white-daikon-radish.jpg?s=612x612&w=0&k=20&c=tw2qkUvxhNeESAVwYoDLXAI_jTgq-ayH56ZY6ad0E4k=',
+              }
+            ]
           },
           {
             'productname': 'Kale',
             'price': '\$40',
             'quantity': 1,
             'image':
-                'https://t3.ftcdn.net/jpg/02/30/97/16/360_F_230971608_hsf90qBGPcmUuv3m0LkWPAuI5i5PnQmL.jpg'
+                'https://t3.ftcdn.net/jpg/02/30/97/16/360_F_230971608_hsf90qBGPcmUuv3m0LkWPAuI5i5PnQmL.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Vegetables',
+                'productname': 'Kale',
+                'price': 40.00,
+                'discount': 580,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://t3.ftcdn.net/jpg/02/30/97/16/360_F_230971608_hsf90qBGPcmUuv3m0LkWPAuI5i5PnQmL.jpg',
+              }
+            ]
           },
           {
             'productname': 'Peas',
             'price': '\$55',
             'quantity': 1,
-            'image': 'https://wallpapercave.com/wp/wp9221825.jpg'
+            'image': 'https://wallpapercave.com/wp/wp9221825.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Vegetables',
+                'productname': 'Peas',
+                'price': 55.00,
+                'discount': 10.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image': 'https://wallpapercave.com/wp/wp9221825.jpg',
+              }
+            ]
           },
           {
             'productname': 'Beets',
             'price': '\$74',
             'quantity': 1,
             'image':
-                'https://health.clevelandclinic.org/wp-content/uploads/sites/3/2020/12/Health-Benefits-Beets-626329388-770x533-1.jpg'
+                'https://health.clevelandclinic.org/wp-content/uploads/sites/3/2020/12/Health-Benefits-Beets-626329388-770x533-1.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Vegetables',
+                'productname': 'Beets',
+                'price': 74.00,
+                'discount': 15.88,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://health.clevelandclinic.org/wp-content/uploads/sites/3/2020/12/Health-Benefits-Beets-626329388-770x533-1.jpg',
+              }
+            ]
           },
         ]
       }
@@ -800,55 +967,168 @@ List<Map<String, dynamic>> data = [
             'price': '\$25',
             'quantity': 1,
             'image':
-                'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80'
+                'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80',
+            'detail': [
+              // 1
+              {
+                'category': 'Fruits',
+                'productname': 'Apples',
+                'price': 25.00,
+                'discount': 5.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80',
+              }
+            ]
           },
           {
             'productname': 'Bananas',
             'price': '\$31',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/509533014/photo/raw-organic-bunch-of-bananas.jpg?b=1&s=612x612&w=0&k=20&c=aicsQsdSPBAqrOiiO1cdJcN6CUG-Cva0CGBCtduX5AA='
+                'https://media.istockphoto.com/id/509533014/photo/raw-organic-bunch-of-bananas.jpg?b=1&s=612x612&w=0&k=20&c=aicsQsdSPBAqrOiiO1cdJcN6CUG-Cva0CGBCtduX5AA=',
+            'detail': [
+              // 2
+              {
+                'category': 'Fruits',
+                'productname': 'Bananas',
+                'price': 31.00,
+                'discount': 5.55,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/509533014/photo/raw-organic-bunch-of-bananas.jpg?b=1&s=612x612&w=0&k=20&c=aicsQsdSPBAqrOiiO1cdJcN6CUG-Cva0CGBCtduX5AA=',
+              }
+            ]
           },
           {
             'productname': 'Orange',
             'price': '\$35',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/1371566508/photo/orange-fruits-wooden-crate-box-in-harvest-with-orange-tree-leaves-fresh.webp?b=1&s=170667a&w=0&k=20&c=8YffxuWhHpGSA_Ptto2gh4JQVX8chSFhEYVlQ_zU4Yg='
+                'https://media.istockphoto.com/id/1371566508/photo/orange-fruits-wooden-crate-box-in-harvest-with-orange-tree-leaves-fresh.webp?b=1&s=170667a&w=0&k=20&c=8YffxuWhHpGSA_Ptto2gh4JQVX8chSFhEYVlQ_zU4Yg=',
+            'detail': [
+              // 3
+              {
+                'category': 'Fruits',
+                'productname': 'Orange',
+                'price': 35.00,
+                'discount': 5.80,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/1371566508/photo/orange-fruits-wooden-crate-box-in-harvest-with-orange-tree-leaves-fresh.webp?b=1&s=170667a&w=0&k=20&c=8YffxuWhHpGSA_Ptto2gh4JQVX8chSFhEYVlQ_zU4Yg=',
+              }
+            ]
           },
           {
             'productname': 'Grape',
             'price': '\$40',
             'quantity': 1,
             'image':
-                'https://www.nicepng.com/png/detail/8-82812_grape-red-grapes-hd.png'
+                'https://www.nicepng.com/png/detail/8-82812_grape-red-grapes-hd.png',
+            'detail': [
+              // 4
+              {
+                'category': 'Fruits',
+                'productname': 'Grape',
+                'price': 35.00,
+                'discount': 5.80,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.nicepng.com/png/detail/8-82812_grape-red-grapes-hd.png',
+              }
+            ]
           },
           {
             'productname': 'Strawberry',
             'price': '\$47',
             'quantity': 1,
             'image':
-                'https://www.hdwallpapers.in/download/two_strawberries_in_black_background_4k_hd_strawberry-HD.jpg'
+                'https://www.hdwallpapers.in/download/two_strawberries_in_black_background_4k_hd_strawberry-HD.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Fruits',
+                'productname': 'Strawberry',
+                'price': 47.00,
+                'discount': 10.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.hdwallpapers.in/download/two_strawberries_in_black_background_4k_hd_strawberry-HD.jpg',
+              }
+            ]
           },
           {
             'productname': 'Blueberry',
             'price': '\$55',
             'quantity': 1,
             'image':
-                'https://images.pling.com/img/00/00/33/91/33/1210425/5fcd7833fc116f84bde05dc72b375a209653.jpg'
+                'https://images.pling.com/img/00/00/33/91/33/1210425/5fcd7833fc116f84bde05dc72b375a209653.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Fruits',
+                'productname': 'Blueberry',
+                'price': 55.00,
+                'discount': 15.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://images.pling.com/img/00/00/33/91/33/1210425/5fcd7833fc116f84bde05dc72b375a209653.jpg',
+              }
+            ]
           },
           {
             'productname': 'Cherry',
             'price': '\$31',
             'quantity': 1,
             'image':
-                'https://www.kindpng.com/picc/m/113-1133187_cherry-png-free-download-sour-cherry-transparent-png.png'
+                'https://www.kindpng.com/picc/m/113-1133187_cherry-png-free-download-sour-cherry-transparent-png.png',
+            'detail': [
+              // 7
+              {
+                'category': 'Fruits',
+                'productname': 'Cherry',
+                'price': 31.00,
+                'discount': 12.66,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.kindpng.com/picc/m/113-1133187_cherry-png-free-download-sour-cherry-transparent-png.png',
+              }
+            ]
           },
           {
             'productname': 'Mango',
             'price': '\$61',
+            'quantity': 1,
             'image':
-                'https://img.freepik.com/premium-psd/ripe-cut-mango-with-green-leaf-isolated-transparent-background_901492-437.jpg'
+                'https://img.freepik.com/premium-psd/ripe-cut-mango-with-green-leaf-isolated-transparent-background_901492-437.jpg',
+            'detail': [
+              // 8
+              {
+                'category': 'Fruits',
+                'productname': 'Mango',
+                'price': 61.00,
+                'discount': 12.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://img.freepik.com/premium-psd/ripe-cut-mango-with-green-leaf-isolated-transparent-background_901492-437.jpg',
+              }
+            ]
           },
         ]
       },
@@ -864,41 +1144,123 @@ List<Map<String, dynamic>> data = [
             'productname': 'Pomegranate',
             'price': '\$21',
             'quantity': 1,
-            'image': 'https://images3.alphacoders.com/100/1004890.jpg'
+            'image': 'https://images3.alphacoders.com/100/1004890.jpg',
+            'detail': [
+              // 1
+              {
+                'category': 'Fruits',
+                'productname': 'Pomegranate',
+                'price': 21.00,
+                'discount': 2.10,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image': 'https://images3.alphacoders.com/100/1004890.jpg',
+              }
+            ]
           },
           {
             'productname': 'Pineapple',
             'price': '\$27',
             'quantity': 1,
             'image':
-                'https://wallpaperswide.com/download/pineapple-wallpaper-1920x1080.jpg'
+                'https://wallpaperswide.com/download/pineapple-wallpaper-1920x1080.jpg',
+            'detail': [
+              // 2
+              {
+                'category': 'Fruits',
+                'productname': 'Pineapple',
+                'price': 27.00,
+                'discount': 8.25,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://wallpaperswide.com/download/pineapple-wallpaper-1920x1080.jpg',
+              }
+            ]
           },
           {
             'productname': 'Watermelon',
             'price': '\$35',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/72/665/231/4k-watermelon-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/72/665/231/4k-watermelon-wallpaper-preview.jpg',
+            'detail': [
+              // 3
+              {
+                'category': 'Fruits',
+                'productname': 'Watermelon',
+                'price': 35.00,
+                'discount': 8.60,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/72/665/231/4k-watermelon-wallpaper-preview.jpg',
+              }
+            ]
           },
           {
             'productname': 'Peach',
             'price': '\$43',
             'quantity': 1,
-            'image': 'https://images6.alphacoders.com/708/708113.jpg'
+            'image': 'https://images6.alphacoders.com/708/708113.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Fruits',
+                'productname': 'Peach',
+                'price': 43.00,
+                'discount': 10.60,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image': 'https://images6.alphacoders.com/708/708113.jpg',
+              }
+            ]
           },
           {
             'productname': 'Pear',
             'price': '\$55',
             'quantity': 1,
             'image':
-                'https://e1.pxfuel.com/desktop-wallpaper/349/35/desktop-wallpaper-pics-of-pear-fruit-pear-fruit-thumbnail.jpg'
+                'https://e1.pxfuel.com/desktop-wallpaper/349/35/desktop-wallpaper-pics-of-pear-fruit-pear-fruit-thumbnail.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Fruits',
+                'productname': 'Pear',
+                'price': 55.00,
+                'discount': 15.40,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://e1.pxfuel.com/desktop-wallpaper/349/35/desktop-wallpaper-pics-of-pear-fruit-pear-fruit-thumbnail.jpg',
+              }
+            ]
           },
           {
             'productname': 'Kiwi',
             'price': '\$43',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/96/26/395/fruits-kiwi-fruit-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/96/26/395/fruits-kiwi-fruit-wallpaper-preview.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Fruits',
+                'productname': 'Kiwi',
+                'price': 43.00,
+                'discount': 15.90,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/96/26/395/fruits-kiwi-fruit-wallpaper-preview.jpg',
+              }
+            ]
           },
         ]
       },
@@ -915,42 +1277,126 @@ List<Map<String, dynamic>> data = [
             'price': '\$30',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/704/168/987/fruit-plum-prunes-plum-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/704/168/987/fruit-plum-prunes-plum-wallpaper-preview.jpg',
+            'detail': [
+              // 1
+              {
+                'category': 'Fruits',
+                'productname': 'Plum',
+                'price': 30.00,
+                'discount': 5.10,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/704/168/987/fruit-plum-prunes-plum-wallpaper-preview.jpg',
+              }
+            ]
           },
           {
             'productname': 'Apricot',
             'price': '\$34',
             'quantity': 1,
             'image':
-                'https://w0.peakpx.com/wallpaper/729/32/HD-wallpaper-food-apricot-fruit.jpg'
+                'https://w0.peakpx.com/wallpaper/729/32/HD-wallpaper-food-apricot-fruit.jpg',
+            'detail': [
+              // 2
+              {
+                'category': 'Fruits',
+                'productname': 'Apricot',
+                'price': 34.00,
+                'discount': 7.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://w0.peakpx.com/wallpaper/729/32/HD-wallpaper-food-apricot-fruit.jpg',
+              }
+            ]
           },
           {
             'productname': 'Papaya',
             'price': '\$42',
             'quantity': 1,
             'image':
-                'https://media.istockphoto.com/id/1353655115/photo/papaya-and-mango-tropical-fruits.webp?b=1&s=170667a&w=0&k=20&c=qL3-bmYq99hHBf4wvGSlYaJl75YY7jNZ7hSV50RsAxo='
+                'https://media.istockphoto.com/id/1353655115/photo/papaya-and-mango-tropical-fruits.webp?b=1&s=170667a&w=0&k=20&c=qL3-bmYq99hHBf4wvGSlYaJl75YY7jNZ7hSV50RsAxo=',
+            'detail': [
+              // 3
+              {
+                'category': 'Fruits',
+                'productname': 'Papaya',
+                'price': 41.00,
+                'discount': 6.33,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://media.istockphoto.com/id/1353655115/photo/papaya-and-mango-tropical-fruits.webp?b=1&s=170667a&w=0&k=20&c=qL3-bmYq99hHBf4wvGSlYaJl75YY7jNZ7hSV50RsAxo=',
+              }
+            ]
           },
           {
             'productname': 'Lemon',
             'price': '\$50',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/333/452/33/water-squirt-yellow-background-lemon-hd-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/333/452/33/water-squirt-yellow-background-lemon-hd-wallpaper-preview.jpg',
+            'detail': [
+              // 4
+              {
+                'category': 'Fruits',
+                'productname': 'Papaya',
+                'price': 50.00,
+                'discount': 10.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/333/452/33/water-squirt-yellow-background-lemon-hd-wallpaper-preview.jpg',
+              }
+            ]
           },
           {
             'productname': 'Lime',
             'price': '\$62',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/956/724/890/summer-fruits-green-lime-citrus-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/956/724/890/summer-fruits-green-lime-citrus-wallpaper-preview.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Fruits',
+                'productname': 'Lime',
+                'price': 61.00,
+                'discount': 10.10,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/956/724/890/summer-fruits-green-lime-citrus-wallpaper-preview.jpg',
+              }
+            ]
           },
           {
             'productname': 'Cranberry',
             'price': '\$90',
             'quantity': 1,
             'image':
-                'https://c4.wallpaperflare.com/wallpaper/80/786/415/fruit-cranberries-red-dishes-wallpaper-preview.jpg'
+                'https://c4.wallpaperflare.com/wallpaper/80/786/415/fruit-cranberries-red-dishes-wallpaper-preview.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Fruits',
+                'productname': 'Cranberry',
+                'price': 90.00,
+                'discount': 20.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://c4.wallpaperflare.com/wallpaper/80/786/415/fruit-cranberries-red-dishes-wallpaper-preview.jpg',
+              }
+            ]
           },
         ]
       }
@@ -974,34 +1420,104 @@ List<Map<String, dynamic>> data = [
             'price': '\$90',
             'quantity': 1,
             'image':
-                'https://cdn.fishry.com/product/815096003206-1-4f37675-concepts-stores.jpg'
+                'https://cdn.fishry.com/product/815096003206-1-4f37675-concepts-stores.jpg',
+            'detail': [
+              // 1
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Tapal Tea',
+                'price': 90.00,
+                'discount': 15.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://cdn.fishry.com/product/815096003206-1-4f37675-concepts-stores.jpg',
+              }
+            ]
           },
           {
             'productname': 'Ahmed Tea',
             'price': '\$69',
             'quantity': 1,
             'image':
-                'https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/61mjK0g3acL._SL1200_.jpg'
+                'https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/61mjK0g3acL._SL1200_.jpg',
+            'detail': [
+              // 2
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Ahmed Tea',
+                'price': 69.00,
+                'discount': 15.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/61mjK0g3acL._SL1200_.jpg',
+              }
+            ]
           },
           {
             'productname': 'Twinings Tea',
             'price': '\$69',
             'quantity': 1,
             'image':
-                'https://qtxasset.com/quartz/qcloud1/media/image/5%20-%20Twinings.jpg?VersionId=gpMY7qBd4HsfUD0V.0d2tOqRUvV8Dg.t'
+                'https://qtxasset.com/quartz/qcloud1/media/image/5%20-%20Twinings.jpg?VersionId=gpMY7qBd4HsfUD0V.0d2tOqRUvV8Dg.t',
+            'detail': [
+              // 3
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Twinings Tea',
+                'price': 69.00,
+                'discount': 10.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://qtxasset.com/quartz/qcloud1/media/image/5%20-%20Twinings.jpg?VersionId=gpMY7qBd4HsfUD0V.0d2tOqRUvV8Dg.t',
+              }
+            ]
           },
           {
             'productname': 'Tazo Tea',
-            'price': '\$69',
+            'price': '\$100',
             'image':
-                'https://stir-tea-coffee.com/downloads/4053/download/News-624-366px-TAZO.jpg?cb=0df0af0c5caa29f5b141b2f2dde9a130'
+                'https://stir-tea-coffee.com/downloads/4053/download/News-624-366px-TAZO.jpg?cb=0df0af0c5caa29f5b141b2f2dde9a130',
+            'detail': [
+              // 4
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Tazo Tea',
+                'price': 100.00,
+                'discount': 20.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://stir-tea-coffee.com/downloads/4053/download/News-624-366px-TAZO.jpg?cb=0df0af0c5caa29f5b141b2f2dde9a130',
+              }
+            ]
           },
           {
             'productname': 'Numi Organic Tea',
-            'price': '\$69',
+            'price': '\$110',
             'quantity': 1,
             'image':
-                'https://numitea.com/wp-content/uploads/2022/12/numi-organic-rooibos-tea.jpg'
+                'https://numitea.com/wp-content/uploads/2022/12/numi-organic-rooibos-tea.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Numi Organic Tea',
+                'price': 110.00,
+                'discount': 20.90,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://numitea.com/wp-content/uploads/2022/12/numi-organic-rooibos-tea.jpg',
+              }
+            ]
           },
         ]
       },
@@ -1018,34 +1534,104 @@ List<Map<String, dynamic>> data = [
             'price': '\$35',
             'quantity': 1,
             'image':
-                'https://toppng.com/uploads/preview/vital-tea-11563081439cp0hxjkdzc.png'
+                'https://toppng.com/uploads/preview/vital-tea-11563081439cp0hxjkdzc.png',
+            'detail': [
+              // 1
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Vital Tea',
+                'price': 35.00,
+                'discount': 8.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://toppng.com/uploads/preview/vital-tea-11563081439cp0hxjkdzc.png',
+              }
+            ]
           },
           {
             'productname': 'Lipton Tea',
             'price': '\$45',
             'quantity': 1,
             'image':
-                'https://w7.pngwing.com/pngs/110/196/png-transparent-green-tea-darjeeling-tea-lipton-tea-bag-tea-food-tea-herbal-tea.png'
+                'https://w7.pngwing.com/pngs/110/196/png-transparent-green-tea-darjeeling-tea-lipton-tea-bag-tea-food-tea-herbal-tea.png',
+            'detail': [
+              // 2
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Lipton Tea',
+                'price': 45.00,
+                'discount': 8.90,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://w7.pngwing.com/pngs/110/196/png-transparent-green-tea-darjeeling-tea-lipton-tea-bag-tea-food-tea-herbal-tea.png',
+              }
+            ]
           },
           {
             'productname': 'Harney & Sons',
             'price': '\$47',
             'quantity': 1,
             'image':
-                'https://images.squarespace-cdn.com/content/v1/6008e4b84dfdb80938cd0442/5cf20e59-ce49-4fba-b9dc-16f1f43a1349/harney+tea+with+plant.JPG'
+                'https://images.squarespace-cdn.com/content/v1/6008e4b84dfdb80938cd0442/5cf20e59-ce49-4fba-b9dc-16f1f43a1349/harney+tea+with+plant.JPG',
+            'detail': [
+              // 3
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Harney & Sons',
+                'price': 47.00,
+                'discount': 12.55,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://images.squarespace-cdn.com/content/v1/6008e4b84dfdb80938cd0442/5cf20e59-ce49-4fba-b9dc-16f1f43a1349/harney+tea+with+plant.JPG',
+              }
+            ]
           },
           {
             'productname': 'Celestial Seasonings',
             'price': '\$50',
             'quantity': 1,
-            'image': 'https://images.heb.com/is/image/HEBGrocery/000160502-1'
+            'image': 'https://images.heb.com/is/image/HEBGrocery/000160502-1',
+            'detail': [
+              // 4
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Celestial Seasonings',
+                'price': 50.00,
+                'discount': 15.63,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://images.heb.com/is/image/HEBGrocery/000160502-1',
+              }
+            ]
           },
           {
             'productname': 'Yogi Tea',
             'price': '\$55',
             'quantity': 1,
             'image':
-                'https://m.media-amazon.com/images/I/715UQNB5pmL._AC_UF1000,1000_QL80_.jpg'
+                'https://m.media-amazon.com/images/I/715UQNB5pmL._AC_UF1000,1000_QL80_.jpg',
+            'detail': [
+              // 5
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Yogi Tea',
+                'price': 55.00,
+                'discount': 12.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://m.media-amazon.com/images/I/715UQNB5pmL._AC_UF1000,1000_QL80_.jpg',
+              }
+            ]
           },
         ]
       },
@@ -1059,45 +1645,129 @@ List<Map<String, dynamic>> data = [
         'product': [
           {
             'productname': 'Supreme Tea',
-            'price': '\$55',
+            'price': '\$40',
             'quantity': 1,
             'image':
-                'https://static-01.daraz.pk/p/9e380f485db343202b9f50aa61c65316.jpg'
+                'https://static-01.daraz.pk/p/9e380f485db343202b9f50aa61c65316.jpg',
+            'detail': [
+              // 1
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Supreme Tea',
+                'price': 40.00,
+                'discount': 10.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://static-01.daraz.pk/p/9e380f485db343202b9f50aa61c65316.jpg',
+              }
+            ]
           },
           {
             'productname': 'Laiba Tea',
             'price': '\$61',
             'quantity': 1,
             'image':
-                'https://i1.sndcdn.com/avatars-000384063137-alijb2-t500x500.jpg'
+                'https://i1.sndcdn.com/avatars-000384063137-alijb2-t500x500.jpg',
+            'detail': [
+              // 2
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Laiba Tea',
+                'price': 61.00,
+                'discount': 10.99,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://i1.sndcdn.com/avatars-000384063137-alijb2-t500x500.jpg',
+              }
+            ]
           },
           {
             'productname': 'Kho Cha',
             'price': '\$75',
             'quantity': 1,
             'image':
-                'https://theplatememoirs.files.wordpress.com/2015/05/img_4934.jpg'
+                'https://theplatememoirs.files.wordpress.com/2015/05/img_4934.jpg',
+            'detail': [
+              // 3
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Kho Cha',
+                'price': 75.00,
+                'discount': 15.99,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://theplatememoirs.files.wordpress.com/2015/05/img_4934.jpg',
+              }
+            ]
           },
           {
             'productname': 'Tetley',
             'price': '\$43',
             'quantity': 1,
             'image':
-                'https://5.imimg.com/data5/SELLER/Default/2021/7/ZG/BH/BF/37470450/whatsapp-image-2021-07-21-at-11-27-02-am.jpeg'
+                'https://5.imimg.com/data5/SELLER/Default/2021/7/ZG/BH/BF/37470450/whatsapp-image-2021-07-21-at-11-27-02-am.jpeg',
+            'detail': [
+              // 4
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Tetley',
+                'price': 43.00,
+                'discount': 10.09,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://5.imimg.com/data5/SELLER/Default/2021/7/ZG/BH/BF/37470450/whatsapp-image-2021-07-21-at-11-27-02-am.jpeg',
+              }
+            ]
           },
           {
             'productname': 'Bigelow Tea',
             'price': '\$79',
             'quantity': 1,
             'image':
-                'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe'
+                'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe',
+            'detail': [
+              // 5
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Bigelow Tea',
+                'price': 79.00,
+                'discount': 20.20,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://qtxasset.com/quartz/qcloud1/media/image/4%20-%20Bigelow%20Tea.jpg?VersionId=HB4ZJUy7MjvK6E4MiWLAk544qcwz4MMe',
+              }
+            ]
           },
           {
             'productname': 'Typhoo Tea',
             'price': '\$85',
             'quantity': 1,
             'image':
-                'https://www.grocerygazette.co.uk/wp-content/uploads/2021/07/EiCl-RTWkAIv06T-600x337.jpg'
+                'https://www.grocerygazette.co.uk/wp-content/uploads/2021/07/EiCl-RTWkAIv06T-600x337.jpg',
+            'detail': [
+              // 6
+              {
+                'category': 'Tea Leaves',
+                'productname': 'Typhoo Tea',
+                'price': 85.00,
+                'discount': 20.50,
+                'isFav': false,
+                'description':
+                    'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.',
+                'image':
+                    'https://www.grocerygazette.co.uk/wp-content/uploads/2021/07/EiCl-RTWkAIv06T-600x337.jpg',
+              }
+            ]
           },
         ]
       }
