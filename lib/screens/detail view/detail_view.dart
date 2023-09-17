@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 import '../../widgets/custom button/custom_button.dart';
@@ -25,6 +26,12 @@ class _DetailViewState extends State<DetailView> {
     initialPage: 0,
   );
 
+  addToCart(addCartProduct) {
+    setState(() {
+      myCart.add(addCartProduct);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +43,7 @@ class _DetailViewState extends State<DetailView> {
           itemCount: 1,
           itemBuilder: (context, index) {
             final detailPage = widget.shopProducts['detail'][index];
+            final addCartProduct = widget.shopProducts;
             return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -181,7 +189,9 @@ class _DetailViewState extends State<DetailView> {
                         Expanded(
                           child: CustomButton(
                             buttonText: 'Add to Cart',
-                            onPressed: () {},
+                            onPressed: () {
+                              addToCart(addCartProduct);
+                            },
                             buttonColor: AppDarkColors.black1,
                             borderColor: AppColors.blue,
                             buttonTextStyle:
