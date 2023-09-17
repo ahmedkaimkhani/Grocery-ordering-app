@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
@@ -40,6 +41,12 @@ class _FavoriteViewState extends State<FavoriteView> {
                 ],
               ),
             )),
+        ListView.builder(
+          itemCount: favItem.length,
+          itemBuilder: (context, index) {
+            return const ListTile();
+          },
+        )
       ],
     );
   }
