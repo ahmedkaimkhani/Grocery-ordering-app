@@ -9,10 +9,18 @@ import '../screens/cart item/cart_view.dart';
 class CustomWhiteAppBar extends StatefulWidget {
   final String? title;
   final IconData? icon;
+  final IconData? iconBack;
+  final Function()? onPressed;
   final IconData? iconCart;
   final Padding? padding;
   const CustomWhiteAppBar(
-      {super.key, this.title, this.icon, this.iconCart, this.padding});
+      {super.key,
+      this.title,
+      this.icon,
+      this.iconCart,
+      this.padding,
+      this.iconBack,
+      this.onPressed});
 
   @override
   State<CustomWhiteAppBar> createState() => _CustomWhiteAppBarState();
@@ -38,7 +46,7 @@ class _CustomWhiteAppBarState extends State<CustomWhiteAppBar> {
                   Navigator.pop(context);
                 },
                 icon: Icon(
-                  Icons.arrow_back_ios_new_sharp,
+                  widget.iconBack ?? Icons.arrow_back_ios_new_sharp,
                   size: 10,
                   color: AppDarkColors.black100,
                 )),
