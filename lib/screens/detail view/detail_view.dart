@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
+import 'package:grocery_order_app_flutter/screens/cart%20item/cart_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 import '../../widgets/custom button/custom_button.dart';
@@ -27,9 +28,8 @@ class _DetailViewState extends State<DetailView> {
   );
 
   addToCart(addCartProduct) {
-    setState(() {
-      myCart.add(addCartProduct);
-    });
+    myCart.add(addCartProduct);
+    setState(() {});
   }
 
   @override
@@ -204,7 +204,13 @@ class _DetailViewState extends State<DetailView> {
                         Expanded(
                           child: CustomButton(
                             buttonText: 'Buy Now',
-                            onPressed: () {},
+                            onPressed: () async {
+                              await Navigator.of(context)
+                                  .push(MaterialPageRoute(
+                                builder: (context) => const CartView(),
+                              ));
+                              setState(() {});
+                            },
                             buttonTextStyle: CustomTextStyle14.h1Medium14,
                           ),
                         ),
