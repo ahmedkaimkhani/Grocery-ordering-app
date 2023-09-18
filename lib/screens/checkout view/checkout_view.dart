@@ -23,7 +23,7 @@ class _CheckoutViewState extends State<CheckoutView> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SingleChildScrollView(
+      body: SafeArea(
         child: Column(
           children: [
             CustomWhiteAppBar(title: 'Shopping Cart (${myCart.length})'),
@@ -37,15 +37,17 @@ class _CheckoutViewState extends State<CheckoutView> {
                 ),
               ),
             ),
-            ListView.builder(
-              itemCount: address.length,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                return CustomListTile(
-                  index: index,
-                );
-              },
+            Expanded(
+              child: ListView.builder(
+                itemCount: address.length,
+                shrinkWrap: true,
+                // physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  return CustomListTile(
+                    index: index,
+                  );
+                },
+              ),
             ),
             const SizedBox(
               height: 35,
@@ -66,15 +68,18 @@ class _CheckoutViewState extends State<CheckoutView> {
             ),
             SizedBox(
               width: width * 0.90,
-              child: CustomButton(
-                buttonText: 'Add Card',
-                onPressed: () async {
-                  await Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const AddCard(),
-                  ));
-                  setState(() {});
-                },
-                buttonTextStyle: CustomTextStyle14.h1Medium14,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 20),
+                child: CustomButton(
+                  buttonText: 'Add Card',
+                  onPressed: () async {
+                    await Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const AddCard(),
+                    ));
+                    setState(() {});
+                  },
+                  buttonTextStyle: CustomTextStyle14.h1Medium14,
+                ),
               ),
             )
           ],
