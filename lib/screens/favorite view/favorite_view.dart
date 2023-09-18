@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
 import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 
 import '../../constants/app_colors.dart';
@@ -44,7 +45,19 @@ class _FavoriteViewState extends State<FavoriteView> {
         ListView.builder(
           itemCount: favItem.length,
           itemBuilder: (context, index) {
-            return const ListTile();
+            final listData = data[index];
+            final shops = listData['shops'][index];
+            final shopProducts = shops['product'][index];
+            final detail = shopProducts['detail'][index];
+            return ListTile(
+              title: Text(detail['productname']),
+              subtitle: Text(detail['price']),
+              trailing: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.favorite,
+                  )),
+            );
           },
         )
       ],
