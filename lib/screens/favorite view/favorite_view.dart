@@ -56,6 +56,10 @@ class _FavoriteViewState extends State<FavoriteView> {
                   itemCount: favItem.length,
                   itemBuilder: (context, index) {
                     final myFavItem = favItem[index];
+                    final listData = data[index];
+                    final shops = listData['shops'][index];
+                    final shopProducts = shops['product'][index];
+                    final detail = shopProducts['detail'][index];
                     return ListTile(
                       leading: CircleAvatar(
                         backgroundImage: NetworkImage(myFavItem['image']),
@@ -66,6 +70,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                           onPressed: () {
                             setState(() {
                               favItem.removeAt(index);
+                              detail['isFav'] = false;
                             });
                           },
                           icon: Icon(
@@ -82,8 +87,3 @@ class _FavoriteViewState extends State<FavoriteView> {
     );
   }
 }
-
-//  final listData = data[index];
-//             final shops = listData['shops'][index];
-//             final shopProducts = shops['product'][index];
-//             final detail = shopProducts['detail'][index];
