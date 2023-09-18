@@ -1,4 +1,5 @@
 import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
 
 class AppDarkColors {
   static Color black = const Color(0xff000000);
@@ -18,5 +19,6 @@ class AppColors {
   static Color blueDark = const Color(0xff153075);
   static Color orange = const Color(0xffF9B023);
   static Color orangeLite = const Color(0xffFFC83A);
+  static Color red = Colors.red;
   static Color textFieldColor = const Color(0xff153075);
 }

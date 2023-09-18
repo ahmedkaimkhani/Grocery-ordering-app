@@ -3,6 +3,7 @@ import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart_view.dart';
+import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 import '../../widgets/custom button/custom_button.dart';
@@ -143,10 +144,22 @@ class _DetailViewState extends State<DetailView> {
                           ],
                         ),
                         IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.favorite),
-                          color: AppDarkColors.black60,
-                        )
+                            onPressed: () {
+                              setState(() {
+                                if (detailPage['isFav']) {
+                                  favItem.remove(detailPage);
+                                  detailPage['isFav'] = false;
+                                } else {
+                                  favItem.add(detailPage);
+                                  detailPage['isFav'] = true;
+                                }
+                              });
+                              print(favItem.length);
+                            },
+                            icon: const Icon(Icons.favorite),
+                            color: detailPage['isFav']
+                                ? AppColors.red
+                                : AppDarkColors.black20)
                       ],
                     ),
                   ),

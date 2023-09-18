@@ -42,25 +42,32 @@ class _FavoriteViewState extends State<FavoriteView> {
                 ],
               ),
             )),
-        ListView.builder(
-          itemCount: favItem.length,
-          itemBuilder: (context, index) {
-            final listData = data[index];
-            final shops = listData['shops'][index];
-            final shopProducts = shops['product'][index];
-            final detail = shopProducts['detail'][index];
-            return ListTile(
-              title: Text(detail['productname']),
-              subtitle: Text(detail['price']),
-              trailing: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.favorite,
-                  )),
-            );
-          },
+        Expanded(
+          child: ListView.builder(
+            itemCount: favItem.length,
+            itemBuilder: (context, index) {
+              final myFavItem = favItem[index];
+              return ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(myFavItem['image']),
+                ),
+                title: Text(myFavItem['productname']),
+                subtitle: Text('\$${myFavItem['price']}'),
+                trailing: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.favorite,
+                    )),
+              );
+            },
+          ),
         )
       ],
     );
   }
 }
+
+//  final listData = data[index];
+//             final shops = listData['shops'][index];
+//             final shopProducts = shops['product'][index];
+//             final detail = shopProducts['detail'][index];
