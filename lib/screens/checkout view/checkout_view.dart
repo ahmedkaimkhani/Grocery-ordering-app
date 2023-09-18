@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/screens/add%20new%20cards/add_cards.dart';
 import 'package:grocery_order_app_flutter/screens/checkout%20view/address%20view/take_address_view.dart';
 import 'package:grocery_order_app_flutter/screens/checkout%20view/widgets/custom_listtile.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
@@ -67,7 +68,12 @@ class _CheckoutViewState extends State<CheckoutView> {
               width: width * 0.90,
               child: CustomButton(
                 buttonText: 'Add Card',
-                onPressed: () {},
+                onPressed: () async {
+                  await Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const AddCard(),
+                  ));
+                  setState(() {});
+                },
                 buttonTextStyle: CustomTextStyle14.h1Medium14,
               ),
             )
