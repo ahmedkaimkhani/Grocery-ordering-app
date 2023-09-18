@@ -44,31 +44,39 @@ class _FavoriteViewState extends State<FavoriteView> {
               ),
             )),
         Expanded(
-          child: ListView.builder(
-            itemCount: favItem.length,
-            itemBuilder: (context, index) {
-              final myFavItem = favItem[index];
-              return ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(myFavItem['image']),
+          child: favItem.isEmpty
+              ? Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'you haven\'t added item to your favorite list',
+                    style: CustomTextStyle14.h1SemiBold14,
+                  ),
+                )
+              : ListView.builder(
+                  itemCount: favItem.length,
+                  itemBuilder: (context, index) {
+                    final myFavItem = favItem[index];
+                    return ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: NetworkImage(myFavItem['image']),
+                      ),
+                      title: Text(myFavItem['productname']),
+                      subtitle: Text('\$${myFavItem['price']}'),
+                      trailing: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              favItem.removeAt(index);
+                            });
+                          },
+                          icon: Icon(
+                            Icons.favorite,
+                            color: myFavItem['isFav'] == true
+                                ? AppColors.red
+                                : AppDarkColors.black20,
+                          )),
+                    );
+                  },
                 ),
-                title: Text(myFavItem['productname']),
-                subtitle: Text('\$${myFavItem['price']}'),
-                trailing: IconButton(
-                    onPressed: () {
-                      setState(() {
-                        favItem.removeAt(index);
-                      });
-                    },
-                    icon: Icon(
-                      Icons.favorite,
-                      color: myFavItem['isFav'] == true
-                          ? AppColors.red
-                          : AppDarkColors.black20,
-                    )),
-              );
-            },
-          ),
         )
       ],
     );
