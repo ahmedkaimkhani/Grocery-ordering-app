@@ -142,8 +142,9 @@ class _DetailViewState extends State<DetailView> {
                             ),
                           ],
                         ),
-                        Icon(
-                          Icons.favorite,
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.favorite),
                           color: AppDarkColors.black60,
                         )
                       ],
