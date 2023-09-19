@@ -3,8 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
 
-import 'screens/orders/order_view.dart';
-
 void main() {
   runApp(const MyApp());
 }
