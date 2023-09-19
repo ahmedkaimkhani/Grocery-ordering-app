@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),
-      home: const OrderView(),
+      home: OrderView(),
     );
   }
 }

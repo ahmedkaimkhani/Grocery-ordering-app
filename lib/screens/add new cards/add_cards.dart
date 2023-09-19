@@ -143,7 +143,7 @@ class AddCard extends StatelessWidget {
                         buttonText: 'Proceed To checkout',
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const OrderView(),
+                            builder: (context) => OrderView(),
                           ));
                         },
                         buttonTextStyle: CustomTextStyle14.h1Medium14,
