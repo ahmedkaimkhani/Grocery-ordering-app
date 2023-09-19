@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 class OrderView extends StatelessWidget {
@@ -14,28 +15,42 @@ class OrderView extends StatelessWidget {
             const CustomWhiteAppBar(
               title: 'Orders',
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 50,
-                    child: Text('Orders'),
-                    decoration: BoxDecoration(
-                      color: AppColors.orange,
-                      borderRadius: BorderRadius.circular(60),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                        color: AppColors.orange,
+                        borderRadius: BorderRadius.circular(60),
+                      ),
+                      child: Center(
+                          child: Text(
+                        'Orders',
+                        style: CustomTextStyle14.h1Medium14,
+                      )),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: Container(
-                    height: 50,
-                    child: Text('Past'),
-                    decoration: BoxDecoration(
-                        color: AppDarkColors.black20,
-                        borderRadius: BorderRadius.circular(60)),
+                  const SizedBox(
+                    width: 10,
                   ),
-                )
-              ],
+                  Expanded(
+                    child: Container(
+                      height: 45,
+                      decoration: BoxDecoration(
+                          color: AppDarkColors.black20,
+                          borderRadius: BorderRadius.circular(60)),
+                      child: Center(
+                          child: Text(
+                        'Past',
+                        style: CustomTextStyle14.h1Medium14Grey,
+                      )),
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),

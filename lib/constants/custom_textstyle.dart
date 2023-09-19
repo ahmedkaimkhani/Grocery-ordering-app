@@ -154,6 +154,12 @@ class CustomTextStyle14 {
     color: AppDarkColors.black1,
   );
 
+  static TextStyle h1Medium14Grey = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppDarkColors.black60,
+  );
+
   static TextStyle h1Regular14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
