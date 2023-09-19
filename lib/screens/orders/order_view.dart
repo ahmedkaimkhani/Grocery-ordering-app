@@ -3,6 +3,8 @@ import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
+import 'orders & past content/orders_content.dart';
+
 class OrderView extends StatefulWidget {
   const OrderView({super.key});
 
@@ -29,7 +31,7 @@ class _OrderViewState extends State<OrderView> {
               title: 'Orders',
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.only(left: 25, right: 25, bottom: 40),
               child: Row(
                 children: [
                   Expanded(
@@ -87,8 +89,9 @@ class _OrderViewState extends State<OrderView> {
               ),
             ),
             Container(
-              child:
-                  selectedTapIndex == 1 ? Text('Button One') : Text('Button 2'),
+              child: selectedTapIndex == 1
+                  ? const OrderContent()
+                  : Text('Button 2'),
             )
           ],
         ),
