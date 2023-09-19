@@ -44,7 +44,8 @@ class _OrderViewState extends State<OrderView> {
                             borderRadius: BorderRadius.circular(60),
                             border: selectedTapIndex == 1
                                 ? null
-                                : Border.all(color: AppDarkColors.black60)),
+                                : Border.all(
+                                    color: AppDarkColors.black60, width: 0.5)),
                         child: Center(
                             child: Text(
                           'Orders',
@@ -70,7 +71,8 @@ class _OrderViewState extends State<OrderView> {
                             borderRadius: BorderRadius.circular(60),
                             border: selectedTapIndex == 2
                                 ? null
-                                : Border.all(color: AppDarkColors.black60)),
+                                : Border.all(
+                                    color: AppDarkColors.black60, width: 0.5)),
                         child: Center(
                             child: Text(
                           'Past',
