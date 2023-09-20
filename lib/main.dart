@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Grocery App',
       theme: ThemeData(
-          backgroundColor: AppDarkColors.black1,
+          scaffoldBackgroundColor: AppDarkColors.black1,
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),

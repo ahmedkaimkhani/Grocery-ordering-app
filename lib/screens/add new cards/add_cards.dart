@@ -56,10 +56,10 @@ class AddCard extends StatelessWidget {
                 hintText: 'Card Number',
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 40),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 40),
               child: Row(
-                children: const [
+                children: [
                   Expanded(
                     child: CustomTextField(
                       textName: 'Exp Date',
@@ -150,7 +150,7 @@ class AddCard extends StatelessWidget {
                           buttonText: 'Proceed To checkout',
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => OrderView(),
+                              builder: (context) => const OrderView(),
                             ));
                           },
                           buttonTextStyle: CustomTextStyle14.h1Medium14,

@@ -58,7 +58,7 @@ class _DetailViewState extends State<DetailView> {
                           padding: const EdgeInsets.only(top: 50),
                           child: Column(
                             children: [
-                              Container(
+                              SizedBox(
                                   height: 245,
                                   width: 245,
                                   child: PageView.builder(

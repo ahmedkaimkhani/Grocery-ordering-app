@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/screens/track%20orrder/track_order.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
-import '../../../constants/app_colors.dart';
 import '../../../constants/custom_textstyle.dart';
 import '../../cart item/cart.list.dart';
 
@@ -51,7 +50,7 @@ class OrderContent extends StatelessWidget {
                           children: [
                             Stack(
                               children: [
-                                Container(
+                                SizedBox(
                                     width: 180,
                                     height: 150,
                                     child: Image.asset(

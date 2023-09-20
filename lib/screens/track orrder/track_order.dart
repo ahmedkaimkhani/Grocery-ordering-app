@@ -5,7 +5,9 @@ import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 import '../../constants/custom_textstyle.dart';
 
 class TrackOrder extends StatelessWidget {
-  const TrackOrder({Key? key});
+  const TrackOrder({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

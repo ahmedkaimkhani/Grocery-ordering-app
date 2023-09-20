@@ -12,7 +12,9 @@ import '../cart item/cart.list.dart';
 List address = [];
 
 class CheckoutView extends StatefulWidget {
-  const CheckoutView({Key? key});
+  const CheckoutView({
+    super.key,
+  });
 
   @override
   State<CheckoutView> createState() => _CheckoutViewState();

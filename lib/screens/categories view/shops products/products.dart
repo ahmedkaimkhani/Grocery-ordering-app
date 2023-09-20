@@ -10,7 +10,7 @@ import '../../../constants/custom_textstyle.dart';
 class ShopProductsPage extends StatefulWidget {
   final Map<String, dynamic> shopData;
 
-  ShopProductsPage({required this.shopData});
+  const ShopProductsPage({super.key, required this.shopData});
 
   @override
   State<ShopProductsPage> createState() => _ShopProductsPageState();

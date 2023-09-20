@@ -146,7 +146,7 @@ class _CategoriesViewState extends State<CategoriesView> {
                   width: 10,
                 ),
                 Expanded(
-                  child: Container(
+                  child: SizedBox(
                     height: 145,
                     child: Column(
                       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/widget/button.dart';
-import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 class GetStartedView extends StatefulWidget {
   const GetStartedView({super.key});
