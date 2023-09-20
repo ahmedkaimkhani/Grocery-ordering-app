@@ -12,7 +12,7 @@ import '../cart item/cart.list.dart';
 List address = [];
 
 class CheckoutView extends StatefulWidget {
-  const CheckoutView({super.key});
+  const CheckoutView({Key? key});
 
   @override
   State<CheckoutView> createState() => _CheckoutViewState();
@@ -28,7 +28,8 @@ class _CheckoutViewState extends State<CheckoutView> {
           children: [
             CustomWhiteAppBar(title: 'Shopping Cart (${myCart.length})'),
             Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25, top: 25),
+              padding: const EdgeInsets.only(
+                  left: 25, right: 25, top: 25, bottom: 20),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -69,7 +70,7 @@ class _CheckoutViewState extends State<CheckoutView> {
             SizedBox(
               width: width * 0.90,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 20),
+                padding: const EdgeInsets.only(bottom: 35),
                 child: CustomButton(
                   buttonText: 'Add Card',
                   onPressed: () async {

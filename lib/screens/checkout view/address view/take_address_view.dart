@@ -38,52 +38,50 @@ class _AddressViewState extends State<AddressView> {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 15),
-          child: Container(
-            color: Colors.grey,
-            height: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  width: 60,
-                ),
-                const CustomWhiteAppBar(title: 'Address'),
-                CustomTextField(
-                  textName: 'Home',
-                  myTextEditingController: editControllerHome,
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                CustomTextField(
-                  textName: 'Office',
-                  hintText: 'Office Address',
-                  myTextEditingController: editControllerOffice,
-                ),
-                const Spacer(),
-                Align(
-                  alignment: Alignment.center,
-                  child: SizedBox(
-                    width: width * 0.90,
-                    child: CustomButton(
-                      buttonText: 'Save',
-                      onPressed: () async {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const CheckoutView(),
-                        ));
-                        addHomeAddress();
-                        addOfficeAddress();
-                        setState(() {});
-                      },
-                      buttonTextStyle: CustomTextStyle14.h1Medium14,
-                    ),
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 15),
+        child: Container(
+          color: Colors.grey,
+          height: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                width: 60,
+              ),
+              const CustomWhiteAppBar(title: 'Address'),
+              CustomTextField(
+                textName: 'Home',
+                myTextEditingController: editControllerHome,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              CustomTextField(
+                textName: 'Office',
+                hintText: 'Office Address',
+                myTextEditingController: editControllerOffice,
+              ),
+              const Spacer(),
+              Align(
+                alignment: Alignment.center,
+                child: SizedBox(
+                  width: width * 0.90,
+                  child: CustomButton(
+                    buttonText: 'Save',
+                    onPressed: () async {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const CheckoutView(),
+                      ));
+                      addHomeAddress();
+                      addOfficeAddress();
+                      setState(() {});
+                    },
+                    buttonTextStyle: CustomTextStyle14.h1Medium14,
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
