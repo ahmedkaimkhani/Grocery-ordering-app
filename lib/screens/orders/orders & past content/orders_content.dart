@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/screens/track%20orrder/track_order.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 import '../../../constants/app_colors.dart';
@@ -107,7 +108,11 @@ class OrderContent extends StatelessWidget {
                             CustomButton(
                               buttonText: 'Track Order',
                               buttonTextStyle: CustomTextStyle14.h1Medium14,
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => const TrackOrder(),
+                                ));
+                              },
                             )
                           ],
                         ),
