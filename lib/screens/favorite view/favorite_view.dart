@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
 import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 
@@ -70,7 +69,6 @@ class _FavoriteViewState extends State<FavoriteView> {
                           onPressed: () {
                             setState(() {
                               favItem.removeAt(index);
-                              detail['isFav'] = false;
                             });
                             detail['isFav'] = false;
                           },

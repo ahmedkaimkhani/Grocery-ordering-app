@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 
 import '../constants/app_colors.dart';
@@ -16,7 +17,7 @@ class CartBadge extends StatefulWidget {
 class _CartBadgeState extends State<CartBadge> {
   @override
   Widget build(BuildContext context) {
-    return Badge(
+    return badges.Badge(
       badgeContent: Text(
         myCart.length.toString(),
         style: CustomTextStyle14.h1Medium14,

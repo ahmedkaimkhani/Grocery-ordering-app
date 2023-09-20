@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -67,7 +68,7 @@ class _HomeViewState extends State<HomeView> {
           // ),
           Padding(
             padding: const EdgeInsets.only(right: 20, top: 12),
-            child: Badge(
+            child: badges.Badge(
               showBadge: myCart.isEmpty ? false : true,
               badgeContent: Text(
                 myCart.length.toString(),

@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
@@ -54,7 +55,7 @@ class _CustomWhiteAppBarState extends State<CustomWhiteAppBar> {
           IconButton(
               onPressed: () {},
               icon: Icon(widget.icon, size: 22, color: AppDarkColors.black100)),
-          Badge(
+          badges.Badge(
             showBadge: myCart.isEmpty ? false : true,
             badgeContent: Text(
               myCart.length.toString(),

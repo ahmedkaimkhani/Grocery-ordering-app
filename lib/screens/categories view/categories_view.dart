@@ -108,6 +108,7 @@ class _CategoriesViewState extends State<CategoriesView> {
     final List<Map<String, dynamic>> shops = categoryData['shops'];
 
     return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: shops.length,
       itemBuilder: (context, index) {
