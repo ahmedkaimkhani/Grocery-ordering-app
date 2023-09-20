@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/orders/orders%20&%20past%20content/past_content.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 import 'orders & past content/orders_content.dart';
@@ -91,7 +92,7 @@ class _OrderViewState extends State<OrderView> {
             Container(
               child: selectedTapIndex == 1
                   ? const OrderContent()
-                  : Text('Button 2'),
+                  : const PastContent(),
             )
           ],
         ),
