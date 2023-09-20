@@ -72,6 +72,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                               favItem.removeAt(index);
                               detail['isFav'] = false;
                             });
+                            detail['isFav'] = false;
                           },
                           icon: Icon(
                             Icons.favorite,

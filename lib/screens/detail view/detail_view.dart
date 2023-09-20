@@ -146,20 +146,20 @@ class _DetailViewState extends State<DetailView> {
                         IconButton(
                             onPressed: () {
                               setState(() {
-                                if (detailPage['isFav']) {
-                                  favItem.remove(detailPage);
-                                  detailPage['isFav'] = false;
-                                } else {
+                                if (detailPage['isFav'] == false) {
                                   favItem.add(detailPage);
                                   detailPage['isFav'] = true;
+                                } else {
+                                  favItem.remove(detailPage);
+                                  detailPage['isFav'] = false;
                                 }
                               });
                               print(favItem.length);
                             },
                             icon: const Icon(Icons.favorite),
-                            color: detailPage['isFav']
-                                ? AppColors.red
-                                : AppDarkColors.black20)
+                            color: detailPage['isFav'] == false
+                                ? AppDarkColors.black20
+                                : AppColors.red)
                       ],
                     ),
                   ),

@@ -150,77 +150,88 @@ class _CartViewState extends State<CartView> {
             ),
             myCart.isEmpty
                 ? const Text('')
-                : Container(
-                    height: 225,
-                    width: double.infinity,
-                    child: SizedBox(
-                      width: width * 0.90,
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 40, right: 40, bottom: 15, top: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Subtotal',
-                                  style: CustomTextStyle12.h1Medium12,
-                                ),
-                                Text(
-                                  '\$${calculateSubtotal().toStringAsFixed(2)}',
-                                  style: CustomTextStyle14.h1SemiBold14,
-                                ),
-                              ],
+                : Padding(
+                    padding: const EdgeInsets.only(left: 5, right: 5),
+                    child: Container(
+                      height: 225,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: AppDarkColors.black10,
+                          borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(30),
+                              topRight: Radius.circular(30))),
+                      child: SizedBox(
+                        width: width * 0.90,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 40, bottom: 15, top: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Subtotal',
+                                    style: CustomTextStyle12.h1Medium12,
+                                  ),
+                                  Text(
+                                    '\$${calculateSubtotal().toStringAsFixed(2)}',
+                                    style: CustomTextStyle14.h1SemiBold14,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 40, right: 40, bottom: 15),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Delivery',
-                                  style: CustomTextStyle12.h1Medium12,
-                                ),
-                                Text(
-                                  '\$2.00',
-                                  style: CustomTextStyle14.h1SemiBold14,
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 40, bottom: 15),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Delivery',
+                                    style: CustomTextStyle12.h1Medium12,
+                                  ),
+                                  Text(
+                                    '\$2.00',
+                                    style: CustomTextStyle14.h1SemiBold14,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                left: 40, right: 40, bottom: 40),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Total',
-                                  style: CustomTextStyle12.h1Medium12,
-                                ),
-                                Text(
-                                  '\$${calculateTotal().toStringAsFixed(2)}',
-                                  style: CustomTextStyle14.h1SemiBold14,
-                                ),
-                              ],
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 40, right: 40, bottom: 40),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Total',
+                                    style: CustomTextStyle12.h1Medium12,
+                                  ),
+                                  Text(
+                                    '\$${calculateTotal().toStringAsFixed(2)}',
+                                    style: CustomTextStyle14.h1SemiBold14,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            width: width * 0.90,
-                            child: CustomButton(
-                              buttonText: 'Proceed To checkout',
-                              onPressed: () {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => const CheckoutView(),
-                                ));
-                              },
-                              buttonTextStyle: CustomTextStyle14.h1Medium14,
-                            ),
-                          )
-                        ],
+                            SizedBox(
+                              width: width * 0.90,
+                              child: CustomButton(
+                                buttonText: 'Proceed To checkout',
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => const CheckoutView(),
+                                  ));
+                                },
+                                buttonTextStyle: CustomTextStyle14.h1Medium14,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   )
