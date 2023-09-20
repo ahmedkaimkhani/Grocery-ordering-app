@@ -5,7 +5,7 @@ import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart_view.dart';
 import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
-
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../../widgets/custom button/custom_button.dart';
 
 class DetailView extends StatefulWidget {
@@ -165,7 +165,7 @@ class _DetailViewState extends State<DetailView> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+                        const EdgeInsets.only(left: 25, right: 25, bottom: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -192,6 +192,38 @@ class _DetailViewState extends State<DetailView> {
                           'Reg: \$${detailPage['price'].toStringAsFixed(2)}',
                           style: CustomTextStyle12.h1Medium12,
                         ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 25, right: 25, bottom: 20),
+                    child: Row(
+                      children: [
+                        RatingBar.builder(
+                          itemSize: 20,
+                          initialRating: 3,
+                          minRating: 1,
+                          direction: Axis.horizontal,
+                          allowHalfRating: true,
+                          itemCount: 5,
+                          itemPadding:
+                              const EdgeInsets.symmetric(horizontal: 2.0),
+                          itemBuilder: (context, index) => const Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          onRatingUpdate: (rating) {
+                            print(rating);
+                          },
+                        ),
+                        const SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          '110 Reviews',
+                          style: CustomTextStyle14.h1Medium14Grey,
+                        )
                       ],
                     ),
                   ),

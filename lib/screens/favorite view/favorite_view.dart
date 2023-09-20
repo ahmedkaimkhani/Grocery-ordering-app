@@ -44,12 +44,18 @@ class _FavoriteViewState extends State<FavoriteView> {
             )),
         Expanded(
           child: favItem.isEmpty
-              ? Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'you haven\'t added item to your favorite list',
-                    style: CustomTextStyle14.h1SemiBold14,
-                  ),
+              ? Column(
+                  children: [
+                    Image.network(
+                        'https://i.giphy.com/media/0HhDnlH89djZtRqYoO/giphy.webp'),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'you haven\'t added item to your favorite list',
+                        style: CustomTextStyle14.h1SemiBold14,
+                      ),
+                    ),
+                  ],
                 )
               : ListView.builder(
                   itemCount: favItem.length,

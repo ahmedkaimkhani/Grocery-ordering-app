@@ -82,7 +82,10 @@ class TrackOrder extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.timer_outlined),
+              leading: CircleAvatar(
+                backgroundColor: AppDarkColors.black1,
+                child: const Icon(Icons.timer_outlined),
+              ),
               title: Text(
                 'Delivery In',
                 style: CustomTextStyle14.h1Medium14Grey,
@@ -93,7 +96,10 @@ class TrackOrder extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.location_on_outlined),
+              leading: CircleAvatar(
+                backgroundColor: AppDarkColors.black1,
+                child: const Icon(Icons.location_on_outlined),
+              ),
               title: Text(
                 'Delivery Address',
                 style: CustomTextStyle14.h1Medium14Grey,

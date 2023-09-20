@@ -66,13 +66,26 @@ class _CartViewState extends State<CartView> {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 12, right: 12),
+                padding: const EdgeInsets.only(left: 12, right: 12, top: 30),
                 child: myCart.isEmpty
-                    ? Center(
-                        child: Text(
-                        'You haven\'t added anything to your cart',
-                        style: CustomTextStyle14.h1SemiBold14,
-                      ))
+                    ? Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.network(
+                              'https://cdn.dribbble.com/users/5107895/screenshots/14532312/media/a7e6c2e9333d0989e3a54c95dd8321d7.gif'),
+                          Text(
+                            'Empty Cart !',
+                            style: CustomTextStyle30.h1Medium30,
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            'You haven\'t added anything to your cart',
+                            style: CustomTextStyle14.h1SemiBold14,
+                          ),
+                        ],
+                      )
                     : ListView.builder(
                         itemCount: myCart.length,
                         itemBuilder: (context, index) {
