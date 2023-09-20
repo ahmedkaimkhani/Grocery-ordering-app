@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+
+import '../../../constants/custom_textstyle.dart';
 
 class PastContent extends StatelessWidget {
   const PastContent({super.key});
@@ -7,19 +10,29 @@ class PastContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: 3,
+        itemCount: 6,
         itemBuilder: (context, index) {
           return Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 12, right: 12),
+              Padding(
+                padding: const EdgeInsets.only(left: 12, right: 12),
                 child: ListTile(
-                  leading: CircleAvatar(
+                  leading: const CircleAvatar(
                     backgroundImage: NetworkImage(
                         'https://w7.pngwing.com/pngs/1018/975/png-transparent-juice-banana-food-auglis-flavor-banana-natural-foods-leaf-orange-thumbnail.png'),
                   ),
-                  title: Text('Bananas'),
-                  subtitle: Text('\$55.50'),
+                  title: Text(
+                    'Bananas',
+                    style: CustomTextStyle14.h1Medium14Grey,
+                  ),
+                  subtitle: Text(
+                    '\$55.50',
+                    style: CustomTextStyle14.h1SemiBold14,
+                  ),
+                  trailing: Text(
+                    'ID: #765433',
+                    style: CustomTextStyle14.h1SemiBold14,
+                  ),
                 ),
               ),
               Padding(
@@ -27,10 +40,30 @@ class PastContent extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('20/082023'),
-                    TextButton(onPressed: () {}, child: Text('Success'))
+                    Padding(
+                      padding: const EdgeInsets.only(left: 60),
+                      child: Text(
+                        '20/082023',
+                        style: CustomTextStyle14.h1Medium14Grey,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            AppDarkColors.black10),
+                      ),
+                      child: Text(
+                        'Success',
+                        style: CustomTextStyle12.h1Medium12Blue,
+                      ),
+                    ),
                   ],
                 ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 20, left: 25, right: 25),
+                child: Divider(),
               )
             ],
           );
