@@ -51,7 +51,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                     Align(
                       alignment: Alignment.center,
                       child: Text(
-                        'you haven\'t added item to your favorite list',
+                        'You haven\'t added item to your favorite list',
                         style: CustomTextStyle14.h1SemiBold14,
                       ),
                     ),
