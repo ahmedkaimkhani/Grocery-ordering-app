@@ -81,16 +81,20 @@ class _DetailViewState extends State<DetailView> {
                                           height: 245,
                                           width: 245,
                                           decoration: BoxDecoration(
-                                              color: Colors.grey,
+                                              color: AppDarkColors.black1,
                                               borderRadius:
                                                   BorderRadius.circular(100)),
-                                          child: Image.network(
-                                            activePage == 0
-                                                ? image
-                                                : activePage == 1
-                                                    ? image2
-                                                    : image3,
-                                            fit: BoxFit.fill,
+                                          child: Hero(
+                                            transitionOnUserGestures: true,
+                                            tag: widget.shopProducts,
+                                            child: Image.network(
+                                              activePage == 0
+                                                  ? image
+                                                  : activePage == 1
+                                                      ? image2
+                                                      : image3,
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                       );

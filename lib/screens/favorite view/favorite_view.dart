@@ -5,6 +5,7 @@ import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
 import '../../constants/string.dart';
+import '../detail view/detail_view.dart';
 
 class FavoriteView extends StatefulWidget {
   const FavoriteView({super.key});
@@ -63,12 +64,11 @@ class _FavoriteViewState extends State<FavoriteView> {
               : Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: favItem.length == 1 ? 1 : 2,
                       crossAxisSpacing: 12,
                       mainAxisSpacing: 12,
-                      mainAxisExtent: 210,
+                      mainAxisExtent: favItem.length == 1 ? 320 : 225,
                     ),
                     itemCount: favItem.length,
                     itemBuilder: (context, index) {
@@ -87,7 +87,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                                   borderRadius: BorderRadius.circular(10),
                                   child: Image.network(
                                     myFavItem['image'],
-                                    height: 120,
+                                    height: favItem.length == 1 ? null : 120,
                                     width: double.infinity,
                                     fit: BoxFit.cover,
                                   ),
