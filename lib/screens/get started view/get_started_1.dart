@@ -111,7 +111,7 @@ class _GetStartedViewState extends State<GetStartedView> {
                 borderRadius: BorderRadius.circular(40),
                 child: Container(
                   child: Image.asset(
-                    'assets/images/logo.png',
+                    'assets/images/logo1.gif',
                     height: 250,
                     width: 250,
                   ),

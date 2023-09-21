@@ -16,7 +16,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   startTimer() {
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds: 2),
       () async {
         Navigator.pushReplacement(
             context,
