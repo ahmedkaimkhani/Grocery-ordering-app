@@ -42,6 +42,9 @@ class _FavoriteViewState extends State<FavoriteView> {
                 ],
               ),
             )),
+        const SizedBox(
+          height: 20,
+        ),
         Expanded(
           child: favItem.isEmpty
               ? Column(
@@ -57,38 +60,122 @@ class _FavoriteViewState extends State<FavoriteView> {
                     ),
                   ],
                 )
-              : ListView.builder(
-                  itemCount: favItem.length,
-                  itemBuilder: (context, index) {
-                    final myFavItem = favItem[index];
-                    final listData = data[index];
-                    final shops = listData['shops'][index];
-                    final shopProducts = shops['product'][index];
-                    final detail = shopProducts['detail'][index];
-                    return ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage: NetworkImage(myFavItem['image']),
-                      ),
-                      title: Text(myFavItem['productname']),
-                      subtitle: Text('\$${myFavItem['price']}'),
-                      trailing: IconButton(
-                          onPressed: () {
-                            setState(() {
-                              favItem.removeAt(index);
-                            });
-                            detail['isFav'] = false;
-                          },
-                          icon: Icon(
-                            Icons.favorite,
-                            color: myFavItem['isFav'] == true
-                                ? AppColors.red
-                                : AppDarkColors.black20,
-                          )),
-                    );
-                  },
+              : Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                      mainAxisExtent: 210,
+                    ),
+                    itemCount: favItem.length,
+                    itemBuilder: (context, index) {
+                      final myFavItem = favItem[index];
+                      return Container(
+                        decoration: BoxDecoration(
+                          color: AppDarkColors.black10,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              child: Center(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.network(
+                                    myFavItem['image'],
+                                    height: 120,
+                                    width: double.infinity,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                  top: 8, left: 6, right: 6, bottom: 6),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '\$${myFavItem['price']}',
+                                    style: CustomTextStyle18.h1Bold318,
+                                  ),
+                                  IconButton(
+                                      onPressed: () {
+                                        setState(() {
+                                          favItem.removeAt(index);
+                                        });
+                                        // detail['isFav'] = false;
+                                      },
+                                      icon: Icon(
+                                        Icons.favorite,
+                                        color: myFavItem['isFav'] == true
+                                            ? AppColors.red
+                                            : AppDarkColors.black20,
+                                      )),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 6, right: 6),
+                              child: Text(
+                                myFavItem['productname'],
+                                style: CustomTextStyle14.h1Regular14,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 ),
         )
       ],
     );
   }
 }
+
+// final listData = data[index];
+//                     final shops = listData['shops'][index];
+//                     final shopProducts = shops['product'][index];
+//                     final detail = shopProducts['detail'][index];
+
+
+
+// ListView.builder(
+//                   itemCount: favItem.length,
+//                   itemBuilder: (context, index) {
+//                     final myFavItem = favItem[index];
+
+//                     return ListTile(
+//                       leading: CircleAvatar(
+//                         backgroundImage: NetworkImage(myFavItem['image']),
+//                       ),
+//                       title: Text(myFavItem['productname']),
+//                       subtitle: Text('\$${myFavItem['price']}'),
+//                       trailing: IconButton(
+//                           onPressed: () {
+//                             setState(() {
+//                               favItem.removeAt(index);
+//                             });
+//                             // detail['isFav'] = false;
+//                           },
+//                           icon: Icon(
+//                             Icons.favorite,
+//                             color: myFavItem['isFav'] == true
+//                                 ? AppColors.red
+//                                 : AppDarkColors.black20,
+//                           )),
+//                     );
+//                   },
+//                 ),
+//         )
+//       ],
+//     );
+//   }
+// }
