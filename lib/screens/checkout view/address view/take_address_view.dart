@@ -49,6 +49,9 @@ class _AddressViewState extends State<AddressView> {
                 width: 60,
               ),
               const CustomWhiteAppBar(title: 'Address'),
+              const SizedBox(
+                height: 30,
+              ),
               CustomTextField(
                 textName: 'Home',
                 myTextEditingController: editControllerHome,

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_order_app_flutter/screens/categories%20view/model/shops_products.dart';
 import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
 import '../../constants/string.dart';
-import '../detail view/detail_view.dart';
 
 class FavoriteView extends StatefulWidget {
   const FavoriteView({super.key});

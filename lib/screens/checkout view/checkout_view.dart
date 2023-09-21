@@ -69,6 +69,9 @@ class _CheckoutViewState extends State<CheckoutView> {
                 buttonColor: AppDarkColors.black1,
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             SizedBox(
               width: width * 0.90,
               child: Padding(
