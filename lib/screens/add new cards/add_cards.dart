@@ -155,7 +155,7 @@ class AddCard extends StatelessWidget {
                           },
                           buttonTextStyle: CustomTextStyle14.h1Medium14,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

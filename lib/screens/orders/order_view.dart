@@ -32,7 +32,8 @@ class _OrderViewState extends State<OrderView> {
               title: 'Orders',
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25, bottom: 40),
+              padding: const EdgeInsets.only(
+                  left: 25, right: 25, bottom: 40, top: 30),
               child: Row(
                 children: [
                   Expanded(
