@@ -100,8 +100,17 @@ class _CustomGridViewItemState extends State<CustomGridViewItem> {
           )
         : Column(
             children: [
-              Image.asset('assets/images/search.gif'),
-              Text('Not results found please try with different search'),
+              Image.asset(
+                'assets/images/search.gif',
+                height: 200,
+                width: 200,
+              ),
+              Align(
+                child: Text(
+                  'Not results found please try with different search',
+                  style: CustomTextStyle14.h1SemiBold14,
+                ),
+              ),
             ],
           );
   }
