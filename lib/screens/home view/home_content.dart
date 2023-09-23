@@ -4,6 +4,7 @@ import 'package:grocery_order_app_flutter/screens/home%20view/widgets/grid_item.
 
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
+import '../../list item data/deals_fruit_tea.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({super.key});
@@ -13,6 +14,29 @@ class HomeContent extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<HomeContent> {
+  List<Map<String, dynamic>> foundProduct = [];
+  @override
+  void initState() {
+    foundProduct = dealItems;
+    super.initState();
+  }
+
+  void runFilter(String enterdKeyWord) {
+    List<Map<String, dynamic>> results = [];
+    if (enterdKeyWord.isEmpty) {
+      results = dealItems;
+    } else {
+      results = dealItems
+          .where((product) => product['name']
+              .toLowerCase()
+              .contains(enterdKeyWord.toLowerCase()))
+          .toList();
+    }
+    setState(() {
+      foundProduct = results;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -123,7 +147,9 @@ class _MyWidgetState extends State<HomeContent> {
                 const SizedBox(
                   height: 22,
                 ),
-                const CustomGridViewItem(),
+                CustomGridViewItem(
+                  foundProduct: foundProduct,
+                ),
               ],
             ),
           ),
@@ -135,6 +161,9 @@ class _MyWidgetState extends State<HomeContent> {
   // Serach bar
   TextField customTextField() {
     return TextField(
+        onChanged: (value) {
+          runFilter(value);
+        },
         decoration: InputDecoration(
           // contentPadding: EdgeInsets.all(0),
           prefixIcon: Icon(
