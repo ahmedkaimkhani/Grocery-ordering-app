@@ -23,8 +23,8 @@ class CustomListTile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15),
             child: ListTile(
               // tileColor: AppDarkColors.black20,
-              title: Wrap(
-                alignment: WrapAlignment.spaceBetween,
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 18),
@@ -33,7 +33,6 @@ class CustomListTile extends StatelessWidget {
                       style: CustomTextStyle14.h1Regular14,
                     ),
                   ),
-                  const Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 18),
                     child: Icon(
@@ -43,18 +42,17 @@ class CustomListTile extends StatelessWidget {
                   ),
                 ],
               ),
-              subtitle: Wrap(
-                alignment: WrapAlignment.spaceBetween,
+              subtitle: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     address[index].toString(),
                     style: CustomTextStyle14.h1SemiBold14,
                   ),
-                  const Spacer(),
                   Text(
                     'Edit',
                     style: CustomTextStyle12.h1Medium12Blue,
-                  )
+                  ),
                 ],
               ),
             ),

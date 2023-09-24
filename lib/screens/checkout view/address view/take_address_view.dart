@@ -40,7 +40,7 @@ class _AddressViewState extends State<AddressView> {
       body: Padding(
         padding: const EdgeInsets.only(bottom: 15),
         child: Container(
-          color: Colors.grey,
+          // color: Colors.grey,
           height: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

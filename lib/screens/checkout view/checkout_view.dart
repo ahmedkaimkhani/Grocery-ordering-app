@@ -43,7 +43,7 @@ class _CheckoutViewState extends State<CheckoutView> {
             Expanded(
               child: ListView.builder(
                 itemCount: address.length,
-                shrinkWrap: true,
+                // shrinkWrap: true,
                 // physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return CustomListTile(
