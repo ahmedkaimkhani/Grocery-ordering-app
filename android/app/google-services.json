@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "138747542255",
+    "project_id": "smit-firebase-practice",
+    "storage_bucket": "smit-firebase-practice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138747542255:android:95689b2e048fa0722b391a",
+        "android_client_info": {
+          "package_name": "com.example.firebase_smit_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwy0i81bw5TAmNeLC7jDU5SZak8jPMvFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138747542255:android:1e1bc33f19527d2a2b391a",
+        "android_client_info": {
+          "package_name": "com.example.grocery_order_app_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwy0i81bw5TAmNeLC7jDU5SZak8jPMvFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
