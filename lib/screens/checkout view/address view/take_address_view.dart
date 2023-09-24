@@ -39,7 +39,7 @@ class _AddressViewState extends State<AddressView> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(bottom: 15),
-        child: Container(
+        child: SizedBox(
           // color: Colors.grey,
           height: double.infinity,
           child: Column(
