@@ -84,27 +84,9 @@ class _MyWidgetState extends State<HomeContent> {
                       'Green Way 3000, Sylhet',
                       style: CustomTextStyle14.h1Medium14,
                     ),
-                    PopupMenuButton(
-                      onSelected: (value) {},
-                      color: const Color(0xff1F2C34),
-                      itemBuilder: (context) => [
-                        const PopupMenuItem(
-                          value: 1,
-                          child: Text('Karachi'),
-                        ),
-                        const PopupMenuItem(
-                          value: 2,
-                          child: Text('Lahore'),
-                        ),
-                        const PopupMenuItem(
-                          value: 3,
-                          child: Text('Islamabad'),
-                        ),
-                      ],
-                      child: Icon(
-                        Icons.arrow_drop_down,
-                        color: AppDarkColors.black1,
-                      ),
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: AppDarkColors.black1,
                     ),
                     const Spacer(),
                     Text('1 Hour', style: CustomTextStyle14.h1Medium14),
