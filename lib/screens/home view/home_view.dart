@@ -9,6 +9,7 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/categories_view.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
+import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 
 import '../cart item/cart.list.dart';
 import '../favorite view/favorite_view.dart';
@@ -121,7 +122,7 @@ class _HomeViewState extends State<HomeView> {
         widget = const FavoriteView();
         break;
       default:
-        widget = const CategoriesView();
+        widget = const OrderView();
         break;
     }
     return widget;
