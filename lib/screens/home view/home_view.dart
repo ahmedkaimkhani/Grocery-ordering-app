@@ -10,6 +10,7 @@ import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/categories_view.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
 import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
+import 'package:grocery_order_app_flutter/screens/profile/profile_menu.dart';
 
 import '../cart item/cart.list.dart';
 import '../favorite view/favorite_view.dart';
@@ -122,7 +123,7 @@ class _HomeViewState extends State<HomeView> {
         widget = const FavoriteView();
         break;
       default:
-        widget = const OrderView();
+        widget = const ProfileMenu();
         break;
     }
     return widget;
