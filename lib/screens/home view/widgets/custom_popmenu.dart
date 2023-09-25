@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CustomPopMenu extends StatelessWidget {
-  final String? text;
-  final String? text2;
-  final String? text3;
-  const CustomPopMenu({super.key, this.text, this.text2, this.text3});
+  final String text;
+  final String text2;
+  final String text3;
+  const CustomPopMenu(
+      {super.key,
+      required this.text,
+      required this.text2,
+      required this.text3});
 
   @override
   Widget build(BuildContext context) {
@@ -12,17 +16,17 @@ class CustomPopMenu extends StatelessWidget {
       onSelected: (value) {},
       color: const Color(0xff1F2C34),
       itemBuilder: (context) => [
-        const PopupMenuItem(
+        PopupMenuItem(
           value: 1,
-          child: Text('Karachi'),
+          child: Text(text),
         ),
-        const PopupMenuItem(
+        PopupMenuItem(
           value: 2,
-          child: Text('Lahore'),
+          child: Text(text2),
         ),
-        const PopupMenuItem(
+        PopupMenuItem(
           value: 3,
-          child: Text('Islamabad'),
+          child: Text(text3),
         ),
       ],
     );
