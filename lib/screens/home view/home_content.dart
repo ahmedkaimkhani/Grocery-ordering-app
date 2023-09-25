@@ -85,26 +85,54 @@ class _MyWidgetState extends State<HomeContent> {
                       'Green Way 3000, Sylhet',
                       style: CustomTextStyle14.h1Medium14,
                     ),
-                    Opacity(
-                      opacity: 0.5,
+                    PopupMenuButton(
+                      color: const Color(0xff1F2C34),
+                      itemBuilder: (context) => [
+                        PopupMenuItem(
+                          value: 1,
+                          child: Text(
+                            'Green Way 4000, Karachi',
+                            style: CustomTextStyle14.h1Medium14,
+                          ),
+                        ),
+                        PopupMenuItem(
+                          value: 2,
+                          child: Text('Green Way 5000, Lahore',
+                              style: CustomTextStyle14.h1Medium14),
+                        ),
+                        PopupMenuItem(
+                          value: 3,
+                          child: Text('Green Way 600, Islamabad',
+                              style: CustomTextStyle14.h1Medium14),
+                        ),
+                      ],
+                      child: Icon(
+                        Icons.arrow_drop_down,
+                        color: AppDarkColors.black1,
+                      ),
+                    ),
+                    const Spacer(),
+                    Text('1 Hour', style: CustomTextStyle14.h1Medium14),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
                       child: PopupMenuButton(
                         color: const Color(0xff1F2C34),
                         itemBuilder: (context) => [
                           PopupMenuItem(
                             value: 1,
                             child: Text(
-                              'Green Way 4000, Karachi',
+                              '2 Hour',
                               style: CustomTextStyle14.h1Medium14,
                             ),
                           ),
                           PopupMenuItem(
                             value: 2,
-                            child: Text('Green Way 5000, Lahore',
+                            child: Text('3 Hour',
                                 style: CustomTextStyle14.h1Medium14),
                           ),
                           PopupMenuItem(
                             value: 3,
-                            child: Text('Green Way 600, Islamabad',
+                            child: Text('4 Hour',
                                 style: CustomTextStyle14.h1Medium14),
                           ),
                         ],
@@ -112,15 +140,6 @@ class _MyWidgetState extends State<HomeContent> {
                           Icons.arrow_drop_down,
                           color: AppDarkColors.black1,
                         ),
-                      ),
-                    ),
-                    const Spacer(),
-                    Text('1 Hour', style: CustomTextStyle14.h1Medium14),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Icon(
-                        Icons.arrow_drop_down,
-                        color: AppDarkColors.black1,
                       ),
                     ),
                   ],
