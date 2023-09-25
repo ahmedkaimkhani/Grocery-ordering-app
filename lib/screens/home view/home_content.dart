@@ -5,6 +5,7 @@ import 'package:grocery_order_app_flutter/screens/home%20view/widgets/grid_item.
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
 import '../../list item data/deals_fruit_tea.dart';
+import 'widgets/custom_popmenu.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({super.key});
@@ -84,9 +85,34 @@ class _MyWidgetState extends State<HomeContent> {
                       'Green Way 3000, Sylhet',
                       style: CustomTextStyle14.h1Medium14,
                     ),
-                    Icon(
-                      Icons.arrow_drop_down,
-                      color: AppDarkColors.black1,
+                    Opacity(
+                      opacity: 0.5,
+                      child: PopupMenuButton(
+                        color: const Color(0xff1F2C34),
+                        itemBuilder: (context) => [
+                          PopupMenuItem(
+                            value: 1,
+                            child: Text(
+                              'Green Way 4000, Karachi',
+                              style: CustomTextStyle14.h1Medium14,
+                            ),
+                          ),
+                          PopupMenuItem(
+                            value: 2,
+                            child: Text('Green Way 5000, Lahore',
+                                style: CustomTextStyle14.h1Medium14),
+                          ),
+                          PopupMenuItem(
+                            value: 3,
+                            child: Text('Green Way 600, Islamabad',
+                                style: CustomTextStyle14.h1Medium14),
+                          ),
+                        ],
+                        child: Icon(
+                          Icons.arrow_drop_down,
+                          color: AppDarkColors.black1,
+                        ),
+                      ),
                     ),
                     const Spacer(),
                     Text('1 Hour', style: CustomTextStyle14.h1Medium14),
