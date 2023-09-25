@@ -5,7 +5,6 @@ import 'package:grocery_order_app_flutter/screens/home%20view/widgets/grid_item.
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
 import '../../list item data/deals_fruit_tea.dart';
-import 'widgets/custom_popmenu.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({super.key});
