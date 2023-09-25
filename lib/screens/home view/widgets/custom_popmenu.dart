@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomPopMenu extends StatelessWidget {
-  final String? Text1;
-  const CustomPopMenu({super.key, this.Text1});
+  final String? text;
+  final String? text2;
+  const CustomPopMenu({super.key, this.text, this.text2});
 
   @override
   Widget build(BuildContext context) {
