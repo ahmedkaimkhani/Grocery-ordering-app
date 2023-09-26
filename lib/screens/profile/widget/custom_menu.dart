@@ -9,24 +9,23 @@ class CustomMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Column(
-        children: [
-          ListTile(
-            tileColor: AppDarkColors.black10,
-            leading: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: CircleAvatar(
-                backgroundColor: AppColors.blue,
-                child: Icon(icon),
-              ),
+    return Column(
+      children: [
+        ListTile(
+          leading: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CircleAvatar(
+              backgroundColor: AppColors.blue,
+              child: Icon(icon),
             ),
-            title: Text(title, style: CustomTextColor16.h1RegularBlack),
           ),
-          Divider()
-        ],
-      ),
+          title: Text(title, style: CustomTextStyle16.h1SemiBold16),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Divider(),
+        )
+      ],
     );
   }
 }

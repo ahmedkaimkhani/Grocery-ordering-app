@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 import 'package:grocery_order_app_flutter/screens/profile/widget/custom_menu.dart';
 
 class ProfileMenu extends StatelessWidget {
@@ -6,12 +7,41 @@ class ProfileMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        CustomMenu(
-          title: 'Profile',
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      child: Column(
+        children: [
+          const CustomMenu(
+            title: 'Profile',
+            icon: Icons.person_2_outlined,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OrderView(),
+                  ));
+            },
+            child: const CustomMenu(
+              title: 'My Orders',
+              icon: Icons.person_2_outlined,
+            ),
+          ),
+          const CustomMenu(
+            title: 'Vouchers',
+            icon: Icons.card_giftcard_outlined,
+          ),
+          const CustomMenu(
+            title: 'Help',
+            icon: Icons.help_outline,
+          ),
+          const CustomMenu(
+            title: 'Log out',
+            icon: Icons.logout_outlined,
+          )
+        ],
+      ),
     );
   }
 }
