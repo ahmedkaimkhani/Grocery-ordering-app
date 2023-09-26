@@ -9,7 +9,6 @@ import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/constants/string.dart';
 import 'package:grocery_order_app_flutter/screens/categories%20view/categories_view.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/home_content.dart';
-import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 import 'package:grocery_order_app_flutter/screens/profile/profile_menu.dart';
 
 import '../cart item/cart.list.dart';
