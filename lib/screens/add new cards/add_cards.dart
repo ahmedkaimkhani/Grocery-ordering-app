@@ -161,47 +161,7 @@ class AddCard extends StatelessWidget {
                           child: CustomButton(
                             buttonText: 'Proceed To checkout',
                             onPressed: () {
-                              showDialog(
-                                barrierDismissible: false,
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    contentPadding: EdgeInsets.zero,
-                                    shape: const RoundedRectangleBorder(),
-                                    content: Container(
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 30,
-                                            bottom: 30,
-                                            left: 30,
-                                            right: 30),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            Container(
-                                              child: Lottie.asset(
-                                                'assets/animation/payment.json',
-                                                height: 100,
-                                                width: 100,
-                                                repeat: false,
-                                                fit: BoxFit.fill,
-                                              ),
-                                            ),
-                                            const SizedBox(
-                                              height: 40,
-                                            ),
-                                            Text(
-                                              'Payment Successful',
-                                              style:
-                                                  CustomTextStyle18.h1Bold318,
-                                            )
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              );
+                              paymentDialoge(context);
                               addCartToOrder();
                               myCart.clear();
                               Future.delayed(
@@ -227,6 +187,46 @@ class AddCard extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  paymentDialoge(BuildContext context) {
+    return showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.zero,
+          shape: const RoundedRectangleBorder(),
+          content: Container(
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  top: 30, bottom: 30, left: 30, right: 30),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    child: Lottie.asset(
+                      'assets/animation/payment.json',
+                      height: 100,
+                      width: 100,
+                      repeat: false,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  Text(
+                    'Payment Successful',
+                    style: CustomTextStyle18.h1Bold318,
+                  )
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }
