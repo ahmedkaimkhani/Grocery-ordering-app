@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../constants/custom_textstyle.dart';
 import '../../widgets/custom button/custom_button.dart';
@@ -152,9 +153,47 @@ class AddCard extends StatelessWidget {
                           child: CustomButton(
                             buttonText: 'Proceed To checkout',
                             onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const OrderView(),
-                              ));
+                              showDialog(
+                                barrierDismissible: false,
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    contentPadding: EdgeInsets.zero,
+                                    shape: const RoundedRectangleBorder(),
+                                    content: Container(
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 10,
+                                            bottom: 30,
+                                            left: 30,
+                                            right: 30),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Container(
+                                              child: Lottie.asset(
+                                                'assets/animation/payment.json',
+                                                height: 100,
+                                                width: 100,
+                                                repeat: false,
+                                                fit: BoxFit.fill,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 50,
+                                            ),
+                                            Text(
+                                              'Payment Successful',
+                                              style:
+                                                  CustomTextStyle18.h1Bold318,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              );
                             },
                             buttonTextStyle: CustomTextStyle14.h1Medium14,
                           ),
