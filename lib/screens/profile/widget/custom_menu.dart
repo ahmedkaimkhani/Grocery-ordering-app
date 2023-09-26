@@ -16,13 +16,16 @@ class CustomMenu extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
               backgroundColor: AppColors.blue,
-              child: Icon(icon),
+              child: Icon(
+                icon,
+                size: 20,
+              ),
             ),
           ),
           title: Text(title, style: CustomTextStyle16.h1SemiBold16),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 25),
           child: Divider(),
         )
       ],
