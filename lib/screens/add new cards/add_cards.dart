@@ -161,8 +161,11 @@ class AddCard extends StatelessWidget {
                           child: CustomButton(
                             buttonText: 'Proceed To checkout',
                             onPressed: () {
+                              // Payment done Dialoge
                               paymentDialoge(context);
+                              // add cart item to order list
                               addCartToOrder();
+                              // clear cart item after adding into order list
                               myCart.clear();
                               Future.delayed(
                                 const Duration(seconds: 2),

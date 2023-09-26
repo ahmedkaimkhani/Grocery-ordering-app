@@ -28,10 +28,7 @@ class _DetailViewState extends State<DetailView> {
     initialPage: 0,
   );
 
-  addToCart(addCartProduct) {
-    myCart.add(addCartProduct);
-    setState(() {});
-  }
+  addToCart(addCartProduct) {}
 
   @override
   Widget build(BuildContext context) {
@@ -240,7 +237,8 @@ class _DetailViewState extends State<DetailView> {
                           child: CustomButton(
                             buttonText: 'Add to Cart',
                             onPressed: () {
-                              addToCart(addCartProduct);
+                              myCart.add(addCartProduct);
+                              setState(() {});
                             },
                             buttonColor: AppDarkColors.black1,
                             borderColor: AppColors.blue,
