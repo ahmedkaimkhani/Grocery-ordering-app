@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/screens/home%20view/home_view.dart';
 import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 import 'package:lottie/lottie.dart';
@@ -8,6 +9,7 @@ import '../../constants/custom_textstyle.dart';
 import '../../widgets/custom button/custom_button.dart';
 import '../cart item/cart.list.dart';
 import '../checkout view/widgets/custom_textfield.dart';
+import '../orders/order_list.dart';
 
 class AddCard extends StatelessWidget {
   const AddCard({super.key});
@@ -33,10 +35,16 @@ class AddCard extends StatelessWidget {
     return calculateSubtotal() + deliveryCost;
   }
 
+  addCartToOrder() {
+    myOrder.addAll(myCart);
+  }
+
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset:
+          false, //removed overflow erro when keyboard launches for input fields
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -163,7 +171,7 @@ class AddCard extends StatelessWidget {
                                     content: Container(
                                       child: Padding(
                                         padding: const EdgeInsets.only(
-                                            top: 10,
+                                            top: 30,
                                             bottom: 30,
                                             left: 30,
                                             right: 30),
@@ -179,8 +187,8 @@ class AddCard extends StatelessWidget {
                                                 fit: BoxFit.fill,
                                               ),
                                             ),
-                                            SizedBox(
-                                              height: 50,
+                                            const SizedBox(
+                                              height: 40,
                                             ),
                                             Text(
                                               'Payment Successful',
@@ -192,6 +200,18 @@ class AddCard extends StatelessWidget {
                                       ),
                                     ),
                                   );
+                                },
+                              );
+                              addCartToOrder();
+                              myCart.clear();
+                              Future.delayed(
+                                const Duration(seconds: 2),
+                                () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const HomeView(),
+                                      ));
                                 },
                               );
                             },
