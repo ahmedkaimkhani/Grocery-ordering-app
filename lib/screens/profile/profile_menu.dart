@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 import 'package:grocery_order_app_flutter/screens/profile/widget/custom_menu.dart';
 
+import 'user_profile.dart';
+
 class ProfileMenu extends StatelessWidget {
   const ProfileMenu({super.key});
 
@@ -11,9 +13,18 @@ class ProfileMenu extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          const CustomMenu(
-            title: 'Profile',
-            icon: Icons.person_2_outlined,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const UserProfile(),
+                  ));
+            },
+            child: const CustomMenu(
+              title: 'Profile',
+              icon: Icons.person_2_outlined,
+            ),
           ),
           GestureDetector(
             onTap: () {
