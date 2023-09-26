@@ -4,7 +4,6 @@ import 'package:grocery_order_app_flutter/screens/track%20orrder/track_order.dar
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
 import '../../../constants/custom_textstyle.dart';
-import '../../cart item/cart.list.dart';
 
 class OrderContent extends StatelessWidget {
   const OrderContent({super.key});
@@ -13,7 +12,7 @@ class OrderContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: myCart.length,
+        itemCount: myOrder.length,
         itemBuilder: (context, index) {
           final cartItem = myOrder[index];
           return Container(
