@@ -66,7 +66,7 @@ class _FavoriteViewState extends State<FavoriteView> {
                       crossAxisCount: favItem.length == 1 ? 1 : 2,
                       crossAxisSpacing: 12,
                       mainAxisSpacing: 12,
-                      mainAxisExtent: favItem.length == 1 ? 320 : 225,
+                      mainAxisExtent: favItem.length == 1 ? 330 : 225,
                     ),
                     itemCount: favItem.length,
                     itemBuilder: (context, index) {

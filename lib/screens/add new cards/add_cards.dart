@@ -168,7 +168,7 @@ class AddCard extends StatelessWidget {
                               // clear cart item after adding into order list
                               myCart.clear();
                               Future.delayed(
-                                const Duration(seconds: 2),
+                                const Duration(seconds: 4),
                                 () {
                                   Navigator.push(
                                       context,
@@ -204,21 +204,18 @@ class AddCard extends StatelessWidget {
           content: Container(
             child: Padding(
               padding: const EdgeInsets.only(
-                  top: 30, bottom: 30, left: 30, right: 30),
+                  top: 10, bottom: 30, left: 30, right: 30),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
                     child: Lottie.asset(
                       'assets/animation/payment.json',
-                      height: 100,
-                      width: 100,
+                      height: 200,
+                      width: 200,
                       repeat: false,
                       fit: BoxFit.fill,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 40,
                   ),
                   Text(
                     'Payment Successful',
