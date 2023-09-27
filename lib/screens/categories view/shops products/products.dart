@@ -3,6 +3,7 @@ import 'package:grocery_order_app_flutter/screens/detail%20view/detail_view.dart
 import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
+import '../../../widgets/custom_alertdialog.dart';
 import '../../cart item/cart.list.dart';
 import '../../../constants/app_colors.dart';
 import '../../../constants/custom_textstyle.dart';
@@ -17,10 +18,29 @@ class ShopProductsPage extends StatefulWidget {
 }
 
 class _ShopProductsPageState extends State<ShopProductsPage> {
-  addToCart(Map<String, dynamic> product) {
-    setState(() {
+  showSnackBar(BuildContext context) {
+    final snackBar = SnackBar(
+      content: Text('Item added to cart'),
+      duration: Duration(seconds: 1),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
+  addToCart(
+    Map<String, dynamic> product,
+  ) {
+    if (myCart.contains(product)) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return CustomAlertDialog(message: 'Item is already added in cart');
+        },
+      );
+    } else {
       myCart.add(product);
-    });
+      showSnackBar(context);
+    }
+    setState(() {});
   }
 
   @override
@@ -87,7 +107,9 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
                               right: 6,
                               child: InkWell(
                                   onTap: () {
-                                    addToCart(product);
+                                    addToCart(
+                                      product,
+                                    );
                                   },
                                   child: const CustomIconButton()),
                             )
