@@ -68,7 +68,7 @@ class _HomeViewState extends State<HomeView> {
           //   child: searchIcon(),
           // ),
           Padding(
-            padding: const EdgeInsets.only(right: 20, top: 12),
+            padding: const EdgeInsets.only(right: 20, top: 20),
             child: badges.Badge(
               showBadge: myCart.isEmpty ? false : true,
               badgeContent: Text(
@@ -84,7 +84,10 @@ class _HomeViewState extends State<HomeView> {
                     ));
                     setState(() {});
                   },
-                  icon: const Icon(Icons.shopping_bag_outlined)),
+                  icon: const Padding(
+                    padding: EdgeInsets.only(top: 7),
+                    child: Icon(Icons.shopping_bag_outlined),
+                  )),
             ),
             // child: Image.asset("assets/images/logo.png"),
           ),
