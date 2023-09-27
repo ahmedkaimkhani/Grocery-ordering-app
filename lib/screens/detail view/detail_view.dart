@@ -41,7 +41,25 @@ class _DetailViewState extends State<DetailView> {
       );
     } else {
       myCart.add(addCartProduct);
-      showSnackBar(context: context, message: 'Item added to cart');
+      customShowSnackBar(context: context, message: 'Item added to cart');
+    }
+    setState(() {});
+  }
+
+  // add to favorite method
+  addToFavorite(detailPage) {
+    if (detailPage['isFav'] == false) {
+      favItem.add(detailPage);
+      // snackbar method
+      customShowSnackBar(
+          context: context, message: 'Item is add into favorite list');
+      detailPage['isFav'] = true;
+    } else {
+      favItem.remove(detailPage);
+      // snackbar method
+      customShowSnackBar(
+          context: context, message: 'Item is removed from favorite list');
+      detailPage['isFav'] = false;
     }
     setState(() {});
   }
@@ -162,15 +180,7 @@ class _DetailViewState extends State<DetailView> {
                         ),
                         IconButton(
                             onPressed: () {
-                              setState(() {
-                                if (detailPage['isFav'] == false) {
-                                  favItem.add(detailPage);
-                                  detailPage['isFav'] = true;
-                                } else {
-                                  favItem.remove(detailPage);
-                                  detailPage['isFav'] = false;
-                                }
-                              });
+                              addToFavorite(detailPage);
                               print(favItem.length);
                             },
                             icon: const Icon(Icons.favorite),

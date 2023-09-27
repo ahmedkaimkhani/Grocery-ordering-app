@@ -33,7 +33,8 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
       );
     } else {
       myCart.add(product);
-      showSnackBar(context: context, message: 'Item added to cart');
+      // snackbar method
+      customShowSnackBar(context: context, message: 'Item added to cart');
     }
     setState(() {});
   }
