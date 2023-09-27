@@ -33,7 +33,7 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
       showDialog(
         context: context,
         builder: (context) {
-          return CustomAlertDialog(message: 'Item is already added in cart');
+          return CustomAlertDialog(message: 'Item is already added in cart...');
         },
       );
     } else {
