@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/home%20view/home_view.dart';
-import 'package:grocery_order_app_flutter/screens/orders/order_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 import 'package:lottie/lottie.dart';
 
