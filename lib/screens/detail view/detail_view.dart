@@ -290,47 +290,53 @@ class _DetailViewState extends State<DetailView> {
                       ],
                     ),
                   ),
-                  ExpansionTile(title: Text('Details')),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25, right: 25, top: 10, bottom: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: ExpansionTile(
+                      collapsedIconColor: AppDarkColors.black45,
+                      iconColor: AppDarkColors.black100,
+                      title: Text(
+                        'Details',
+                        style: CustomTextStyle16.h1Medium16,
+                      ),
+                      childrenPadding: const EdgeInsets.only(
+                          left: 18, right: 18, bottom: 18),
                       children: [
                         Text(
-                          'Nutritional facts',
-                          style: CustomTextStyle16.h1Medium16,
-                        ),
-                        Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 35,
-                          color: AppDarkColors.black45,
+                          detailPage['description'],
+                          style: CustomTextColor16.h1Regular16,
                         ),
                       ],
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 25, right: 25, bottom: 15),
-                    child: Divider(
-                      thickness: 2,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: ExpansionTile(
+                      collapsedIconColor: AppDarkColors.black45,
+                      iconColor: AppDarkColors.black100,
+                      title: Text(
+                        'Nutritional facts',
+                        style: CustomTextStyle16.h1Medium16,
+                      ),
+                      childrenPadding: const EdgeInsets.only(
+                          left: 18, right: 18, bottom: 18),
+                      children: [
+                        Text(
+                          'is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s',
+                          style: CustomTextColor16.h1Regular16,
+                        ),
+                      ],
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 25, right: 25, bottom: 30),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Reviews',
-                          style: CustomTextStyle16.h1Medium16,
-                        ),
-                        Icon(
-                          Icons.keyboard_arrow_down,
-                          size: 35,
-                          color: AppDarkColors.black45,
-                        ),
-                      ],
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: ExpansionTile(
+                      collapsedIconColor: AppDarkColors.black45,
+                      iconColor: AppDarkColors.black100,
+                      title: Text(
+                        'Reviews',
+                        style: CustomTextStyle16.h1Medium16,
+                      ),
                     ),
                   ),
                 ]);

@@ -76,7 +76,7 @@ class _HomeViewState extends State<HomeView> {
                 style: CustomTextStyle14.h1Medium14,
               ),
               badgeStyle: BadgeStyle(badgeColor: AppColors.orange),
-              position: BadgePosition.topEnd(top: 0, end: 0),
+              position: BadgePosition.topEnd(top: 5, end: 5),
               child: IconButton(
                   onPressed: () async {
                     await Navigator.of(context).push(MaterialPageRoute(
@@ -84,10 +84,7 @@ class _HomeViewState extends State<HomeView> {
                     ));
                     setState(() {});
                   },
-                  icon: const Padding(
-                    padding: EdgeInsets.only(top: 7),
-                    child: Icon(Icons.shopping_bag_outlined),
-                  )),
+                  icon: const Icon(Icons.shopping_bag_outlined)),
             ),
             // child: Image.asset("assets/images/logo.png"),
           ),
