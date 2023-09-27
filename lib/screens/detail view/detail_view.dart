@@ -7,6 +7,8 @@ import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import '../../widgets/custom button/custom_button.dart';
+import '../../widgets/custom_alertdialog.dart';
+import '../../widgets/custom_snackbar.dart';
 
 class DetailView extends StatefulWidget {
   final Map<String, dynamic> shopProducts;
@@ -27,9 +29,20 @@ class _DetailViewState extends State<DetailView> {
   final PageController pageController = PageController(
     initialPage: 0,
   );
-
+  // add to cart method
   addToCart(addCartProduct) {
-    myCart.add(addCartProduct);
+    // if products already exist than..
+    if (myCart.contains(addCartProduct)) {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return CustomAlertDialog(message: 'Item is already added in cart...');
+        },
+      );
+    } else {
+      myCart.add(addCartProduct);
+      showSnackBar(context: context, message: 'Item added to cart');
+    }
     setState(() {});
   }
 

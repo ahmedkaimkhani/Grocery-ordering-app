@@ -19,9 +19,11 @@ class ShopProductsPage extends StatefulWidget {
 }
 
 class _ShopProductsPageState extends State<ShopProductsPage> {
+  // Add to cart method
   addToCart(
     Map<String, dynamic> product,
   ) {
+    // if products already exist than..
     if (myCart.contains(product)) {
       showDialog(
         context: context,
@@ -31,7 +33,7 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
       );
     } else {
       myCart.add(product);
-      showSnackBar(context, 'Item added to cart');
+      showSnackBar(context: context, message: 'Item added to cart');
     }
     setState(() {});
   }
