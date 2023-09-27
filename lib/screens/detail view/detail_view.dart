@@ -313,6 +313,7 @@ class _DetailViewState extends State<DetailView> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: ExpansionTile(
+                      backgroundColor: AppDarkColors.black1,
                       collapsedIconColor: AppDarkColors.black45,
                       iconColor: AppDarkColors.black100,
                       title: Text(
@@ -323,7 +324,7 @@ class _DetailViewState extends State<DetailView> {
                       //     left: 18, right: 18, bottom: 18),
                       children: [
                         Container(
-                          color: AppColors.orangeLite,
+                          color: AppDarkColors.black10,
                           height: 200,
                           child: ListView.builder(
                             itemCount: 1,
