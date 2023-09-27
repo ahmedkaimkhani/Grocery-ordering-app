@@ -4,6 +4,7 @@ import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_a
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
 import '../../../widgets/custom_alertdialog.dart';
+import '../../../widgets/custom_snackbar.dart';
 import '../../cart item/cart.list.dart';
 import '../../../constants/app_colors.dart';
 import '../../../constants/custom_textstyle.dart';
@@ -18,14 +19,6 @@ class ShopProductsPage extends StatefulWidget {
 }
 
 class _ShopProductsPageState extends State<ShopProductsPage> {
-  showSnackBar(BuildContext context) {
-    final snackBar = SnackBar(
-      content: Text('Item added to cart'),
-      duration: Duration(seconds: 1),
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  }
-
   addToCart(
     Map<String, dynamic> product,
   ) {
@@ -38,7 +31,7 @@ class _ShopProductsPageState extends State<ShopProductsPage> {
       );
     } else {
       myCart.add(product);
-      showSnackBar(context);
+      showSnackBar(context, 'Item added to cart');
     }
     setState(() {});
   }

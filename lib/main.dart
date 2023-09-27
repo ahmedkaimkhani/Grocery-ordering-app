@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
-
 import 'screens/splash view/splash_view.dart';
 
 void main() {
