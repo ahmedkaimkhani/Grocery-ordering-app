@@ -3,6 +3,7 @@ import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart.list.dart';
 import 'package:grocery_order_app_flutter/screens/cart%20item/cart_view.dart';
+import 'package:grocery_order_app_flutter/screens/detail%20view/custom_reviews.dart';
 import 'package:grocery_order_app_flutter/screens/favorite%20view/favorite_list.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -315,6 +316,54 @@ class _DetailViewState extends State<DetailView> {
                       collapsedIconColor: AppDarkColors.black45,
                       iconColor: AppDarkColors.black100,
                       title: Text(
+                        'Reviews',
+                        style: CustomTextStyle16.h1Medium16,
+                      ),
+                      // childrenPadding: const EdgeInsets.only(
+                      //     left: 18, right: 18, bottom: 18),
+                      children: [
+                        Container(
+                          color: AppColors.orangeLite,
+                          height: 200,
+                          child: ListView.builder(
+                            itemCount: 1,
+                            shrinkWrap: true,
+                            itemBuilder: (context, index) {
+                              return const Column(
+                                children: [
+                                  CustomReviews(
+                                      name: 'Jonny',
+                                      subtitle: 'The food is excellent',
+                                      trailing: '25/09/23'),
+                                  CustomReviews(
+                                      name: 'Alica',
+                                      subtitle:
+                                          'Generous portions and great prices',
+                                      trailing: '24/09/23'),
+                                  CustomReviews(
+                                      name: 'Mark',
+                                      subtitle:
+                                          'The service was fast and friendly',
+                                      trailing: '23/09/23'),
+                                  CustomReviews(
+                                      name: 'Grace',
+                                      subtitle:
+                                          'This place knows how to satisfy their clients',
+                                      trailing: '23/09/23'),
+                                ],
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: ExpansionTile(
+                      collapsedIconColor: AppDarkColors.black45,
+                      iconColor: AppDarkColors.black100,
+                      title: Text(
                         'Nutritional facts',
                         style: CustomTextStyle16.h1Medium16,
                       ),
@@ -326,17 +375,6 @@ class _DetailViewState extends State<DetailView> {
                           style: CustomTextColor16.h1Regular16,
                         ),
                       ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    child: ExpansionTile(
-                      collapsedIconColor: AppDarkColors.black45,
-                      iconColor: AppDarkColors.black100,
-                      title: Text(
-                        'Reviews',
-                        style: CustomTextStyle16.h1Medium16,
-                      ),
                     ),
                   ),
                 ]);
