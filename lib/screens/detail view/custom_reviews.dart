@@ -28,8 +28,14 @@ class CustomReviews extends StatelessWidget {
             color: AppDarkColors.black100,
           ),
         ),
-        title: Text(name),
-        subtitle: Text(subtitle),
+        title: Text(
+          name,
+          style: CustomTextStyle14.h1SemiBold14,
+        ),
+        subtitle: Text(
+          subtitle,
+          style: CustomTextStyle12.h1Medium12,
+        ),
         trailing: Text(
           trailing,
           style: CustomTextStyle12.h1Medium12,

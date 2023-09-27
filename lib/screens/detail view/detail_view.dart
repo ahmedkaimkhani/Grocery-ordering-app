@@ -294,6 +294,7 @@ class _DetailViewState extends State<DetailView> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: ExpansionTile(
+                      initiallyExpanded: true,
                       collapsedIconColor: AppDarkColors.black45,
                       iconColor: AppDarkColors.black100,
                       title: Text(
