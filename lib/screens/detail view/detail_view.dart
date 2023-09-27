@@ -290,22 +290,7 @@ class _DetailViewState extends State<DetailView> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 25, right: 25, bottom: 20),
-                    child: Text(
-                      'Details',
-                      style: CustomTextStyle16.h1Medium16,
-                    ),
-                  ),
-                  Padding(
-                    padding:
-                        const EdgeInsets.only(left: 25, right: 25, bottom: 30),
-                    child: Text(
-                      detailPage['description'],
-                      style: CustomTextColor16.h1Regular16,
-                    ),
-                  ),
+                  ExpansionTile(title: Text('Details')),
                   Padding(
                     padding: const EdgeInsets.only(
                         left: 25, right: 25, top: 10, bottom: 15),
