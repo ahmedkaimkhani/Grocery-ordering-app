@@ -10,6 +10,22 @@ class CustomTextFormField extends StatefulWidget {
 class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Form(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: TextFormField(
+          decoration: InputDecoration(
+            hintText: 'email',
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+          validator: (value) {
+            if (value == null || value.isEmpty) {
+              return 'Please enter some text';
+            }
+            return null;
+          },
+        ),
+      ),
+    );
   }
 }

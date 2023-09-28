@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:grocery_order_app_flutter/screens/login&signup/widgets/custom_textformfield.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -14,7 +15,8 @@ class LoginView extends StatelessWidget {
             height: 200,
             width: 200,
             child: SvgPicture.asset('assets/images/logo.svg'),
-          )
+          ),
+          CustomTextFormField()
         ],
       ),
     ));
