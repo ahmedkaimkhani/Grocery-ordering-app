@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:grocery_order_app_flutter/constants/app_colors.dart';
-import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
-import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
-import 'package:grocery_order_app_flutter/screens/login&signup/signup_view.dart';
-import 'package:grocery_order_app_flutter/screens/login&signup/widgets/custom_textformfield.dart';
-import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:grocery_order_app_flutter/screens/login&signup/login_view.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+import '../../constants/app_colors.dart';
+import '../../constants/custom_textstyle.dart';
+import '../../widgets/custom button/custom_button.dart';
+import '../get started view/get_started_1.dart';
+import 'widgets/custom_textformfield.dart';
 
+class SignUpView extends StatefulWidget {
+  const SignUpView({super.key});
+
+  @override
+  State<SignUpView> createState() => _SignUpViewState();
+}
+
+class _SignUpViewState extends State<SignUpView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +35,26 @@ class LoginView extends StatelessWidget {
               ),
               const SizedBox(
                 height: 10,
+              ),
+              CustomTextFormField(
+                title: 'Name',
+                icon: Icons.person_2_outlined,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter name';
+                  }
+                  return null;
+                },
+              ),
+              CustomTextFormField(
+                title: 'Contact',
+                icon: Icons.call_outlined,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter contact';
+                  }
+                  return null;
+                },
               ),
               CustomTextFormField(
                 title: 'Email',
@@ -56,25 +82,11 @@ class LoginView extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              GestureDetector(
-                onTap: () {},
-                child: Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forget Password?',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: AppColors.blue,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                ),
-              ),
               const Spacer(),
               SizedBox(
                 width: double.infinity,
                 child: CustomButton(
-                  buttonText: 'LOG IN',
+                  buttonText: 'SIGN UP',
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
@@ -94,7 +106,7 @@ class LoginView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Don\'t have an account?',
+                    'Already have an account?',
                     style:
                         TextStyle(fontSize: 18, color: AppDarkColors.black100),
                   ),
@@ -103,11 +115,11 @@ class LoginView extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignUpView(),
+                            builder: (context) => const LoginView(),
                           ));
                     },
                     child: Text(
-                      ' Sign Up',
+                      ' Log In',
                       style: TextStyle(
                           fontSize: 18,
                           color: AppColors.blue,
