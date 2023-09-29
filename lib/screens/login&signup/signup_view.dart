@@ -24,6 +24,7 @@ class _SignUpViewState extends State<SignUpView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppDarkColors.black1,
         body: SafeArea(
             child: Padding(
