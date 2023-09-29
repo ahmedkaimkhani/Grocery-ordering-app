@@ -16,13 +16,16 @@ class LoginView extends StatelessWidget {
         body: SafeArea(
             child: Padding(
           padding:
-              const EdgeInsets.only(left: 20, right: 20, top: 80, bottom: 50),
+              const EdgeInsets.only(left: 20, right: 20, top: 60, bottom: 50),
           child: Column(
             children: [
               Container(
                 height: 200,
                 width: 200,
                 child: SvgPicture.asset('assets/images/logo.svg'),
+              ),
+              const SizedBox(
+                height: 10,
               ),
               CustomTextFormField(
                 title: 'Email',

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/login&signup/login_view.dart';
 
 import '../get started view/get_started_1.dart';
 
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => const GetStartedView(),
+              builder: (context) => const LoginView(),
             ));
       },
     );
