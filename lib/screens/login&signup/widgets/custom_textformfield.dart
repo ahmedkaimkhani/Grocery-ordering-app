@@ -22,23 +22,20 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: TextFormField(
-          controller: widget.controller,
-          decoration: InputDecoration(
-            hintText: widget.title,
-            focusedBorder: InputBorder.none,
-            prefixIcon: Icon(
-              widget.icon,
-              color: AppColors.blue,
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppDarkColors.black10),
-            ),
-            disabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppDarkColors.black10),
-            ),
+      child: TextFormField(
+        controller: widget.controller,
+        decoration: InputDecoration(
+          hintText: widget.title,
+          focusedBorder: InputBorder.none,
+          prefixIcon: Icon(
+            widget.icon,
+            color: AppColors.blue,
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppDarkColors.black10),
+          ),
+          disabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: AppDarkColors.black10),
           ),
         ),
       ),
