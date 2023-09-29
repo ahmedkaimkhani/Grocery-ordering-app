@@ -23,7 +23,20 @@ class LoginView extends StatelessWidget {
                 icon: Icons.alternate_email_outlined,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter some text';
+                    return 'Please enter email';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTextFormField(
+                title: 'Password',
+                icon: Icons.lock_outline_rounded,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter password';
                   }
                   return null;
                 },
