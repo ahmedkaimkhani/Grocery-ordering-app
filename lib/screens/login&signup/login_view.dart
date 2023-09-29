@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
+import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/widgets/custom_textformfield.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
@@ -46,6 +47,9 @@ class LoginView extends StatelessWidget {
                   return null;
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
               GestureDetector(
                 onTap: () {},
                 child: Align(
@@ -67,7 +71,13 @@ class LoginView extends StatelessWidget {
                   buttonText: 'LOG IN',
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const GetStartedView(),
+                        ));
+                  },
                 ),
               ),
               const SizedBox(
