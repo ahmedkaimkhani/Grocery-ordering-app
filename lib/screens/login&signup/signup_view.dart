@@ -46,6 +46,9 @@ class _SignUpViewState extends State<SignUpView> {
                   return null;
                 },
               ),
+              const SizedBox(
+                height: 10,
+              ),
               CustomTextFormField(
                 title: 'Contact',
                 icon: Icons.call_outlined,
@@ -55,6 +58,9 @@ class _SignUpViewState extends State<SignUpView> {
                   }
                   return null;
                 },
+              ),
+              const SizedBox(
+                height: 10,
               ),
               CustomTextFormField(
                 title: 'Email',
