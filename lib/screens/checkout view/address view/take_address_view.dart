@@ -37,6 +37,7 @@ class _AddressViewState extends State<AddressView> {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(bottom: 15),
         child: SizedBox(
