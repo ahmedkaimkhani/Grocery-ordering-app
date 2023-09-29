@@ -7,8 +7,16 @@ import 'package:grocery_order_app_flutter/screens/login&signup/signup_view.dart'
 import 'package:grocery_order_app_flutter/screens/login&signup/widgets/custom_textformfield.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
   const LoginView({super.key});
+
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +39,7 @@ class LoginView extends StatelessWidget {
                 height: 10,
               ),
               CustomTextFormField(
+                controller: emailController,
                 title: 'Email',
                 icon: Icons.alternate_email_outlined,
                 validator: (value) {
@@ -44,6 +53,7 @@ class LoginView extends StatelessWidget {
                 height: 10,
               ),
               CustomTextFormField(
+                controller: passwordController,
                 title: 'Password',
                 icon: Icons.lock_outline_rounded,
                 validator: (value) {

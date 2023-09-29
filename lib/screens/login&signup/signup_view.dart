@@ -16,6 +16,11 @@ class SignUpView extends StatefulWidget {
 }
 
 class _SignUpViewState extends State<SignUpView> {
+  TextEditingController nameController = TextEditingController();
+  TextEditingController contactController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +42,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                controller: nameController,
                 title: 'Name',
                 icon: Icons.person_2_outlined,
                 validator: (value) {
@@ -50,6 +56,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                controller: contactController,
                 title: 'Contact',
                 icon: Icons.call_outlined,
                 validator: (value) {
@@ -63,6 +70,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                controller: emailController,
                 title: 'Email',
                 icon: Icons.alternate_email_outlined,
                 validator: (value) {
@@ -76,6 +84,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                controller: passwordController,
                 title: 'Password',
                 icon: Icons.lock_outline_rounded,
                 validator: (value) {
