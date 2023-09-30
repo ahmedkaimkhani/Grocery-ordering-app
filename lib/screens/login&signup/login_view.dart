@@ -42,7 +42,7 @@ class _LoginViewState extends State<LoginView> {
                 height: 10,
               ),
               CustomTextFormField(
-                key: _formKey,
+                formKey: _formKey,
                 controller: emailController,
                 title: 'Email',
                 icon: Icons.alternate_email_outlined,
@@ -57,7 +57,7 @@ class _LoginViewState extends State<LoginView> {
                 height: 10,
               ),
               CustomTextFormField(
-                key: _formKey,
+                formKey: _formKey,
                 controller: passwordController,
                 title: 'Password',
                 icon: Icons.lock_outline_rounded,
@@ -115,11 +115,6 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   InkWell(
                     onTap: () {
-                      if (_formKey.currentState!.validate()) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Processing Data')),
-                        );
-                      }
                       Navigator.push(
                           context,
                           MaterialPageRoute(
