@@ -20,6 +20,20 @@ class _LoginViewState extends State<LoginView> {
 
   final _formKey = GlobalKey<FormState>();
 
+  String? validateEmail(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your email';
+    }
+    return null;
+  }
+
+  String? validatePassword(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your password';
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,32 +55,53 @@ class _LoginViewState extends State<LoginView> {
               const SizedBox(
                 height: 10,
               ),
-              CustomTextFormField(
-                formKey: _formKey,
-                controller: emailController,
-                title: 'Email',
-                icon: Icons.alternate_email_outlined,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter email';
-                  }
-                  return null;
-                },
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomTextFormField(
-                formKey: _formKey,
-                controller: passwordController,
-                title: 'Password',
-                icon: Icons.lock_outline_rounded,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter password';
-                  }
-                  return null;
-                },
+              Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    TextFormField(
+                        controller: emailController,
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                          focusedBorder: InputBorder.none,
+                          prefixIcon: Icon(
+                            Icons.alternate_email_outlined,
+                            color: AppColors.blue,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppDarkColors.black10),
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppDarkColors.black10),
+                          ),
+                        ),
+                        validator: validateEmail),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    TextFormField(
+                        controller: passwordController,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          focusedBorder: InputBorder.none,
+                          prefixIcon: Icon(
+                            Icons.lock_outline_rounded,
+                            color: AppColors.blue,
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppDarkColors.black10),
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                            borderSide:
+                                BorderSide(color: AppDarkColors.black10),
+                          ),
+                        ),
+                        validator: validatePassword),
+                  ],
+                ),
               ),
               const SizedBox(
                 height: 10,
@@ -93,11 +128,16 @@ class _LoginViewState extends State<LoginView> {
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const GetStartedView(),
-                        ));
+                    if (_formKey.currentState!.validate()) {
+                      print('Form is valid');
+                    } else {
+                      print('Form is invalid');
+                    }
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //       builder: (context) => const GetStartedView(),
+                    //     ));
                   },
                 ),
               ),

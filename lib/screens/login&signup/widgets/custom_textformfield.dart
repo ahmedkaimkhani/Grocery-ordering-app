@@ -6,14 +6,12 @@ class CustomTextFormField extends StatefulWidget {
   final IconData? icon;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
-  final GlobalKey<FormState> formKey;
   const CustomTextFormField({
     Key? key,
     required this.title,
     this.icon,
     this.controller,
     required this.validator,
-    required this.formKey,
   }) : super(key: key);
 
   @override
