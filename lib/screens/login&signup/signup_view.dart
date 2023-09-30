@@ -21,6 +21,8 @@ class _SignUpViewState extends State<SignUpView> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +45,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                formKey: _formKey,
                 controller: nameController,
                 title: 'Name',
                 icon: Icons.person_2_outlined,
@@ -57,6 +60,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                formKey: _formKey,
                 controller: contactController,
                 title: 'Contact',
                 icon: Icons.call_outlined,
@@ -71,6 +75,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                formKey: _formKey,
                 controller: emailController,
                 title: 'Email',
                 icon: Icons.alternate_email_outlined,
@@ -85,6 +90,7 @@ class _SignUpViewState extends State<SignUpView> {
                 height: 10,
               ),
               CustomTextFormField(
+                formKey: _formKey,
                 controller: passwordController,
                 title: 'Password',
                 icon: Icons.lock_outline_rounded,

@@ -18,6 +18,8 @@ class _LoginViewState extends State<LoginView> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +42,7 @@ class _LoginViewState extends State<LoginView> {
                 height: 10,
               ),
               CustomTextFormField(
+                key: _formKey,
                 controller: emailController,
                 title: 'Email',
                 icon: Icons.alternate_email_outlined,
@@ -54,6 +57,7 @@ class _LoginViewState extends State<LoginView> {
                 height: 10,
               ),
               CustomTextFormField(
+                key: _formKey,
                 controller: passwordController,
                 title: 'Password',
                 icon: Icons.lock_outline_rounded,
@@ -111,6 +115,11 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   InkWell(
                     onTap: () {
+                      if (_formKey.currentState!.validate()) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Processing Data')),
+                        );
+                      }
                       Navigator.push(
                           context,
                           MaterialPageRoute(
