@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
+import 'package:grocery_order_app_flutter/screens/profile/user_profile.dart';
 import 'firebase_options.dart';
 import 'screens/login&signup/login_view.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),
-      home: const LoginView(),
+      home: const UserProfile(),
     );
   }
 }
