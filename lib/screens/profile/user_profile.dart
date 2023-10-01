@@ -93,6 +93,10 @@ class UserProfile extends StatelessWidget {
               ],
             ),
           ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Divider(),
+          ),
         ],
       ),
     );

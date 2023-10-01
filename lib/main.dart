@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),
-      home: const UserProfile(),
+      home: const LoginView(),
     );
   }
 }
