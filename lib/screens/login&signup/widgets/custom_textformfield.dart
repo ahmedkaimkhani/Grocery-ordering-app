@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 
-class CustomTextFormField extends StatefulWidget {
+class CustomTextFormField extends StatelessWidget {
   final String title;
   final IconData? icon;
   final TextEditingController? controller;
@@ -15,30 +15,24 @@ class CustomTextFormField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<CustomTextFormField> createState() => _CustomTextFormFieldState();
-}
-
-class _CustomTextFormFieldState extends State<CustomTextFormField> {
-  @override
   Widget build(BuildContext context) {
-    return Form(
-      child: TextFormField(
-        controller: widget.controller,
-        decoration: InputDecoration(
-          hintText: widget.title,
-          focusedBorder: InputBorder.none,
-          prefixIcon: Icon(
-            widget.icon,
-            color: AppColors.blue,
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: AppDarkColors.black10),
-          ),
-          disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: AppDarkColors.black10),
-          ),
+    return TextFormField(
+      controller: controller,
+      decoration: InputDecoration(
+        hintText: title,
+        focusedBorder: InputBorder.none,
+        prefixIcon: Icon(
+          icon,
+          color: AppColors.blue,
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppDarkColors.black10),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: AppDarkColors.black10),
         ),
       ),
+      validator: validator,
     );
   }
 }

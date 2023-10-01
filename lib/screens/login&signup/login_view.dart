@@ -30,6 +30,8 @@ class _LoginViewState extends State<LoginView> {
   String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Please enter your password';
+    } else if (value.length < 6) {
+      return 'Password must be at least 6 character long';
     }
     return null;
   }
@@ -59,47 +61,21 @@ class _LoginViewState extends State<LoginView> {
                 key: _formKey,
                 child: Column(
                   children: [
-                    TextFormField(
-                        controller: emailController,
-                        decoration: InputDecoration(
-                          hintText: 'Email',
-                          focusedBorder: InputBorder.none,
-                          prefixIcon: Icon(
-                            Icons.alternate_email_outlined,
-                            color: AppColors.blue,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: AppDarkColors.black10),
-                          ),
-                          disabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: AppDarkColors.black10),
-                          ),
-                        ),
-                        validator: validateEmail),
+                    CustomTextFormField(
+                      title: 'Email',
+                      validator: validateEmail,
+                      controller: emailController,
+                      icon: Icons.alternate_email_outlined,
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
-                    TextFormField(
-                        controller: passwordController,
-                        decoration: InputDecoration(
-                          hintText: 'Password',
-                          focusedBorder: InputBorder.none,
-                          prefixIcon: Icon(
-                            Icons.lock_outline_rounded,
-                            color: AppColors.blue,
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: AppDarkColors.black10),
-                          ),
-                          disabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: AppDarkColors.black10),
-                          ),
-                        ),
-                        validator: validatePassword),
+                    CustomTextFormField(
+                      title: 'Password',
+                      validator: validatePassword,
+                      controller: passwordController,
+                      icon: Icons.lock_outline_rounded,
+                    ),
                   ],
                 ),
               ),
