@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/login_view.dart';
@@ -20,6 +21,23 @@ class _SignUpViewState extends State<SignUpView> {
   TextEditingController contactController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
+signUp ()async{
+  try {
+  final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+    email: emailController.text,
+    password: passwordController.text,
+  );
+} on FirebaseAuthException catch (e) {
+  if (e.code == 'weak-password') {
+    print('The password provided is too weak.');
+  } else if (e.code == 'email-already-in-use') {
+    print('The account already exists for that email.');
+  }
+} catch (e) {
+  print(e);
+}
+} 
 
   @override
   Widget build(BuildContext context) {
