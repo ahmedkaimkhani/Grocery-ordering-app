@@ -105,15 +105,15 @@ class _LoginViewState extends State<LoginView> {
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      print('Form is valid');
+                      debugPrint('Form is valid');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const GetStartedView(),
+                          ));
                     } else {
-                      print('Form is invalid');
+                      debugPrint('Form is invalid');
                     }
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //       builder: (context) => const GetStartedView(),
-                    //     ));
                   },
                 ),
               ),

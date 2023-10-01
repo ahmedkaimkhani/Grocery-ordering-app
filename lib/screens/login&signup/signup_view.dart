@@ -22,22 +22,55 @@ class _SignUpViewState extends State<SignUpView> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-signUp ()async{
-  try {
-  final credential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
-    email: emailController.text,
-    password: passwordController.text,
-  );
-} on FirebaseAuthException catch (e) {
-  if (e.code == 'weak-password') {
-    print('The password provided is too weak.');
-  } else if (e.code == 'email-already-in-use') {
-    print('The account already exists for that email.');
+  final _formKey = GlobalKey<FormState>();
+
+  String? validateName(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your password';
+    }
+    return null;
   }
-} catch (e) {
-  print(e);
-}
-} 
+
+  String? validateContact(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your password';
+    }
+    return null;
+  }
+
+  String? validateEmail(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your email';
+    }
+    return null;
+  }
+
+  String? validatePassword(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter your password';
+    } else if (value.length < 6) {
+      return 'Password must be at least 6 character long';
+    }
+    return null;
+  }
+
+  signUp() async {
+    try {
+      final credential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emailController.text,
+        password: passwordController.text,
+      );
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        print('The password provided is too weak.');
+      } else if (e.code == 'email-already-in-use') {
+        print('The account already exists for that email.');
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,59 +93,41 @@ signUp ()async{
               const SizedBox(
                 height: 10,
               ),
-              CustomTextFormField(
-                controller: nameController,
-                title: 'Name',
-                icon: Icons.person_2_outlined,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter name';
-                  }
-                  return null;
-                },
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomTextFormField(
-                controller: contactController,
-                title: 'Contact',
-                icon: Icons.call_outlined,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter contact';
-                  }
-                  return null;
-                },
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomTextFormField(
-                controller: emailController,
-                title: 'Email',
-                icon: Icons.alternate_email_outlined,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter email';
-                  }
-                  return null;
-                },
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              CustomTextFormField(
-                controller: passwordController,
-                title: 'Password',
-                icon: Icons.lock_outline_rounded,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter password';
-                  }
-                  return null;
-                },
-              ),
+              Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      CustomTextFormField(
+                          controller: nameController,
+                          title: 'Name',
+                          icon: Icons.person_2_outlined,
+                          validator: validateName),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      CustomTextFormField(
+                          controller: contactController,
+                          title: 'Contact',
+                          icon: Icons.call_outlined,
+                          validator: validateContact),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      CustomTextFormField(
+                          controller: emailController,
+                          title: 'Email',
+                          icon: Icons.alternate_email_outlined,
+                          validator: validateEmail),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      CustomTextFormField(
+                          controller: passwordController,
+                          title: 'Password',
+                          icon: Icons.lock_outline_rounded,
+                          validator: validatePassword),
+                    ],
+                  )),
               const SizedBox(
                 height: 10,
               ),
@@ -124,11 +139,16 @@ signUp ()async{
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const GetStartedView(),
-                        ));
+                    if (_formKey.currentState!.validate()) {
+                      debugPrint('Form is valid');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const GetStartedView(),
+                          ));
+                    } else {
+                      debugPrint('Form is invalid');
+                    }
                   },
                 ),
               ),

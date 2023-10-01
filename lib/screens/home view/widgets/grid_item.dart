@@ -107,7 +107,7 @@ class _CustomGridViewItemState extends State<CustomGridViewItem> {
               ),
               Align(
                 child: Text(
-                  'Not results found please try with different search',
+                  'Results not found please try with different search',
                   style: CustomTextStyle14.h1SemiBold14,
                 ),
               ),
