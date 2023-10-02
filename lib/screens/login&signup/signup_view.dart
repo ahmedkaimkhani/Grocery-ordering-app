@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/login_view.dart';
+import 'package:grocery_order_app_flutter/screens/login&signup/utils/utils.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/custom_textstyle.dart';
@@ -23,6 +25,7 @@ class _SignUpViewState extends State<SignUpView> {
   TextEditingController passwordController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   String? validateName(String? value) {
     if (value == null || value.isEmpty) {
@@ -54,21 +57,36 @@ class _SignUpViewState extends State<SignUpView> {
     return null;
   }
 
-  signUp() async {
+  Future<void> signUp() async {
     try {
-      final credential =
-          await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text,
-      );
+      loading = true;
+      setState(() {});
+      UserCredential userCredential = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(
+              email: emailController.text, password: passwordController.text);
+
+      // Store user data in Firestore
+      await FirebaseFirestore.instance.collection('users').add({
+        'name': nameController.text,
+        'contact': contactController.text,
+        'email': emailController.text,
+      });
+
+      Utils().toastMessage('Sign up successful');
+      // Navigate to the home screen or any other screen
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const GetStartedView(),
+          ));
+      loading = false;
+      setState(() {});
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') {
-        print('The password provided is too weak.');
-      } else if (e.code == 'email-already-in-use') {
-        print('The account already exists for that email.');
-      }
-    } catch (e) {
-      print(e);
+      loading = false;
+
+      Utils().toastMessage('Failed to sign up: ${e.message}');
+      debugPrint('Failed to register: $e');
+      setState(() {});
     }
   }
 
@@ -135,17 +153,19 @@ class _SignUpViewState extends State<SignUpView> {
               SizedBox(
                 width: double.infinity,
                 child: CustomButton(
+                  loading: loading,
                   buttonText: 'SIGN UP',
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      signUp();
                       debugPrint('Form is valid');
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const GetStartedView(),
-                          ));
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => const GetStartedView(),
+                      //     ));
                     } else {
                       debugPrint('Form is invalid');
                     }

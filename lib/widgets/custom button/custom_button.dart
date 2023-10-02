@@ -10,6 +10,7 @@ class CustomButton extends StatelessWidget {
   final Color? borderColor;
   final Function()? onPressed;
   final Padding? height;
+  final bool loading;
   const CustomButton(
       {super.key,
       required this.buttonText,
@@ -18,14 +19,16 @@ class CustomButton extends StatelessWidget {
       this.buttonTextStyle,
       this.onPressed,
       this.height,
-      this.borderColor});
+      this.borderColor,
+      this.loading = false});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        elevation: 0, backgroundColor: buttonColor ?? AppColors.blue,
+        elevation: 0,
+        backgroundColor: buttonColor ?? AppColors.blue,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
             side: BorderSide(color: borderColor ?? Colors.transparent)),
@@ -53,11 +56,18 @@ class CustomButton extends StatelessWidget {
               ],
             )
           : Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                buttonText,
-                style: buttonTextStyle ?? CustomTextStyle14.h1SemiBold14,
-              ),
+              padding: EdgeInsets.all(20),
+              child: loading
+                  ? Visibility(
+                      visible: loading,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 4,
+                        color: AppDarkColors.black1,
+                      ))
+                  : Text(
+                      buttonText,
+                      style: buttonTextStyle ?? CustomTextStyle14.h1SemiBold14,
+                    ),
             ),
     );
   }
