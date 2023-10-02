@@ -57,7 +57,7 @@ class _SignUpViewState extends State<SignUpView> {
     return null;
   }
 
-  Future<void> signUp() async {
+  signUp() async {
     try {
       loading = true;
       setState(() {});
@@ -140,6 +140,7 @@ class _SignUpViewState extends State<SignUpView> {
                         height: 10,
                       ),
                       CustomTextFormField(
+                          iconR: Icons.visibility_off,
                           controller: passwordController,
                           title: 'Password',
                           icon: Icons.lock_outline_rounded,

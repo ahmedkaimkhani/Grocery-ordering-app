@@ -1,9 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/signup_view.dart';
+import 'package:grocery_order_app_flutter/screens/login&signup/utils/utils.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/widgets/custom_textformfield.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20button/custom_button.dart';
 
@@ -34,6 +36,22 @@ class _LoginViewState extends State<LoginView> {
       return 'Password must be at least 6 character long';
     }
     return null;
+  }
+
+  login() async {
+    try {
+      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text, password: passwordController.text);
+      Utils().toastMessage('Login Successful');
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        Utils().toastMessage('User not exist: ${e.message}');
+        print('No user found for that email.');
+      } else if (e.code == 'wrong-password') {
+        Utils().toastMessage('Wrong password: ${e.message}');
+        print('Wrong password provided for that user.');
+      }
+    }
   }
 
   @override
@@ -105,12 +123,8 @@ class _LoginViewState extends State<LoginView> {
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      login();
                       debugPrint('Form is valid');
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const GetStartedView(),
-                          ));
                     } else {
                       debugPrint('Form is invalid');
                     }

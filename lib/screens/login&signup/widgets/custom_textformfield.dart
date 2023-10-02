@@ -4,6 +4,7 @@ import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 class CustomTextFormField extends StatelessWidget {
   final String title;
   final IconData? icon;
+  final IconData? iconR;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   const CustomTextFormField({
@@ -12,6 +13,7 @@ class CustomTextFormField extends StatelessWidget {
     this.icon,
     this.controller,
     required this.validator,
+    this.iconR,
   }) : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class CustomTextFormField extends StatelessWidget {
           icon,
           color: AppColors.blue,
         ),
+        suffixIcon: Icon(iconR),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppDarkColors.black10),
         ),
