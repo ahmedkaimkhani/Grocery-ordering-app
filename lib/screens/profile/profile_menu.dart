@@ -8,12 +8,11 @@ import 'package:grocery_order_app_flutter/screens/profile/widget/custom_menu.dar
 import 'user_profile.dart';
 
 class ProfileMenu extends StatelessWidget {
-  ProfileMenu({super.key});
-
-  final auth = FirebaseAuth.instance;
+  const ProfileMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final auth = FirebaseAuth.instance;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
