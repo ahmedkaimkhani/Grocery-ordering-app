@@ -21,6 +21,7 @@ class _LoginViewState extends State<LoginView> {
   TextEditingController passwordController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
@@ -38,19 +39,38 @@ class _LoginViewState extends State<LoginView> {
     return null;
   }
 
-  login() async {
+  final credential = FirebaseAuth.instance;
+  void login() async {
     try {
-      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
-          email: emailController.text, password: passwordController.text);
-      Utils().toastMessage('Login Successful');
+      loading = true;
+
+      await credential.signInWithEmailAndPassword(
+        email: emailController.text.toString(),
+        password: passwordController.text.toString(),
+      );
+
+      // Login successful
+      Utils().toastMessage("Login Successful");
+      loading = false;
+      setState(() {});
+      // emailController.clear();
+      // passwordController.clear();
+      debugPrint("Login Successful");
     } on FirebaseAuthException catch (e) {
+      String errorMessage;
+      loading = false;
       if (e.code == 'user-not-found') {
-        Utils().toastMessage('User not exist: ${e.message}');
-        print('No user found for that email.');
+        errorMessage = 'No account found for the provided email.';
+        debugPrint(errorMessage);
       } else if (e.code == 'wrong-password') {
-        Utils().toastMessage('Wrong password: ${e.message}');
-        print('Wrong password provided for that user.');
+        errorMessage = 'Incorrect password for the given email.';
+        debugPrint(errorMessage);
+      } else {
+        errorMessage = 'Login failed: ${e.message}';
+        debugPrint(errorMessage);
       }
+
+      Utils().toastMessage(errorMessage);
     }
   }
 
@@ -118,15 +138,15 @@ class _LoginViewState extends State<LoginView> {
               SizedBox(
                 width: double.infinity,
                 child: CustomButton(
+                  loading: loading,
                   buttonText: 'LOG IN',
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
+                      debugPrint('Attempting login...');
                       login();
                       debugPrint('Form is valid');
-                    } else {
-                      debugPrint('Form is invalid');
                     }
                   },
                 ),
@@ -166,3 +186,53 @@ class _LoginViewState extends State<LoginView> {
         )));
   }
 }
+
+
+//  try {
+//       final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+//           email: emailController.text, password: passwordController.text);
+//       Utils().toastMessage('Login Successful');
+//       debugPrint('Login Successful');
+//     } on FirebaseAuthException catch (e) {
+//       String errorMessage;
+//       if (e.code == 'user-not-found') {
+//         errorMessage = 'User not found for the provided email.';
+//         debugPrint(errorMessage);
+//         Utils().toastMessage(errorMessage);
+//       } else if (e.code == 'wrong-password') {
+//         errorMessage = 'Wrong password provided for the user.';
+//         debugPrint(errorMessage);
+//         Utils().toastMessage(errorMessage);
+//       }
+//       // if (e.code == 'user-not-found') {
+//       //   Utils().toastMessage('User not exist: ${e.message}');
+//       //   debugPrint('No user found for that email.');
+//       // } else if (e.code == 'wrong-password') {
+//       //   Utils().toastMessage('Wrong password: ${e.message}');
+//       //   debugPrint('Wrong password provided for that user.');
+//       // }
+//     }
+
+// final auth = FirebaseAuth.instance;
+
+//   void login() {
+//     auth
+//         .signInWithEmailAndPassword(
+//       email: emailController.text.toString(),
+//       password: passwordController.text.toString(),
+//     )
+//         .then((value) {
+//       setState(() {
+//         Utils().toastMessage("Login Successful");
+//         emailController.clear();
+//         passwordController.clear();
+
+//         Navigator.push(context,
+//             MaterialPageRoute(builder: (context) => const GetStartedView()));
+//       });
+//     }).onError((error, stackTrace) {
+//       setState(() {
+//         Utils().toastMessage(error.toString());
+//       });
+//     });
+//   }
