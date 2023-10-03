@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/login_view.dart';
-
+import 'package:grocery_order_app_flutter/screens/splash%20view/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -14,23 +14,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  startTimer() {
-    Timer(
-      const Duration(seconds: 2),
-      () async {
-        Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const LoginView(),
-            ));
-      },
-    );
-  }
+  SplashServices splashServices = SplashServices();
 
   @override
   void initState() {
     super.initState();
-    startTimer();
+    splashServices.isLogin(context);
   }
 
   @override
