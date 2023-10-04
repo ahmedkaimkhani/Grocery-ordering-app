@@ -52,9 +52,15 @@ class _LoginViewState extends State<LoginView> {
       // Login successful
       Utils().toastMessage("Login Successful");
       loading = false;
+      emailController.clear();
+      passwordController.clear();
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const GetStartedView(),
+          ));
       setState(() {});
-      // emailController.clear();
-      // passwordController.clear();
+
       debugPrint("Login Successful");
     } on FirebaseAuthException catch (e) {
       String errorMessage;
@@ -110,6 +116,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     CustomTextFormField(
                       title: 'Password',
+                      iconR: Icons.visibility_off,
                       validator: validatePassword,
                       controller: passwordController,
                       icon: Icons.lock_outline_rounded,

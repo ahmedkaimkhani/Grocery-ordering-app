@@ -5,6 +5,7 @@ class CustomTextFormField extends StatelessWidget {
   final String title;
   final IconData? icon;
   final IconData? iconR;
+  final bool obscureText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   const CustomTextFormField({
@@ -14,11 +15,17 @@ class CustomTextFormField extends StatelessWidget {
     this.controller,
     required this.validator,
     this.iconR,
+    this.obscureText = false,
   }) : super(key: key);
+
+  bool isVisible(obscureText) {
+    return obscureText = true;
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       controller: controller,
       decoration: InputDecoration(
         hintText: title,
@@ -27,7 +34,7 @@ class CustomTextFormField extends StatelessWidget {
           icon,
           color: AppColors.blue,
         ),
-        suffixIcon: Icon(iconR),
+        suffixIcon: GestureDetector(onTap: () {}, child: Icon(iconR)),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: AppDarkColors.black10),
         ),
