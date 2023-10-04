@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
+import 'package:grocery_order_app_flutter/screens/login&signup/forget%20password/forget_password.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/signup_view.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/utils/utils.dart';
 import 'package:grocery_order_app_flutter/screens/login&signup/widgets/custom_textformfield.dart';
@@ -128,7 +129,13 @@ class _LoginViewState extends State<LoginView> {
                 height: 10,
               ),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ForgetPassordView(),
+                      ));
+                },
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: Text(
