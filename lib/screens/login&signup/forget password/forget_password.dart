@@ -38,55 +38,52 @@ class _ForgetPassordViewState extends State<ForgetPassordView> {
             child: Padding(
           padding:
               const EdgeInsets.only(left: 20, right: 20, top: 50, bottom: 50),
-          child: Container(
-            color: Colors.green,
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  height: 200,
-                  width: 200,
-                  child: SvgPicture.asset('assets/images/logo.svg'),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Center(
-                  child: Form(
-                    key: _formKey,
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CustomTextFormField(
-                            title: 'Email',
-                            validator: validateEmail,
-                            controller: emailController,
-                            icon: Icons.alternate_email_outlined,
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                        ],
-                      ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 200,
+                width: 200,
+                child: SvgPicture.asset('assets/images/logo.svg'),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: Form(
+                  key: _formKey,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomTextFormField(
+                          title: 'Email',
+                          validator: validateEmail,
+                          controller: emailController,
+                          icon: Icons.alternate_email_outlined,
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                const Spacer(),
-                SizedBox(
-                  width: double.infinity,
-                  child: CustomButton(
-                    loading: loading,
-                    buttonText: 'FORGET',
-                    buttonColor: AppColors.blue,
-                    buttonTextStyle: CustomTextStyle14.h1Medium14,
-                    onPressed: () {},
-                  ),
+              ),
+              const Spacer(),
+              SizedBox(
+                width: double.infinity,
+                child: CustomButton(
+                  loading: loading,
+                  buttonText: 'FORGET',
+                  buttonColor: AppColors.blue,
+                  buttonTextStyle: CustomTextStyle14.h1Medium14,
+                  onPressed: () {},
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         )));
   }
