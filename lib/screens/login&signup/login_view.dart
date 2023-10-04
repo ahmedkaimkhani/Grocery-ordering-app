@@ -151,8 +151,10 @@ class _LoginViewState extends State<LoginView> {
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      debugPrint('Attempting login...');
+                      // debugPrint('Attempting login...');
                       login();
+                      emailController.clear();
+                      passwordController.clear;
                       debugPrint('Form is valid');
                     }
                   },
