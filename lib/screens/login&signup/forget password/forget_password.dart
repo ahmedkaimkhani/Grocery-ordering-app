@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../constants/app_colors.dart';
 import '../../../constants/custom_textstyle.dart';
 import '../../../widgets/custom button/custom_button.dart';
+import '../utils/utils.dart';
 import '../widgets/custom_textformfield.dart';
 
 class ForgetPassordView extends StatefulWidget {
@@ -27,6 +28,19 @@ class _ForgetPassordViewState extends State<ForgetPassordView> {
       return 'Please enter your email';
     }
     return null;
+  }
+
+  forgetMethod() {
+    loading = true;
+    auth
+        .sendPasswordResetEmail(email: emailController.text.toString())
+        .then((value) {
+      Utils().toastMessage(
+          'we have sent you email to recover password, please check email');
+    }).onError((error, stackTrace) {
+      loading = false;
+      Utils().toastMessage(error.toString());
+    });
   }
 
   @override
@@ -80,7 +94,12 @@ class _ForgetPassordViewState extends State<ForgetPassordView> {
                   buttonText: 'FORGET',
                   buttonColor: AppColors.blue,
                   buttonTextStyle: CustomTextStyle14.h1Medium14,
-                  onPressed: () {},
+                  onPressed: () {
+                    if (_formKey.currentState!.validate()) {
+                      forgetMethod();
+                    }
+                    setState(() {});
+                  },
                 ),
               ),
             ],

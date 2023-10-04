@@ -56,7 +56,9 @@ class CustomButton extends StatelessWidget {
               ],
             )
           : Padding(
-              padding: EdgeInsets.all(20),
+              padding: loading == true
+                  ? const EdgeInsets.all(10)
+                  : const EdgeInsets.all(20),
               child: loading
                   ? Visibility(
                       visible: loading,

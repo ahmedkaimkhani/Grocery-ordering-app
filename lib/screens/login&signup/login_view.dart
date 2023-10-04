@@ -60,7 +60,6 @@ class _LoginViewState extends State<LoginView> {
           MaterialPageRoute(
             builder: (context) => const GetStartedView(),
           ));
-      setState(() {});
 
       debugPrint("Login Successful");
     } on FirebaseAuthException catch (e) {
@@ -79,6 +78,7 @@ class _LoginViewState extends State<LoginView> {
 
       Utils().toastMessage(errorMessage);
     }
+    setState(() {});
   }
 
   @override
@@ -160,10 +160,10 @@ class _LoginViewState extends State<LoginView> {
                     if (_formKey.currentState!.validate()) {
                       // debugPrint('Attempting login...');
                       login();
-                      emailController.clear();
-                      passwordController.clear;
                       debugPrint('Form is valid');
                     }
+                    emailController.clear();
+                    passwordController.clear;
                   },
                 ),
               ),
