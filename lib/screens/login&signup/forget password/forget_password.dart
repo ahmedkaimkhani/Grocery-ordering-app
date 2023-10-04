@@ -32,14 +32,19 @@ class _ForgetPassordViewState extends State<ForgetPassordView> {
 
   forgetMethod() {
     loading = true;
+    setState(() {});
     auth
         .sendPasswordResetEmail(email: emailController.text.toString())
         .then((value) {
       Utils().toastMessage(
           'we have sent you email to recover password, please check email');
+      loading = false;
+      setState(() {});
     }).onError((error, stackTrace) {
       loading = false;
       Utils().toastMessage(error.toString());
+      loading = false;
+      setState(() {});
     });
   }
 
@@ -98,7 +103,6 @@ class _ForgetPassordViewState extends State<ForgetPassordView> {
                     if (_formKey.currentState!.validate()) {
                       forgetMethod();
                     }
-                    setState(() {});
                   },
                 ),
               ),

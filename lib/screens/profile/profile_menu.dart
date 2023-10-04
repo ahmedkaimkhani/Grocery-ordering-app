@@ -54,7 +54,7 @@ class ProfileMenu extends StatelessWidget {
           GestureDetector(
             onTap: () {
               auth.signOut().then((value) {
-                Navigator.push(
+                Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const LoginView(),
