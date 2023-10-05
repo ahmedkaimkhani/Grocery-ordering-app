@@ -44,15 +44,17 @@ class _LoginViewState extends State<LoginView> {
   void login() async {
     try {
       loading = true;
-
+      setState(() {});
       await credential.signInWithEmailAndPassword(
         email: emailController.text.toString(),
         password: passwordController.text.toString(),
       );
 
       // Login successful
-      Utils().toastMessage("Login Successful");
       loading = false;
+      setState(() {});
+      Utils().toastMessage("Login Successful");
+
       emailController.clear();
       passwordController.clear();
       Navigator.pushReplacement(
@@ -60,11 +62,14 @@ class _LoginViewState extends State<LoginView> {
           MaterialPageRoute(
             builder: (context) => const GetStartedView(),
           ));
+      loading = false;
+      setState(() {});
 
       debugPrint("Login Successful");
     } on FirebaseAuthException catch (e) {
       String errorMessage;
       loading = false;
+      setState(() {});
       if (e.code == 'user-not-found') {
         errorMessage = 'No account found for the provided email.';
         debugPrint(errorMessage);

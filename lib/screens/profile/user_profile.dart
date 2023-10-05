@@ -1,10 +1,61 @@
+import 'dart:ffi';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 
-class UserProfile extends StatelessWidget {
+class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
+
+  @override
+  State<UserProfile> createState() => _UserProfileState();
+}
+
+class _UserProfileState extends State<UserProfile> {
+  String? userId;
+  String? userName;
+  String? userEmail;
+  String? userContactNo;
+  bool isLoading = true;
+
+  Future<void> fetchUserData() async {
+    User? user = FirebaseAuth.instance.currentUser;
+
+    if (user != null) {
+      setState(() {
+        userId = user.uid;
+        userEmail = user.email;
+      });
+
+      DocumentSnapshot userSnapshot = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(userId)
+          .get();
+
+      if (userSnapshot.exists) {
+        setState(() {
+          userName = userSnapshot['name'];
+          userContactNo = userSnapshot['contact'];
+        });
+      }
+    }
+    print('userName: $userName');
+    print('userContactNo: $userContactNo');
+
+    setState(() {
+      isLoading =
+          false; // Set loading to false after data is fetched (or simulated delay)
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchUserData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +102,13 @@ class UserProfile extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Text(
-            'Ahmed Raza',
-            style: CustomTextStyle20.h1Bold20,
-          ),
+          if (isLoading)
+            CircularProgressIndicator()
+          else
+            Text(
+              userName ?? '',
+              style: CustomTextColor16.h1SemiBold16,
+            ),
           Padding(
             padding:
                 const EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 5),
@@ -65,10 +119,13 @@ class UserProfile extends StatelessWidget {
                   'Email:',
                   style: CustomTextStyle18.h1Bold318,
                 ),
-                Text(
-                  'ahmed@gmail.com',
-                  style: CustomTextColor16.h1SemiBold16,
-                ),
+                if (isLoading)
+                  CircularProgressIndicator()
+                else
+                  Text(
+                    userEmail ?? '',
+                    style: CustomTextColor16.h1SemiBold16,
+                  ),
               ],
             ),
           ),
@@ -86,10 +143,13 @@ class UserProfile extends StatelessWidget {
                   'Phone No:',
                   style: CustomTextStyle18.h1Bold318,
                 ),
-                Text(
-                  '0315-2116095',
-                  style: CustomTextColor16.h1SemiBold16,
-                ),
+                if (isLoading)
+                  CircularProgressIndicator()
+                else
+                  Text(
+                    userContactNo ?? '',
+                    style: CustomTextColor16.h1SemiBold16,
+                  ),
               ],
             ),
           ),
