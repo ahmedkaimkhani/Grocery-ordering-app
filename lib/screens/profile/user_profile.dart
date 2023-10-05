@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -103,7 +101,7 @@ class _UserProfileState extends State<UserProfile> {
             height: 10,
           ),
           if (isLoading)
-            CircularProgressIndicator()
+            const CircularProgressIndicator()
           else
             Text(
               userName ?? '',
@@ -120,7 +118,7 @@ class _UserProfileState extends State<UserProfile> {
                   style: CustomTextStyle18.h1Bold318,
                 ),
                 if (isLoading)
-                  CircularProgressIndicator()
+                  const CircularProgressIndicator()
                 else
                   Text(
                     userEmail ?? '',
@@ -144,7 +142,7 @@ class _UserProfileState extends State<UserProfile> {
                   style: CustomTextStyle18.h1Bold318,
                 ),
                 if (isLoading)
-                  CircularProgressIndicator()
+                  const CircularProgressIndicator()
                 else
                   Text(
                     userContactNo ?? '',
