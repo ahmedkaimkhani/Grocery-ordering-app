@@ -1,9 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
-import 'package:grocery_order_app_flutter/screens/login&signup/login_view.dart';
 import 'package:grocery_order_app_flutter/screens/splash%20view/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
