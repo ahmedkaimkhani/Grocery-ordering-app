@@ -15,7 +15,7 @@ class SplashServices {
     if (user != null) {
       Timer(
           const Duration(seconds: 2),
-          () => Navigator.push(
+          () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (context) => const GetStartedView(),
@@ -23,7 +23,7 @@ class SplashServices {
     } else {
       Timer(
           const Duration(seconds: 2),
-          () => Navigator.push(
+          () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (context) => const LoginView(),

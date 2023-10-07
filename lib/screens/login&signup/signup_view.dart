@@ -59,14 +59,17 @@ class _SignUpViewState extends State<SignUpView> {
 
   signUp() async {
     try {
-      loading = true;
-      setState(() {});
+      setState(() {
+        loading = true;
+      });
       UserCredential userCredential = await FirebaseAuth.instance
           .createUserWithEmailAndPassword(
               email: emailController.text, password: passwordController.text);
 
+      String userId = userCredential.user!.uid;
+
       // Store user data in Firestore
-      await FirebaseFirestore.instance.collection('users').add({
+      await FirebaseFirestore.instance.collection('users').doc(userId).set({
         'name': nameController.text,
         'contact': contactController.text,
         'email': emailController.text,
@@ -79,14 +82,17 @@ class _SignUpViewState extends State<SignUpView> {
           MaterialPageRoute(
             builder: (context) => const GetStartedView(),
           ));
-      loading = false;
-      setState(() {});
+
+      setState(() {
+        loading = false;
+      });
     } on FirebaseAuthException catch (e) {
-      loading = false;
+      setState(() {
+        loading = false;
+      });
 
       Utils().toastMessage('Failed to sign up: ${e.message}');
       debugPrint('Failed to register: $e');
-      setState(() {});
     }
   }
 
