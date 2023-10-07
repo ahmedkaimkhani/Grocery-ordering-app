@@ -71,7 +71,7 @@ class _SignUpViewState extends State<SignUpView> {
         'contact': contactController.text,
         'email': emailController.text,
       });
-
+//
       Utils().toastMessage('Account created successful');
       // Navigate to the home screen or any other screen
       Navigator.pushReplacement(
