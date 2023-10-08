@@ -53,11 +53,11 @@ class _LoginViewState extends State<LoginView> {
 
       // Login successful
       loading = false;
+      emailController.clear();
+      passwordController.clear();
       setState(() {});
       Utils().toastMessage("Login Successful");
 
-      emailController.clear();
-      passwordController.clear();
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -84,6 +84,8 @@ class _LoginViewState extends State<LoginView> {
 
       Utils().toastMessage(errorMessage);
     }
+    emailController.clear;
+    passwordController.clear;
     setState(() {});
   }
 
@@ -173,8 +175,6 @@ class _LoginViewState extends State<LoginView> {
                         login();
                         debugPrint('Form is valid');
                       }
-                      emailController.clear();
-                      passwordController.clear;
                     },
                   ),
                 ),
