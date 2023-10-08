@@ -52,8 +52,8 @@ class ProfileMenu extends StatelessWidget {
             icon: Icons.help_outline,
           ),
           GestureDetector(
-            onTap: () {
-              auth.signOut().then((value) {
+            onTap: () async {
+              await auth.signOut().then((value) {
                 Utils().toastMessage('Log out successfully');
                 Navigator.push(
                     context,

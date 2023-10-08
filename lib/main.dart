@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
 import 'firebase_options.dart';
+import 'screens/login&signup/login_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),
-      home: const GetStartedView(),
+      home: const LoginView(),
     );
   }
 }
