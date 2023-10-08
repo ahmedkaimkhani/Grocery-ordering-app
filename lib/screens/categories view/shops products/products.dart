@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_order_app_flutter/screens/detail%20view/detail_view.dart';
+import 'package:grocery_order_app_flutter/screens/detail_view/detail_view.dart';
 import 'package:grocery_order_app_flutter/widgets/custom%20add%20button/custom_add_icon.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
 

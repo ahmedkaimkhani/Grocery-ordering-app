@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/screens/get%20started%20view/get_started_1.dart';
+import 'package:grocery_order_app_flutter/screens/splash%20view/splash_view.dart';
 import 'firebase_options.dart';
 import 'screens/login&signup/login_view.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: AppBarTheme(
             color: AppColors.blue,
           )),
-      home: const GetStartedView(),
+      home: const SplashScreen(),
     );
   }
 }
