@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_order_app_flutter/constants/app_colors.dart';
 import 'package:grocery_order_app_flutter/constants/custom_textstyle.dart';
 import 'package:grocery_order_app_flutter/widgets/custom_appbar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
@@ -13,46 +14,51 @@ class UserProfile extends StatefulWidget {
 }
 
 class _UserProfileState extends State<UserProfile> {
-  String? userId;
-  String? userName;
-  String? userEmail;
-  String? userContactNo;
-  bool isLoading = true;
+  User? user;
+  late String userName = '';
+  late String userEmail = '';
+  late String userContactNo = '';
+
+  final FirebaseAuth auth = FirebaseAuth.instance;
+  CollectionReference users = FirebaseFirestore.instance.collection('users');
 
   Future<void> fetchUserData() async {
-    User? user = FirebaseAuth.instance.currentUser;
+    final User? currentUser = auth.currentUser;
+    if (currentUser != null) {
+      final userData = await users.doc(currentUser.uid).get();
 
-    if (user != null) {
       setState(() {
-        userId = user.uid;
-        userEmail = user.email;
+        user = currentUser;
+        userName = userData['name'];
+        userEmail = userData['email'];
+        userContactNo = userData['contact'];
       });
-
-      DocumentSnapshot userSnapshot = await FirebaseFirestore.instance
-          .collection('users')
-          .doc(userId)
-          .get();
-
-      if (userSnapshot.exists) {
-        setState(() {
-          userName = userSnapshot['name'];
-          userContactNo = userSnapshot['contact'];
-        });
-      }
     }
-    print('userName: $userName');
-    print('userContactNo: $userContactNo');
+  }
 
-    setState(() {
-      isLoading =
-          false; // Set loading to false after data is fetched (or simulated delay)
-    });
+  storeData() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    await prefs.setString('user', user as String);
+    setState(() {});
+  }
+
+  getStoreData() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    prefs.get('user');
+    setState(() {});
+  }
+
+  fetchStoreData() async {
+    await getStoreData();
   }
 
   @override
   void initState() {
     super.initState();
     fetchUserData();
+    fetchStoreData();
   }
 
   @override
@@ -100,13 +106,10 @@ class _UserProfileState extends State<UserProfile> {
           const SizedBox(
             height: 10,
           ),
-          if (isLoading)
-            const CircularProgressIndicator()
-          else
-            Text(
-              userName ?? '',
-              style: CustomTextColor16.h1SemiBold16,
-            ),
+          Text(
+            userName,
+            style: CustomTextStyle20.h1Bold20,
+          ),
           Padding(
             padding:
                 const EdgeInsets.only(left: 25, right: 25, top: 40, bottom: 5),
@@ -117,13 +120,10 @@ class _UserProfileState extends State<UserProfile> {
                   'Email:',
                   style: CustomTextStyle18.h1Bold318,
                 ),
-                if (isLoading)
-                  const CircularProgressIndicator()
-                else
-                  Text(
-                    userEmail ?? '',
-                    style: CustomTextColor16.h1SemiBold16,
-                  ),
+                Text(
+                  userEmail,
+                  style: CustomTextColor16.h1SemiBold16,
+                ),
               ],
             ),
           ),
@@ -141,13 +141,10 @@ class _UserProfileState extends State<UserProfile> {
                   'Phone No:',
                   style: CustomTextStyle18.h1Bold318,
                 ),
-                if (isLoading)
-                  const CircularProgressIndicator()
-                else
-                  Text(
-                    userContactNo ?? '',
-                    style: CustomTextColor16.h1SemiBold16,
-                  ),
+                Text(
+                  userContactNo,
+                  style: CustomTextColor16.h1SemiBold16,
+                ),
               ],
             ),
           ),
