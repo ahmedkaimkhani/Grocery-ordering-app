@@ -33,32 +33,22 @@ class _UserProfileState extends State<UserProfile> {
         userEmail = userData['email'];
         userContactNo = userData['contact'];
       });
+      saveUserDataLocally(userName, userEmail, userContactNo);
     }
   }
 
-  storeData() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-
-    await prefs.setString('user', user as String);
-    setState(() {});
-  }
-
-  getStoreData() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-
-    prefs.get('user');
-    setState(() {});
-  }
-
-  fetchStoreData() async {
-    await getStoreData();
+  Future<void> saveUserDataLocally(
+      String userName, String userEmail, String userContactNo) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('userName', userName);
+    await prefs.setString('userEmail', userEmail);
+    await prefs.setString('userContactNo', userContactNo);
   }
 
   @override
   void initState() {
     super.initState();
     fetchUserData();
-    fetchStoreData();
   }
 
   @override
@@ -157,3 +147,23 @@ class _UserProfileState extends State<UserProfile> {
     );
   }
 }
+
+
+
+// storeData() async {
+//     final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+//     await prefs.setString('user', user as String);
+//     setState(() {});
+//   }
+
+//   getStoreData() async {
+//     final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+//     prefs.get('user');
+//     setState(() {});
+//   }
+
+//   fetchStoreData() async {
+//     await getStoreData();
+//   }
