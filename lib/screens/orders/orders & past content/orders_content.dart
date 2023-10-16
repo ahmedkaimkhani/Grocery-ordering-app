@@ -11,14 +11,21 @@ class OrderContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return myOrder.isEmpty
-        ? Column(
-            children: [
-              Container(
-                height: 300,
-                width: 300,
-                child: Image.asset('assets/images/emptyrider.gif'),
-              ),
-            ],
+        ? Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/emptyrider.gif',
+                  height: 300,
+                  width: 300,
+                ),
+                Text(
+                  'Make your order now!',
+                  style: CustomTextStyle18.h1Bold318,
+                ),
+              ],
+            ),
           )
         : Expanded(
             child: ListView.builder(
