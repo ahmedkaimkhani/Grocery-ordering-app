@@ -42,8 +42,8 @@ class AddCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      // resizeToAvoidBottomInset:
-      //     false, //removed overflow erro when keyboard launches for input fields
+      resizeToAvoidBottomInset:
+          false, //removed overflow erro when keyboard launches for input fields
       body: SafeArea(
         child: Column(
           children: [
