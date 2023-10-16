@@ -26,7 +26,8 @@ final List<Map<String, dynamic>> dealItems = [
   {
     'price': '\$500',
     'name': 'Apple Package 5 | 3  KG',
-    'image': 'https://www.pngall.com/wp-content/uploads/11/Apple-PNG-Photo.png'
+    'image':
+        'https://img.freepik.com/premium-photo/fresh-red-apple-fruit-with-sliced-green-leaves-isolated-white-background_252965-9.jpg'
   },
   {
     'price': '\$400',
