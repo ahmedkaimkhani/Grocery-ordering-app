@@ -66,13 +66,13 @@ class _UserProfileState extends State<UserProfile> {
             alignment: Alignment.center,
             children: [
               Container(
-                height: 120,
-                width: 120,
+                height: 150,
+                width: 150,
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(100)),
                 child: const CircleAvatar(
                   backgroundImage: AssetImage(
-                    'assets/images/tea.jpg',
+                    'assets/images/ahmed.jpg',
                   ),
                 ),
               ),
@@ -83,7 +83,7 @@ class _UserProfileState extends State<UserProfile> {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                      color: AppColors.blue,
+                      color: Colors.black, //AppColors.blue,
                       borderRadius: BorderRadius.circular(100)),
                   child: Icon(
                     Icons.camera_alt_outlined,
